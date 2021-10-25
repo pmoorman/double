@@ -4,10 +4,22 @@ module.exports = {
     title: "Double Agency",
   },
   plugins: [
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        additionalData: `
+          @import '~bootstrap/scss/functions';
+          @import '~bootstrap/scss/mixins';
+          @import './src/styles/variables';
+          @import '~bootstrap/scss/variables';
+        `,
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-tsconfig-paths",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-layout",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
