@@ -50,7 +50,11 @@ export const AboutSection = () => {
               </p>
             </div>
             <div className="about--line1 active-in-view">
-              <img className="d-none d-lg-block" src="./about-line1.png" />
+              <StaticImage
+                alt=""
+                className="d-none d-lg-block"
+                src="./about-line1.png"
+              />
               <StaticImage
                 alt=""
                 className="d-block d-lg-none"

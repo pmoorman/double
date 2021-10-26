@@ -164,7 +164,7 @@ export const ClientsSection = () => {
 
             <div className="row justify-content-between align-items-center position-relative">
               <AnimatedLine className="clients__lines--line1 ">
-                <img src="/assets/images/home/explode-line1.svg" />
+                <StaticImage alt="" src="./explode-line1.svg" />
               </AnimatedLine>
 
               <div>
@@ -194,7 +194,7 @@ export const ClientsSection = () => {
               <div>
                 <StaticImage
                   className="clients__logoitem"
-                  src="./logo-simplelabs.png"
+                  src="./logo-simplabs.png"
                   alt=""
                 />
               </div>
@@ -255,9 +255,10 @@ export const ClientsSection = () => {
         {/* Explode */}
         <div className="clients__explode row justify-content-center position-relative">
           <h1 className="clients__explode__text text-primary">explode</h1>
-          <img
+          <StaticImage
+            alt=""
             className="clients__explode__bg position-absolute"
-            src="/assets/images/home/explode-stroke.svg"
+            src="./explode-stroke.svg"
           />
         </div>
 
@@ -276,14 +277,16 @@ export const ClientsSection = () => {
               </h3>
               <div className="clients__circles__curved-text">
                 <div className="clients__circles__curved-text--wrapper">
-                  <img
+                  <StaticImage
+                    alt=""
                     className="clients__circles__curved-text--mobile d-lg-none d-block"
-                    src="/assets/images/home/explode-curved-text-mobile.png"
+                    src="./explode-curved-text-mobile.png"
                   />
 
-                  <img
+                  <StaticImage
+                    alt=""
                     className="clients__circles__curved-text--desktop d-none d-lg-block"
-                    src="/assets/images/home/explode-curved-text.png"
+                    src="./explode-curved-text.png"
                   />
                 </div>
               </div>

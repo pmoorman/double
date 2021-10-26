@@ -41,7 +41,7 @@ export const ProcessSection = () => {
           <div className="col-lg-8 pr-lg-0">
             {items.map((item, i) => (
               <div
-                key={item.title}
+                key={item.title + i}
                 className="process__items__item d-flex mb-5"
               >
                 <div>
