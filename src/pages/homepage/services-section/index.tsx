@@ -52,7 +52,7 @@ export const ServicesSection = () => {
         {/* Service Items */}
         <div className="row">
           {items.map((item, i) => (
-            <div className="col-lg-3 px-lg-4 mb-4 mb-lg-0">
+            <div key={item.title} className="col-lg-3 px-lg-4 mb-4 mb-lg-0">
               <div className="shadowbox variant-2 mb-4 mb-lg-5 active-in-view">
                 {i + 1}
               </div>
