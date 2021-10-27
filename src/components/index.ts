@@ -5,3 +5,4 @@ export * from "./animated-line";
 export * from "./link";
 export * from "./arrow-button";
 export * from "./shadow-box";
+export * from "./double-logo";

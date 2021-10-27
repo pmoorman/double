@@ -1,64 +1,54 @@
 import React from "react";
+import { Nav, Navbar } from "react-bootstrap";
+
+import { Link } from "../link";
+
+import * as styles from "./index.module.scss";
+
+const ID = "main-nav";
 
 export const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
+    <Navbar expand="lg" className={styles.navbar}>
       <div className="container">
-        <a className="navbar-brand" href="/" style={{ width: "120px" }}>
+        <Navbar.Brand as={Link} to="/" style={{ width: "120px" }}>
           Logo
-        </a>
-        <button
-          className="navbar-toggler collapsed"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        </Navbar.Brand>
+        <Navbar.Toggle className={styles.navbarToggler} aria-controls={ID}>
           <div className="toggler-menu-text">Menu</div>
           <span className="navbar-toggle">
             <span className="icon-bar top-bar"></span>
             <span className="icon-bar middle-bar"></span>
             <span className="icon-bar bottom-bar"></span>
           </span>
-        </button>
+        </Navbar.Toggle>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="/">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/services">
-                Services
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/clients">
-                Clients
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/blog">
-                Blog
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/about">
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="mailto:pieter@double-agency.com">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+        <Navbar.Collapse className={styles.navbarCollapse} id={ID}>
+          <Nav className="ms-auto">
+            <Nav.Link className={styles.navLink} as={Link} to="/">
+              Home
+            </Nav.Link>
+            <Nav.Link className={styles.navLink} as={Link} to="/services">
+              Services
+            </Nav.Link>
+            <Nav.Link className={styles.navLink} as={Link} to="/clients">
+              Clients
+            </Nav.Link>
+            <Nav.Link className={styles.navLink} as={Link} to="/blog">
+              Blog
+            </Nav.Link>
+            <Nav.Link className={styles.navLink} as={Link} to="/about">
+              About
+            </Nav.Link>
+            <Nav.Link
+              className={styles.navLink}
+              href="mailto:pieter@double-agency.com"
+            >
+              Contact
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </div>
-    </nav>
+    </Navbar>
   );
 };

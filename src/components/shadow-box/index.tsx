@@ -19,8 +19,6 @@ export const ShadowBox: FC<ShadowBoxProps> = ({
     rootMargin: "-40% 0px -40% 0px",
   });
 
-  console.log({ inView });
-
   const _className = cn(
     className,
     styles.shadowbox,
