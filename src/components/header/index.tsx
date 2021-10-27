@@ -1,8 +1,8 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
+import { DoubleLogo } from "..";
 
 import { Link } from "../link";
-
 import * as styles from "./index.module.scss";
 
 const ID = "main-nav";
@@ -12,7 +12,7 @@ export const Header = () => {
     <Navbar expand="lg" className={styles.navbar}>
       <div className="container">
         <Navbar.Brand as={Link} to="/" style={{ width: "120px" }}>
-          Logo
+          <DoubleLogo />
         </Navbar.Brand>
         <Navbar.Toggle className={styles.navbarToggler} aria-controls={ID}>
           <div className="toggler-menu-text">Menu</div>
