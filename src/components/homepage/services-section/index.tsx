@@ -1,4 +1,4 @@
-import { ArrowButton } from "@app/components";
+import { ArrowButton, ShadowBox } from "@app/components";
 import React from "react";
 
 const items = [
@@ -54,9 +54,9 @@ export const ServicesSection = () => {
         <div className="row">
           {items.map((item, i) => (
             <div key={item.title} className="col-lg-3 px-lg-4 mb-4 mb-lg-0">
-              <div className="shadowbox variant-2 mb-4 mb-lg-5 active-in-view">
+              <ShadowBox variant="2" className="mb-4 mb-lg-5">
                 {i + 1}
-              </div>
+              </ShadowBox>
               <p className="lead">{item.title}</p>
               <p className="text-small">{item.body}</p>
             </div>
