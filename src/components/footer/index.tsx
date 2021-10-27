@@ -1,28 +1,27 @@
 import React from "react";
+import cn from "classnames";
+
+import * as styles from "./index.module.scss";
+import { DoubleLogo, Link } from "..";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <div className="container">
-        <hr className="divider-1" />
-        <div
-          className="
-        row
-        justify-content-between
-        mx-0
-        mb-4
-        flex-lg-row flex-column
-        align-items-center align-items-lg-start
-        text-center text-lg-left
-      "
-        >
+        <hr className={styles.divider1} />
+        <div className=" d-flex justify-content-between mx-0 mb-4 flex-lg-row flex-column align-items-center align-items-lg-start text-center text-lg-left">
           <div
             style={{ maxWidth: "100px" }}
-            className="double_logo mb-3 mb-lg-0"
+            className={cn(styles.doubleLogo, "mb3 mb-lg-0")}
           >
-            Logo
+            <DoubleLogo />
           </div>
-          <div className="contact-details d-flex flex-lg-row flex-column">
+          <div
+            className={cn(
+              styles.contactDetails,
+              "d-flex flex-lg-row flex-column"
+            )}
+          >
             <span className="me-3">
               <strong>Email</strong>:
               <a href="mailto:pieter@double-agency.com">
@@ -39,63 +38,53 @@ export const Footer = () => {
             </span>
           </div>
         </div>
-        <hr className="divider-2" />
-        <div
-          className="
-        row
-        justify-content-between
-        mx-0
-        mb-4
-        flex-lg-row flex-column
-        align-items-center align-items-lg-start
-        text-center text-lg-left
-      "
-        >
-          <a className="nav-link mb-4 mb-lg-0" href="/">
+        <hr className={styles.divider2} />
+        <div className="  d-flex justify-content-between mx-0 mb-4 flex-lg-row flex-column align-items-center align-items-lg-start text-center text-lg-left ">
+          <Link className={cn(styles.navLink, "mb-4 mb-lg-0")} to="/">
             Home
-          </a>
-          <a className="nav-link mb-4 mb-lg-0" href="/services">
+          </Link>
+          <Link className={cn(styles.navLink, "mb-4 mb-lg-0")} to="/services">
             Services
-          </a>
-          <a className="nav-link mb-4 mb-lg-0" href="/clients">
+          </Link>
+          <Link className={cn(styles.navLink, "mb-4 mb-lg-0")} to="/clients">
             Clients
-          </a>
-          <a className="nav-link mb-4 mb-lg-0" href="/#process">
+          </Link>
+          <Link className={cn(styles.navLink, "mb-4 mb-lg-0")} to="/#process">
             Process
-          </a>
-          <a className="nav-link mb-4 mb-lg-0" href="/about">
+          </Link>
+          <Link className={cn(styles.navLink, "mb-4 mb-lg-0")} to="/about">
             About
-          </a>
-          <a className="nav-link mb-4 mb-lg-0" href="/blog">
+          </Link>
+          <Link className={cn(styles.navLink, "mb-4 mb-lg-0")} to="/blog">
             Blog
-          </a>
-          <a className="nav-link mb-4 mb-lg-0" href="/academy">
+          </Link>
+          <Link className={cn(styles.navLink, "mb-4 mb-lg-0")} to="/academy">
             Double Academy
-          </a>
-          <a
-            className="nav-link mb-4 mb-lg-0"
-            href="mailto:pieter@double-agency.com"
+          </Link>
+          <Link
+            className={cn(styles.navLink, "mb-4 mb-lg-0")}
+            to="mailto:pieter@double-agency.com"
           >
             Contact
-          </a>
-          <a className="nav-link" href="/about#hiring">
+          </Link>
+          <Link className={styles.navLink} to="/about#hiring">
             Working at Double
-          </a>
+          </Link>
         </div>
 
-        <hr className="divider-2 d-lg-none" />
+        <hr className={cn(styles.divider2, "d-lg-none")} />
 
-        <div className="text-center text-lg-left">
-          <span className="copyright">
+        <div className="text-center text-lg-start">
+          <span className={styles.copyright}>
             Copyright © {new Date().getFullYear()} Double LLC. All Rights
             Reserved.
-            <a
-              href="/privacy-policy"
+            <Link
+              to="/privacy-policy"
               target="_blank"
               style={{ color: "#afafbf" }}
             >
               Privacy Policy.
-            </a>
+            </Link>
           </span>
         </div>
       </div>

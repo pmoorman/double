@@ -1,7 +1,4 @@
 .clients {
-  .row > * {
-    width: auto;
-  }
   &__lines {
     &--line1 {
       position: absolute;
@@ -41,7 +38,7 @@
       }
     }
     &--desktop {
-      > .row {
+      > .d-flex {
         margin-bottom: 100px;
       }
     }
@@ -49,7 +46,7 @@
       width: 140%;
       position: relative;
       left: -20%;
-      > .row {
+      > .d-flex {
         margin-bottom: 65px;
       }
     }

@@ -20,7 +20,7 @@ export const ClientsSection = () => {
               </AnimatedLine>
             </div>
             {/* Row 1 */}
-            <div className="row justify-content-around align-items-center">
+            <div className="d-flex justify-content-around align-items-center">
               <div>
                 <StaticImage
                   className="clients__logoitem"
@@ -46,7 +46,7 @@ export const ClientsSection = () => {
             </div>
 
             {/* Row 2 */}
-            <div className="row justify-content-between align-items-center">
+            <div className="d-flex justify-content-between align-items-center">
               <div>
                 <StaticImage
                   className="clients__logoitem"
@@ -78,7 +78,7 @@ export const ClientsSection = () => {
             </div>
 
             {/* Row 3 */}
-            <div className="row justify-content-around align-items-center">
+            <div className="d-flex justify-content-around align-items-center">
               <div>
                 <StaticImage
                   className="clients__logoitem"
@@ -104,7 +104,7 @@ export const ClientsSection = () => {
             </div>
 
             {/* Row 4 */}
-            <div className="row justify-content-between align-items-center">
+            <div className="d-flex justify-content-between align-items-center">
               <div>
                 <StaticImage
                   className="clients__logoitem"
@@ -132,7 +132,7 @@ export const ClientsSection = () => {
           </div>
 
           <div className="clients__logos--mobile d-block d-lg-none">
-            <div className="row justify-content-between align-items-center">
+            <div className="d-flex justify-content-between align-items-center">
               <div>
                 <StaticImage
                   className="clients__logoitem"
@@ -156,13 +156,13 @@ export const ClientsSection = () => {
               </div>
             </div>
 
-            <div className="row justify-content-center align-items-center">
+            <div className="d-flex justify-content-center align-items-center">
               <p className="lead-lg text-center mb-0" style={{ width: "65%" }}>
                 Whether you’re a billion-dollar company,
               </p>
             </div>
 
-            <div className="row justify-content-between align-items-center position-relative">
+            <div className="d-flex justify-content-between align-items-center position-relative">
               <AnimatedLine className="clients__lines--line1 ">
                 <StaticImage alt="" src="./explode-line1.svg" />
               </AnimatedLine>
@@ -190,7 +190,7 @@ export const ClientsSection = () => {
               </div>
             </div>
 
-            <div className="row justify-content-between align-items-center">
+            <div className="d-flex justify-content-between align-items-center">
               <div>
                 <StaticImage
                   className="clients__logoitem"
@@ -214,13 +214,13 @@ export const ClientsSection = () => {
               </div>
             </div>
 
-            <div className="row justify-content-center align-items-center">
+            <div className="d-flex justify-content-center align-items-center">
               <p className="lead-lg text-center mb-0" style={{ width: "80%" }}>
                 ...or a bootstrapped powerhouse,
               </p>
             </div>
 
-            <div className="row justify-content-between align-items-center position-relative">
+            <div className="d-flex justify-content-between align-items-center position-relative">
               <AnimatedLine className="clients__lines--line2">
                 <StaticImage
                   className="clients__logoitem"
@@ -245,7 +245,7 @@ export const ClientsSection = () => {
             </div>
           </div>
 
-          <div className="row justify-content-center pt-5 pt-lg-0 pb-4 pb-lg-0">
+          <div className="d-flex justify-content-center pt-5 pt-lg-0 pb-4 pb-lg-0">
             <p className="clients__logos__text2 lead-lg text-center mb-0">
               ...chances are that we can <br /> help you <span>scale up</span>
             </p>
@@ -253,7 +253,7 @@ export const ClientsSection = () => {
         </div>
 
         {/* Explode */}
-        <div className="clients__explode row justify-content-center position-relative">
+        <div className="clients__explode d-flex justify-content-center position-relative">
           <h1 className="clients__explode__text text-primary">explode</h1>
           <StaticImage
             alt=""
@@ -295,7 +295,7 @@ export const ClientsSection = () => {
         </div>
 
         {/* Footer */}
-        <div className="clients__footer row justify-content-center position-relative text-center mt-4 mt-lg-5">
+        <div className="clients__footer d-flex justify-content-center position-relative text-center mt-4 mt-lg-5">
           <div className="col-lg-7 px-4">
             <p className="lead-lg">
               We build <span className="text-highlight">systems</span>, to tell
