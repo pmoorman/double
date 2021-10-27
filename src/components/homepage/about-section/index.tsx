@@ -2,6 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import "./index.scss";
+import { AnimatedLine, ArrowButton } from "@app/components";
 
 export const AboutSection = () => {
   return (
@@ -30,15 +31,13 @@ export const AboutSection = () => {
             <p className="lead-lg ml-2 mb-0 d-none d-lg-block">?</p>
           </div>
           <div className="d-flex flex-column flex-lg-row mt-5">
-            <a href="/about" className="arrow-btn variant-1">
-              About Us
-            </a>
+            <ArrowButton to="/about">About Us</ArrowButton>
           </div>
         </div>
 
         <div className="about__items">
           {/* Image 1 */}
-          <div className="about__items--item1 row justify-content-end">
+          <div className="about__items--item1 d-flex justify-content-end">
             <div className="d-flex flex-column align-items-end">
               <StaticImage
                 alt=""
@@ -49,7 +48,7 @@ export const AboutSection = () => {
                 We’re marketing super nerds
               </p>
             </div>
-            <div className="about--line1 active-in-view">
+            <AnimatedLine className="about--line1">
               <StaticImage
                 alt=""
                 className="d-none d-lg-block"
@@ -60,11 +59,11 @@ export const AboutSection = () => {
                 className="d-block d-lg-none"
                 src="./about-line1-mobile.png"
               />
-            </div>
+            </AnimatedLine>
           </div>
 
           {/* Image 2 */}
-          <div className="about__items--item2 row">
+          <div className="about__items--item2 d-flex">
             <div className="d-flex flex-column">
               <StaticImage
                 alt=""
@@ -75,7 +74,7 @@ export const AboutSection = () => {
                 In other words, we’re writers with a knack for maths...
               </p>
             </div>
-            <div className="about--line2 active-in-view">
+            <AnimatedLine className="about--line2">
               <StaticImage
                 alt=""
                 className="d-none d-lg-block"
@@ -86,7 +85,7 @@ export const AboutSection = () => {
                 className="d-block d-lg-none"
                 src="./about-line2-mobile.png"
               />
-            </div>
+            </AnimatedLine>
           </div>
 
           {/* Image 3 */}

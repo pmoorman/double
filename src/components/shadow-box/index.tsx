@@ -6,12 +6,14 @@ import * as styles from "./index.module.scss";
 
 export interface ShadowBoxProps extends React.HTMLAttributes<HTMLElement> {
   variant?: "1" | "2";
+  checkbox?: boolean;
 }
 
 export const ShadowBox: FC<ShadowBoxProps> = ({
   variant = "1",
   children,
   className,
+  checkbox,
   ...rest
 }) => {
   const { ref, inView } = useInView({
@@ -23,7 +25,8 @@ export const ShadowBox: FC<ShadowBoxProps> = ({
     className,
     styles.shadowbox,
     styles[`variant${variant}`],
-    { [styles.active]: inView }
+    { [styles.active]: inView },
+    { [styles.check]: checkbox }
   );
 
   return (

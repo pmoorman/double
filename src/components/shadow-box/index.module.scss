@@ -7,7 +7,7 @@
   }
 }
 
-@mixin shadowbox-check($check-color: "light") {
+@mixin shadowbox-check() {
   width: 40px;
   height: 40px;
   &:before {
@@ -26,14 +26,13 @@
   transition: 0.5s;
 }
 
-.shadowbox.variant1 {
+.variant1 {
   @include shadowbox();
-  &-check {
-    @include shadowbox();
-    @include shadowbox-check();
-  }
+}
+.variant2 {
+  @include shadowbox(#359bfa, #fff, #fff);
 }
 
-.shadowbox.variant2 {
-  @include shadowbox(#359bfa, #fff, #fff);
+.check {
+  @include shadowbox-check();
 }

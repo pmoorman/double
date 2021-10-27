@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useInView } from "react-intersection-observer";
 
-import "./index.scss";
 import { AnimatedLine } from "@app/components";
+
+import "./index.scss";
 
 export const ClientsSection = () => {
   return (

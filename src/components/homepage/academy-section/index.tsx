@@ -2,6 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import "./index.scss";
+import { ArrowButton } from "@app/components";
 
 export const AcademySection = () => {
   return (
@@ -51,10 +52,9 @@ export const AcademySection = () => {
             </p>
             <div className="d-flex flex-column flex-lg-row justify-content-center mt-lg-5">
               <hr className="academy__divider d-block d-lg-none" />
-              <a href="/academy" className="arrow-btn variant-3">
-                {" "}
-                Read more{" "}
-              </a>
+              <ArrowButton to="/academy" variant="3">
+                Read more
+              </ArrowButton>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { ShadowBox } from "@app/components";
 import React from "react";
 
 import "./index.scss";
@@ -38,14 +39,14 @@ export const ProcessSection = () => {
 
         {/* List items */}
         <div className="process__items row">
-          <div className="col-lg-8 pr-lg-0">
+          <div className="col-lg-8 pe-lg-0">
             {items.map((item, i) => (
               <div
                 key={item.title + i}
                 className="process__items__item d-flex mb-5"
               >
                 <div>
-                  <div className="shadowbox variant-1-check mr-4 mr-lg-5 active-in-view"></div>
+                  <ShadowBox checkbox className="me-4 me-lg-5" />
                 </div>
                 <p className="process__items__item__text mb-0 lead">
                   {item.title}

@@ -2,6 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import "./index.scss";
+import { ArrowButton } from "@app/components";
 
 export const BottomSection = () => {
   return (
@@ -46,17 +47,13 @@ export const BottomSection = () => {
               live on our laptops).
             </p>
             <div className="d-flex flex-column flex-lg-row align-items-lg-center mt-4 mt-lg-5">
-              <a
-                href="mailto:pieter@double-agency.com"
-                className="arrow-btn variant-1"
-              >
+              <ArrowButton to="mailto:pieter@double-agency.com">
                 Contact us
-              </a>
-              <div className="ml-0 ml-lg-4 mt-4 mt-lg-0">
-                <span className="font-weight-bold">Email</span>:
-                pieter@double-agency.com <br />
-                <span className="font-weight-bold">WhatsApp</span>: +316 230 555
-                90
+              </ArrowButton>
+              <div className="ms-0 ms-lg-4 mt-4 mt-lg-0">
+                <span className="fw-bold">Email</span>: pieter@double-agency.com{" "}
+                <br />
+                <span className="fw-bold">WhatsApp</span>: +316 230 555 90
               </div>
             </div>
           </div>

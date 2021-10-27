@@ -1,3 +1,4 @@
+import { ArrowButton } from "@app/components";
 import React from "react";
 
 import "./index.scss";
@@ -15,7 +16,7 @@ export const PricingSection = () => {
 
         <div className="row">
           {/* Column 1 */}
-          <div className="pricing__content__col1 d-flex flex-column col-lg-5 pr-lg-5">
+          <div className="pricing__content__col1 d-flex flex-column col-lg-5 pe-lg-5">
             <div style={{ flex: 1 }}>
               <h2 className="mb-4">We like simple, transparent pricing</h2>
               <p>
@@ -30,7 +31,7 @@ export const PricingSection = () => {
           </div>
 
           {/* Column 2 */}
-          <div className="col-lg-7">
+          <div className="col-lg-7 position-relative">
             <div className="pricing__content__col2__bg"></div>
             <div className="pricing__content__col2">
               <div className="d-flex flex-column text-right">
@@ -58,9 +59,9 @@ export const PricingSection = () => {
                 <p className="lead-lg">See what it looks like in practice.</p>
               </div>
               <div className="pricing__bottom__button d-flex">
-                <a href="/clients" className="arrow-btn variant-2">
-                  See Examples{" "}
-                </a>
+                <ArrowButton to="/clients" variant="2">
+                  See Examples
+                </ArrowButton>
               </div>
             </div>
           </div>

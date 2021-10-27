@@ -2,13 +2,14 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import "./index.scss";
+import { ArrowButton } from "@app/components";
 
 export const CaseStudiesSection = () => {
   return (
     <>
       {/* Case Studies: Intro */}
       <section id="case-studies" className="case-studies">
-        <div className="case-studies__intro container text-center text-lg-left">
+        <div className="case-studies__intro container text-center text-lg-start">
           <div className="row">
             <div className="col-lg-7 position-relative order-2 order-lg-1">
               <h2 className="case-studies__intro__title mb-3 mb-lg-5">
@@ -19,7 +20,7 @@ export const CaseStudiesSection = () => {
                 <StaticImage alt="" src="./studies-line1.svg" />
               </div>
             </div>
-            <div className="col-lg-5 text-center text-lg-right order-1 order-lg-2 mb-4 mb-lg-0">
+            <div className="col-lg-5 text-center text-lg-end order-1 order-lg-2 mb-4 mb-lg-0">
               <StaticImage
                 alt=""
                 className="case-studies__intro__warningimg"
@@ -70,10 +71,9 @@ export const CaseStudiesSection = () => {
               </p>
               <hr className="case-studies__item__divider" />
               <div className="d-flex flex-column flex-lg-row">
-                <a href="/clients" className="arrow-btn variant-6">
-                  {" "}
-                  Read more{" "}
-                </a>
+                <ArrowButton to="/clients" variant="6">
+                  Read more
+                </ArrowButton>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ export const CaseStudiesSection = () => {
                 src="./studies-alpian-logo.png"
               />
               <p>
-                We’ve been Alpian’s right hand since pre-launch, concepting and
+                We’ve been Alpian’s end hand since pre-launch, concepting and
                 executing on everything that's digital and growth…
               </p>
               <p className="lead-lg">
@@ -116,10 +116,9 @@ export const CaseStudiesSection = () => {
               </p>
               <hr className="case-studies__item__divider" />
               <div className="d-flex flex-column flex-lg-row">
-                <a href="/clients" className="arrow-btn variant-5">
-                  {" "}
-                  Read more{" "}
-                </a>
+                <ArrowButton to="/clients" variant="5">
+                  Read more
+                </ArrowButton>
               </div>
             </div>
           </div>
@@ -145,7 +144,7 @@ export const CaseStudiesSection = () => {
         {/* content */}
         <div className="case-studies__item__content container">
           <div className="row">
-            <div className="col-lg-7 px-lg-5">
+            <div className="col-lg-7 px-lg-5 position-relative">
               <StaticImage
                 alt=""
                 className="mb-4 case-studies__item__logo img-fluid"
@@ -166,10 +165,9 @@ export const CaseStudiesSection = () => {
               </p>
               <hr className="case-studies__item__divider" />
               <div className="d-flex flex-column flex-lg-row">
-                <a href="/clients" className="arrow-btn variant-4">
-                  {" "}
-                  Read more{" "}
-                </a>
+                <ArrowButton to="/clients" variant="4">
+                  Read more
+                </ArrowButton>
               </div>
             </div>
           </div>
