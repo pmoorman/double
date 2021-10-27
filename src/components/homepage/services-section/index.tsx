@@ -1,3 +1,4 @@
+import { ArrowButton } from "@app/components";
 import React from "react";
 
 const items = [
@@ -63,10 +64,10 @@ export const ServicesSection = () => {
         </div>
 
         {/* Services button */}
-        <div className="row flex-column flex-lg-row justify-content-center mt-5 px-3">
-          <a href="/services" className="arrow-btn variant-3">
+        <div className="d-flex flex-column flex-lg-row justify-content-center mt-5 px-3">
+          <ArrowButton variant="3" to="/services">
             Services page
-          </a>
+          </ArrowButton>
         </div>
       </div>
     </section>

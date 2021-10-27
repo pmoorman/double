@@ -1,0 +1,82 @@
+@mixin arrow-btn(
+  $arrow-bg: #359bfa,
+  $arrow-color: "light",
+  $bg: #292f47,
+  $color: #fff
+) {
+  background: $bg;
+  color: $color;
+  &:before {
+    z-index: 1;
+    @if $arrow-color == "dark" {
+      content: url("./arrow-right-dark.svg");
+    } @else {
+      content: url("./arrow-right.svg");
+    }
+  }
+  &:after {
+    content: "";
+    transition: 0.5s;
+    background: $arrow-bg;
+    height: 56px;
+    width: 56px;
+    position: absolute;
+    z-index: -2;
+  }
+  &:hover {
+    @if $arrow-color == "dark" {
+      color: #292f47 !important;
+    } @else {
+      color: #fff !important;
+    }
+    &:after {
+      width: 100% !important;
+    }
+  }
+}
+
+.arrowBtn {
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+}
+.arrowBtn:hover {
+  text-decoration: none;
+}
+.arrowBtn:before {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.arrowBtn.variant1 {
+  @include arrow-btn();
+}
+
+.arrowBtn.variant2 {
+  @include arrow-btn(#fff, "dark", #292f47, #fff);
+}
+
+.arrowBtn.variant3 {
+  @include arrow-btn(#359bfa, "light", #fff, #292f47);
+}
+
+.arrowBtn.variant4 {
+  @include arrow-btn(#632249, "light", #b63e86, #fff);
+}
+
+.arrowBtn.variant5 {
+  @include arrow-btn(#272e31, "light", #265a51, #fff);
+}
+
+.arrowBtn.variant6 {
+  @include arrow-btn(#ea3354, "light", #000000, #fff);
+}
