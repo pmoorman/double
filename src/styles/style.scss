@@ -1,2 +1,12 @@
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+section {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.text-highlight {
+  color: var(--bs-primary);
+  font-weight: bold;
+}

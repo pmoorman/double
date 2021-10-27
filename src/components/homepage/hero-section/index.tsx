@@ -23,7 +23,7 @@ export const HeroSection = () => {
       <div className="container position-relative">
         {/* intro */}
         <div
-          className="hero__intro px-3 px-lg-0 text-center text-lg-left"
+          className="hero__intro px-3 px-lg-0 text-center text-lg-start"
           data-aos="fade-in"
         >
           <h1 className="text-primary font-weight-bold mb-4">
@@ -79,7 +79,7 @@ export const HeroSection = () => {
 
         {/* bottom */}
         <div
-          className="hero__bottom text-center text-lg-left px-3 px-lg-0 d-flex justify-content-end"
+          className="hero__bottom text-center text-lg-start px-3 px-lg-0 d-flex justify-content-end"
           data-aos="fade-in"
         >
           <div className="hero__bottom__inner">

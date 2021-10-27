@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { useInView } from "react-intersection-observer";
 
 import "./index.scss";
 import { AnimatedLine } from "@app/components";
@@ -252,69 +253,191 @@ export const ClientsSection = () => {
           </div>
         </div>
 
-        {/* Explode */}
-        <div className="clients__explode d-flex justify-content-center position-relative">
-          <h1 className="clients__explode__text text-primary">explode</h1>
-          <StaticImage
-            alt=""
-            className="clients__explode__bg position-absolute"
-            src="./explode-stroke.svg"
-          />
-        </div>
+        <Explode />
+        <Circles />
+      </div>
+    </section>
+  );
+};
 
-        {/* Circles */}
-        <div className="row justify-content-center">
-          <div className="clients__circles position-relative">
-            <div className="clients__circles--circle1">
-              <h3 className="clients__circles--circle1__text">Stories</h3>
-            </div>
-            <div className="clients__circles--circle2">
-              <h3
-                className="clients__circles--circle2__text"
-                data-animationend-text="Systems & Stories"
-              >
-                Systems
-              </h3>
-              <div className="clients__circles__curved-text">
-                <div className="clients__circles__curved-text--wrapper">
-                  <StaticImage
-                    alt=""
-                    className="clients__circles__curved-text--mobile d-lg-none d-block"
-                    src="./explode-curved-text-mobile.png"
-                  />
+const Explode = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
 
-                  <StaticImage
-                    alt=""
-                    className="clients__circles__curved-text--desktop d-none d-lg-block"
-                    src="./explode-curved-text.png"
-                  />
-                </div>
+  useEffect(() => {
+    if (inView) {
+      (async () => {
+        const textClass = "clients__logos__text2";
+        const explodeClass = "clients__explode";
+
+        const sleep = (ms) => {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        };
+
+        document.querySelector(`.${textClass}`).classList.add("active");
+        await sleep(100);
+        document.querySelector(`.${explodeClass}`).classList.add("active");
+      })();
+    }
+  }, [inView]);
+
+  return (
+    <>
+      {/* Explode */}
+      <div
+        ref={ref}
+        className="clients__explode d-flex justify-content-center position-relative"
+      >
+        <h1 className="clients__explode__text text-primary">explode</h1>
+        <StaticImage
+          alt=""
+          className="clients__explode__bg position-absolute"
+          src="./explode-stroke.svg"
+        />
+      </div>
+    </>
+  );
+};
+
+const Circles = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      (async () => {
+        const footer = document.querySelector(".clients__footer");
+        const circle1 = document.querySelector(".clients__circles--circle1");
+        const circle2 = document.querySelector(".clients__circles--circle2");
+        const circle1TextEl = document.querySelector(
+          ".clients__circles--circle1__text"
+        );
+        const circle2TextEl = document.querySelector(
+          ".clients__circles--circle2__text"
+        );
+        const curvedText = document.querySelector(
+          ".clients__circles__curved-text--wrapper"
+        );
+
+        const sleep = (ms) => {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        };
+
+        const animateCircle = (circle, startPoint, duration) => {
+          circle.animate(
+            [
+              { transform: `translateX(${startPoint})`, opacity: 0 },
+              { transform: "translateX(0%)", opacity: 1 },
+            ],
+            { duration, fill: "both" }
+          );
+        };
+
+        const animateCircleText = (textEl, duration) => {
+          textEl.animate([{ opacity: 1 }, { opacity: 0 }, { opacity: 1 }], {
+            duration,
+            fill: "both",
+          });
+        };
+
+        const animateCurvedText = async (delayDuration) => {
+          await sleep(delayDuration);
+          curvedText.animate(
+            [
+              { opacity: 0, transform: "rotate(45deg)" },
+              { opacity: 1, transform: "rotate(0)" },
+            ],
+            { duration: 1000, fill: "both" }
+          );
+        };
+
+        const fadeIn = async (el, duration) => {
+          el.animate([{ opacity: 0 }, { opacity: 1 }], {
+            duration,
+            fill: "both",
+          });
+        };
+
+        const changeCircle2Text = () => {
+          circle2TextEl.innerHTML = circle2TextEl.getAttribute(
+            "data-animationend-text"
+          );
+        };
+
+        animateCircle(circle1, "60%", 1500);
+        animateCircle(circle2, "-60%", 1500);
+        fadeIn(footer, 2250);
+
+        // Should be half of animateCircle anmimation
+        await sleep(750);
+
+        animateCircleText(circle1TextEl, 750);
+        animateCircleText(circle2TextEl, 750);
+        animateCurvedText(200);
+
+        // Should be half of animateCircleText anmimation
+        await sleep(375);
+
+        changeCircle2Text();
+      })();
+    }
+  }, [inView]);
+  return (
+    <>
+      {/* Circles */}
+      <div className="row justify-content-center">
+        <div ref={ref} className="clients__circles position-relative">
+          <div className="clients__circles--circle1">
+            <h3 className="clients__circles--circle1__text">Stories</h3>
+          </div>
+          <div className="clients__circles--circle2">
+            <h3
+              className="clients__circles--circle2__text"
+              data-animationend-text="Systems & Stories"
+            >
+              Systems
+            </h3>
+            <div className="clients__circles__curved-text">
+              <div className="clients__circles__curved-text--wrapper">
+                <StaticImage
+                  alt=""
+                  className="clients__circles__curved-text--mobile d-lg-none d-block"
+                  src="./explode-curved-text-mobile.png"
+                />
+
+                <StaticImage
+                  alt=""
+                  className="clients__circles__curved-text--desktop d-none d-lg-block"
+                  src="./explode-curved-text.png"
+                />
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Footer */}
-        <div className="clients__footer d-flex justify-content-center position-relative text-center mt-4 mt-lg-5">
-          <div className="col-lg-7 px-4">
-            <p className="lead-lg">
-              We build <span className="text-highlight">systems</span>, to tell
-              your
-              <span className="text-highlight">story</span>
-            </p>
-            <p className="mb-0">
-              The ultimate salesperson happens to be
-              <span className="text-highlight">an intoxicating story</span>. The
-              key to repeatable outputs is{" "}
-              <span className="text-highlight">systems</span>. Combine them both
-              and you get (deadly)
-              <span className="text-highlight">
-                story-powered growth systems.
-              </span>
-            </p>
-          </div>
+      {/* Footer */}
+      <div className="clients__footer d-flex justify-content-center position-relative text-center mt-4 mt-lg-5">
+        <div className="col-lg-7 px-4">
+          <p className="lead-lg">
+            We build <span className="text-highlight">systems</span>, to tell
+            your
+            <span className="text-highlight">story</span>
+          </p>
+          <p className="mb-0">
+            The ultimate salesperson happens to be
+            <span className="text-highlight">an intoxicating story</span>. The
+            key to repeatable outputs is{" "}
+            <span className="text-highlight">systems</span>. Combine them both
+            and you get (deadly)
+            <span className="text-highlight">
+              story-powered growth systems.
+            </span>
+          </p>
         </div>
       </div>
-    </section>
+    </>
   );
 };
