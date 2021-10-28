@@ -1,18 +1,31 @@
 import React, { FC, ReactNode } from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import * as styles from "./index.module.scss";
+// helper
+const Image: FC<{ image: { childImageSharp?: any; publicURL: string } }> = ({
+  image,
+}) => {
+  console.log({ image });
+  if (!image) return null;
+
+  if (image.childImageSharp) {
+    return <GatsbyImage image={getImage(image.childImageSharp)} alt="" />;
+  }
+
+  return <img src={image.publicURL} alt="" />;
+};
 
 export interface ClientBoxProps {
   size?: 1 | 2 | 3;
   title: string;
-  logo: ReactNode;
+  logo: { childImageSharp?: any; publicURL: string };
   industry: string;
   services: string[];
   description: string;
   testimonialName?: string;
   testimonialJobtitle?: string;
   backgroundColor?: string;
-  backgroundImage?: ReactNode;
+  backgroundImage?: { childImageSharp?: any; publicURL: string };
   backgroundImageMobile?: ReactNode;
   backgroundImagePosition?: "top" | "bottom";
   arrow: "dark" | "light";
@@ -43,24 +56,26 @@ const ClientBoxSm: FC<ClientBoxProps> = (props) => {
     services,
   } = props;
   return (
-    <div className="client-box client-box__sm">
-      <div className="client-box__logo" style={{ backgroundColor }}>
-        {pageUrl && (
-          <a
-            href="{{client.page_url}}"
-            className="client-box__logo__arrow d-lg-flex d-none"
-          >
-            <img
-              className="client-box__logo__arrow--non_hover"
-              src="/assets/images/clients/link_arrow-{{client.arrow}}.svg"
-            />
-            <div className="client-box__logo__arrow--hover">
-              <img src="/assets/images/clients/link_arrow-light.svg" />
-              <span>See Case Study</span>
-            </div>
-          </a>
-        )}
-        {logo}
+    <>
+      <div className="client-box client-box__sm">
+        <div className="client-box__logo" style={{ backgroundColor }}>
+          {pageUrl && (
+            <a
+              href="{{client.page_url}}"
+              className="client-box__logo__arrow d-lg-flex d-none"
+            >
+              <img
+                className="client-box__logo__arrow--non_hover"
+                src="/assets/images/clients/link_arrow-{{client.arrow}}.svg"
+              />
+              <div className="client-box__logo__arrow--hover">
+                <img src="/assets/images/clients/link_arrow-light.svg" />
+                <span>See Case Study</span>
+              </div>
+            </a>
+          )}
+          <Image image={logo} />
+        </div>
         <div className="client-box__content">
           <h3 className="client-box__content__title">{title}</h3>
           <p className="client-box__content__industry">{industry}</p>
@@ -89,7 +104,7 @@ const ClientBoxSm: FC<ClientBoxProps> = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -109,7 +124,9 @@ const ClientBoxMd: FC<ClientBoxProps> = (props) => {
 
   return (
     <div className="client-box client-box__md">
-      <div className="client-box__md__bg">{backgroundImage}</div>
+      <div className="client-box__md__bg">
+        <Image image={backgroundImage} />
+      </div>
       <div className="client-box__logo" style={{ backgroundColor }}>
         {pageUrl && (
           <a
@@ -126,8 +143,7 @@ const ClientBoxMd: FC<ClientBoxProps> = (props) => {
             </div>
           </a>
         )}
-
-        {logo}
+        <Image image={logo} />
       </div>
       <div className="client-box__content">
         <h3 className="client-box__content__title">{title}</h3>
@@ -189,7 +205,10 @@ const ClientBoxLg: FC<ClientBoxProps> = (props) => {
   } = props;
 
   return (
-    <div className="client-box__lg">
+    <div
+      className="client-box__lg"
+      style={{ backgroundImage: `url('${backgroundImage.publicURL}')` }}
+    >
       <div
         className="mobile-bg d-block d-lg-none"
         style={{ backgroundImage: `url('${backgroundImageMobile}')` }}
@@ -198,7 +217,7 @@ const ClientBoxLg: FC<ClientBoxProps> = (props) => {
         <div className="row">
           <div className="col-lg-4 px-0">
             <div className="client-box__logo" style={{ backgroundColor }}>
-              {logo}
+              <Image image={logo} />
             </div>
           </div>
           <div className="col-lg-8 pl-4 pr-0">

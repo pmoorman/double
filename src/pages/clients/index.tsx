@@ -1,5 +1,8 @@
-import { ClientBox, ClientBoxProps } from "@app/components/client-box";
 import React from "react";
+import { graphql, PageProps } from "gatsby";
+import { Col } from "react-bootstrap";
+
+import { ClientBox, ClientBoxProps } from "@app/components/client-box";
 
 import "./index.scss";
 
@@ -19,10 +22,15 @@ const services = [
 ];
 const industries = ["All", "SaaS", "Mobile", "FinTech", "E-commerce", "B2B"];
 
-const clients: ClientBoxProps[] = [
+interface Client extends Omit<ClientBoxProps, "logo" | "backgroundImage"> {
+  logo: string;
+  backgroundImage?: string;
+}
+
+const clients: Client[] = [
   {
     title: "TikTok",
-    logo: "/assets/images/clients/tiktok-logo.jpg",
+    logo: "tiktok-logo",
     industry: "Mobile",
     services: ["Webdesign", "Copywriting", "Onboarding"],
     description:
@@ -30,15 +38,14 @@ const clients: ClientBoxProps[] = [
     testimonialName: null,
     testimonialJobtitle: null,
     backgroundColor: "#000",
-    backgroundImage: "/assets/images/clients/tiktok_background.jpg",
-    backgroundImageMobile:
-      "/assets/images/clients/tiktok_background-mobile.jpg",
+    backgroundImage: "tiktok_background",
+    backgroundImageMobile: "tiktok_background-mobile",
     arrow: "light",
     size: 3,
   },
   {
     title: "Sendcloud",
-    logo: "/assets/images/clients/sendcloud-logo.png",
+    logo: "sendcloud-logo",
     industry: "SaaS",
     services: ["Copywriting", "Training", "Content marketing"],
     description:
@@ -49,7 +56,7 @@ const clients: ClientBoxProps[] = [
   },
   {
     title: "Peg",
-    logo: "/assets/images/clients/peg-logo.svg",
+    logo: "peg-logo",
     industry: "SaaS",
     services: ["B2B Lead Generation", "Copywriting", "Activation"],
     description:
@@ -60,7 +67,7 @@ const clients: ClientBoxProps[] = [
   },
   {
     title: "InsectoCycle",
-    logo: "/assets/images/clients/insecto_cycle-logo.svg",
+    logo: "insecto_cycle-logo",
     industry: "B2B",
     services: [
       "Webdesign",
@@ -93,13 +100,13 @@ const clients: ClientBoxProps[] = [
       "Alpian aims to change banking and investing in the most competitive market in the world... Switzerland. We are building explosive momentum to gain a piece of that market.",
     testimonialName: null,
     testimonialJobtitle: null,
-    backgroundImage: "/assets/images/clients/Alpian_background.svg",
+    backgroundImage: "Alpian_background",
     arrow: "light",
     size: 2,
   },
   {
     title: "Switch.CM",
-    logo: "/assets/images/clients/switchcm-logo.svg",
+    logo: "switchcm-logo",
     industry: "SaaS",
     services: ["B2B Lead Generation", "Onboarding", "Copywriting", "Strategy"],
     description:
@@ -110,7 +117,7 @@ const clients: ClientBoxProps[] = [
   },
   {
     title: "Klooker",
-    logo: "/assets/images/clients/klooker-logo.svg",
+    logo: "klooker-logo",
     industry: "E-commerce",
     services: [
       "Webdesign",
@@ -126,15 +133,14 @@ const clients: ClientBoxProps[] = [
     testimonialName: "Dennis Kamst",
     testimonialJobtitle: "Founder & CEO at klooker",
     backgroundColor: "#725D87",
-    backgroundImage: "/assets/images/clients/klooker_background.jpg",
-    backgroundImageMobile:
-      "/assets/images/clients/klooker_background-mobile.jpg",
+    backgroundImage: "klooker_background",
+    backgroundImageMobile: "klooker_background-mobile",
     arrow: "light",
     size: 3,
   },
   {
     title: "BABB",
-    logo: "/assets/images/clients/babb-logo.svg",
+    logo: "babb-logo",
     industry: "FinTech",
     services: ["Strategy", "Copywriting", "Paid Ads"],
     description:
@@ -145,7 +151,7 @@ const clients: ClientBoxProps[] = [
   },
   {
     title: "Elugie",
-    logo: "/assets/images/clients/elugie-logo.svg",
+    logo: "elugie-logo",
     industry: "B2B",
     services: [
       "Strategy",
@@ -156,14 +162,14 @@ const clients: ClientBoxProps[] = [
     ],
     description:
       "Elugie are set on selling 100,000 of their hydrogen power plants by 2030. Read the case study to see exactly how they got on the path to selling at scale!",
-    backgroundImage: "/assets/images/clients/elugie_background.svg",
+    backgroundImage: "elugie_background",
     backgroundImagePosition: "bottom",
     arrow: "light",
     size: 2,
   },
   {
     title: "Core Life Analytics",
-    logo: "/assets/images/clients/core_life_analytics-logo.svg",
+    logo: "core_life_analytics-logo",
     industry: "SaaS",
     services: [
       "Webdesign",
@@ -180,7 +186,7 @@ const clients: ClientBoxProps[] = [
   },
   {
     title: "Diesel",
-    logo: "/assets/images/clients/diesel-logo.svg",
+    logo: "diesel-logo",
     industry: "E-commerce",
     services: ["Strategy", "Copywriting", "Analytics"],
     description:
@@ -191,7 +197,7 @@ const clients: ClientBoxProps[] = [
   },
   {
     title: "Sigrow",
-    logo: "/assets/images/clients/sigrow-logo.svg",
+    logo: "sigrow-logo",
     industry: "B2B",
     services: [
       "Webdesign",
@@ -208,7 +214,19 @@ const clients: ClientBoxProps[] = [
   },
 ];
 
-export const ClientsPage = () => {
+export interface ClientsPageProps {
+  allFile: {
+    edges: {
+      node: {
+        childImageSharp?: any;
+        name: string;
+        publicURL: string;
+      };
+    }[];
+  };
+}
+
+export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
   const rows = clients.reduce(
     (prev, curr) => {
       const lastIndex = prev.length - 1;
@@ -221,10 +239,9 @@ export const ClientsPage = () => {
       }
       return prev;
     },
-    [[]] as Array<ClientBoxProps[]>
+    [[]] as Array<Client[]>
   );
 
-  console.log({ rows });
   return (
     <div id="clients-page">
       {/* Hero */}
@@ -245,11 +262,8 @@ export const ClientsPage = () => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <img
-                    className="mr-2"
-                    src="/assets/images/clients/chevron-down.svg"
-                  />
-                  #<span v-html="selectedServiceLabel()"></span>
+                  <img className="mr-2" src="chevron-down" />#
+                  <span v-html="selectedServiceLabel()"></span>
                 </button>
                 <div
                   className="dropdown-menu"
@@ -299,7 +313,7 @@ export const ClientsPage = () => {
                   Show <span v-html="selectedIndustry"></span>
                   <img
                     className="mr-2 industry_filters-mobile__mainbtn__arrow"
-                    src="/assets/images/clients/chevron-down-light.svg"
+                    src="chevron-down-light"
                   />
                 </button>
                 <div
@@ -326,15 +340,32 @@ export const ClientsPage = () => {
       <section className="client-boxes pt-0">
         {rows.map((row, i) => {
           if (row.length === 1) {
-            return <ClientBox {...row[0]} />;
+            const logo = data.allFile.edges.find(
+              (e) => e.node.name === row[0].logo
+            )?.node;
+            const bg = data.allFile.edges.find(
+              (e) => e.node.name === row[0].backgroundImage
+            )?.node;
+            return <ClientBox {...row[0]} logo={logo} backgroundImage={bg} />;
           }
 
           return (
             <div className="container">
               <div className="row">
-                {row.map((client, ii) => (
-                  <ClientBox {...client} />
-                ))}
+                {row.map((client, ii) => {
+                  const width = client.size === 2 ? 8 : 4;
+                  const logo = data.allFile.edges.find(
+                    (e) => e.node.name === client.logo
+                  )?.node;
+                  const bg = data.allFile.edges.find(
+                    (e) => e.node.name === client.backgroundImage
+                  )?.node;
+                  return (
+                    <Col lg={width}>
+                      <ClientBox {...client} logo={logo} backgroundImage={bg} />
+                    </Col>
+                  );
+                })}
               </div>
             </div>
           );
@@ -345,3 +376,19 @@ export const ClientsPage = () => {
 };
 
 export default ClientsPage;
+
+export const query = graphql`
+  query ClientsPageQuery {
+    allFile(filter: { relativeDirectory: { eq: "clients" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData(width: 360)
+          }
+          name
+          publicURL
+        }
+      }
+    }
+  }
+`;
