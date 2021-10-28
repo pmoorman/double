@@ -2,7 +2,10 @@ import React from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col } from "react-bootstrap";
 
-import { ClientBox, ClientBoxProps } from "@app/components/client-box";
+import {
+  ClientBox,
+  ClientBoxProps,
+} from "@app/page-components/clients/client-box";
 
 import "./index.scss";
 
