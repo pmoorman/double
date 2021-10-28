@@ -1,20 +1,23 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import * as styles from "./index.module.scss";
+import "./index.scss";
+import { AnimatedLine } from "@app/components";
 
 export const HeroSection = () => {
   return (
-    <section id="hero" className={styles.hero}>
+    <section id="hero" className="hero">
       <div className="container position-relative">
-        <img
-          className="bggraphic-item--desktop bggraphic-item--desktop--1"
+        <StaticImage
+          alt=""
+          width={141}
+          className="hero__bggraphic-item--desktop hero__bggraphic-item--desktop--1"
           src="./hero-graphic-2.png"
         />
 
         {/* intro */}
         <div
-          className="intro row px-3 px-lg-0 text-center text-lg-left"
+          className="intro d-flex px-3 px-lg-0 text-center text-lg-start"
           data-aos="fade-in"
         >
           <div className="col-lg-5">
@@ -27,15 +30,18 @@ export const HeroSection = () => {
 
         {/* Graphics mobile 1 */}
         <div className="hero__bggraphics-mobile--1 position-relative">
-          <img
+          <StaticImage
+            alt=""
             className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--1"
             src="./hero-graphic-2.png"
           />
-          <img
+          <StaticImage
+            alt=""
             className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--2"
             src="./hero-img-2.jpg"
           />
-          <img
+          <StaticImage
+            alt=""
             className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--3"
             src="./hero-img-4.jpg"
           />
@@ -43,10 +49,10 @@ export const HeroSection = () => {
 
         {/* text 1 */}
         <div
-          className="hero__text--1 row text-center text-lg-left px-4 px-lg-3"
+          className="hero__text--1 d-flex text-center text-lg-start px-4 px-lg-3"
           data-aos="fade-in"
         >
-          <div className="col-lg-6 pr-lg-5">
+          <div className="col-lg-6 pe-lg-5">
             <p className="lead">
               If you’ve already dreamed up a marketing plan,
               <span className="text-highlight">we’ll bring it to life</span>.
@@ -56,37 +62,41 @@ export const HeroSection = () => {
             <StaticImage alt="" src="./hero-graphic-3.png" />
             <StaticImage alt="" src="./hero-img-4.jpg" />
           </div>
-          <div className="hero__line--1 animated-line active-in-view">
+          <AnimatedLine className="hero__line--1">
             <StaticImage alt="" src="./hero-line-1.png" />
-          </div>
+          </AnimatedLine>
         </div>
 
         {/* Graphics mobile 2 */}
         <div className="hero__bggraphics-mobile--2 position-relative">
-          <img
+          <StaticImage
+            alt=""
             className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--4"
             src="./hero-graphic-3.png"
           />
-          <img
+          <StaticImage
+            alt=""
             className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--5"
             src="./hero-img-5.jpg"
           />
-          <img
+          <StaticImage
+            alt=""
             className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--6"
             src="./hero-img-1.jpg"
           />
-          <img
+          <StaticImage
+            alt=""
             className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--7"
             src="./hero-graphic-1.png"
           />
-          <div className="hero__line--1-mobile animated-line active-in-view">
+          <AnimatedLine className="hero__line--1-mobile">
             <StaticImage alt="" src="./hero-line-1-mobile.svg" />
-          </div>
+          </AnimatedLine>
         </div>
 
         {/* text 2 */}
         <div
-          className="hero__text--2 row justify-content-end  text-center text-lg-left px-4 px-lg-3"
+          className="hero__text--2 d-flex justify-content-end  text-center text-lg-start px-4 px-lg-3"
           data-aos="fade-in"
         >
           <div className="col-lg-6 px-0 px-lg-3">
@@ -99,17 +109,18 @@ export const HeroSection = () => {
               for you.
             </p>
           </div>
-          <div className="hero__line--2 animated-line active-in-view">
+          <AnimatedLine className="hero__line--2">
             <StaticImage alt="" src="./hero-line-2.png" />
-          </div>
+          </AnimatedLine>
         </div>
 
         {/* Graphics mobile 3 */}
         <div className="hero__bggraphics-mobile--3 position-relative">
-          <div className="hero__line--2-mobile animated-line active-in-view">
+          <AnimatedLine className="hero__line--2-mobile">
             <StaticImage alt="" src="./hero-line-2-mobile.svg" />
-          </div>
-          <img
+          </AnimatedLine>
+          <StaticImage
+            alt=""
             className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--8"
             src="./hero-img-3.jpg"
           />
@@ -130,8 +141,8 @@ export const HeroSection = () => {
         </div>
 
         {/* text 3 */}
-        <div className="hero__text--3 row" data-aos="fade-in">
-          <div className="col-lg-7 pr-lg-5">
+        <div className="hero__text--3 d-flex" data-aos="fade-in">
+          <div className="col-lg-7 pe-lg-5">
             <div className="shadowbox variant-1-check mb-4 active-in-view"></div>
             <h2>
               We help you systematically drive traffic...
@@ -147,7 +158,7 @@ export const HeroSection = () => {
 
         {/* text 4 & 5 */}
         <div
-          className="hero__text--4 row justify-content-between"
+          className="hero__text--4 d-flex justify-content-between"
           data-aos="fade-in"
         >
           <div className="col-lg-6">
@@ -157,20 +168,20 @@ export const HeroSection = () => {
               & storytelling…
             </p>
           </div>
-          <div className="col-lg-5 pr-lg-0">
+          <div className="col-lg-5 pe-lg-0">
             <div className="shadowbox variant-1-check mb-4 active-in-view"></div>
             <p className="lead-lg">…and turn them into active product users.</p>
           </div>
-          <div className="hero__line--3 animated-line active-in-view">
+          <AnimatedLine className="hero__line--3">
             <StaticImage alt="" src="./hero-line-3.png" />
-          </div>
+          </AnimatedLine>
         </div>
 
         {/* Graphics mobile 4 */}
         <div className="hero__bggraphics-mobile--3 position-relative">
-          <div className="hero__line--3-mobile animated-line active-in-view">
+          <AnimatedLine className="hero__line--3-mobile">
             <StaticImage alt="" src="./hero-line-3-mobile.svg" />
-          </div>
+          </AnimatedLine>
         </div>
 
         {/* Text 6 */}

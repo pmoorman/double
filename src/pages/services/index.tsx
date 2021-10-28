@@ -6,6 +6,7 @@ import {
   InfrastructureSection,
   MarketingSection,
   PerformanceSection,
+  ClientsSection,
 } from "@app/page-components/services";
 
 export const ServicesPage = () => {
@@ -16,6 +17,7 @@ export const ServicesPage = () => {
       <FunnelsSection />
       <MarketingSection />
       <InfrastructureSection />
+      <ClientsSection />
     </>
   );
 };

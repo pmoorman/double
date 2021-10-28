@@ -1,6 +1,8 @@
 import React, { FC, ReactNode } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
+import "./index.scss";
+
 // helper
 const Image: FC<{ image: { childImageSharp?: any; publicURL: string } }> = ({
   image,
