@@ -1,0 +1,51 @@
+.item {
+  border-bottom: 1px solid rgba(41, 47, 71, 0.2);
+  margin-bottom: 60px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+  }
+}
+
+.button {
+  padding: 0;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  line-height: 27px;
+  width: 100%;
+  border: 0;
+  background: 0;
+}
+
+.arrow {
+  transition: 0.5s;
+  transform: rotate(180deg);
+}
+
+.arrowOpen {
+  transform: rotate(0);
+}
+
+.content {
+  padding-bottom: 25px;
+  font-weight: normal;
+}
+
+.backgroundDark {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  .collapse {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .collapse.show {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  .content,
+  button {
+    color: #fff;
+  }
+}

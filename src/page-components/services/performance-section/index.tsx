@@ -1,7 +1,11 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import cn from "classnames";
 
 import { MultiCollapse } from "@app/components";
 import { Navigation } from "../navigation";
+
+import * as styles from "./index.module.scss";
 
 const performance = [
   {
@@ -32,17 +36,16 @@ const performance = [
 
 export const PerformanceSection = () => {
   return (
-    <section id="performance" className="performance">
+    <section id="performance" className={styles.performance}>
       <div className="container">
-        <div className="performance__upper row align-items-end px-3 px-lg-0">
+        <div
+          className={cn(styles.upper, "d-flex align-items-end px-3 px-lg-0")}
+        >
           <div className="col">
-            <Navigation />
+            <Navigation index={0} />
           </div>
           <div>
-            <img
-              className="img-fluid"
-              src="/assets/images/services/performance.svg"
-            />
+            <StaticImage alt="" className="img-fluid" src="./performance.svg" />
           </div>
         </div>
         <MultiCollapse items={performance} />

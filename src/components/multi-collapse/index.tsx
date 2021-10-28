@@ -1,10 +1,11 @@
 import React, { FC, useState } from "react";
 import { Collapse } from "react-bootstrap";
+import cn from "classnames";
 
 import darkArrow from "./icon-chevron_up-dark.svg";
 import lightArrow from "./icon-chevron_up-light.svg";
 
-import "./index.scss";
+import * as styles from "./index.module.scss";
 
 const indexes = [2, 0, 1, 2];
 
@@ -24,9 +25,14 @@ export function createChunks<T>(arr: T[]): T[][] {
   );
 }
 
+export interface CollapseItem {
+  title: string;
+  body: string;
+}
+
 export interface MultiCollapseProps {
   background?: "light" | "dark";
-  items: { title: string; body: string }[];
+  items: CollapseItem[];
 }
 
 export const MultiCollapse: FC<MultiCollapseProps> = ({
@@ -35,36 +41,41 @@ export const MultiCollapse: FC<MultiCollapseProps> = ({
 }) => {
   const [selected, setSelected] = useState<null | string>();
   const chunks = createChunks(items);
-
   const arrow = background === "dark" ? lightArrow : darkArrow;
+
+  const renderItem = (item: CollapseItem, i: number) => {
+    const isOpen = selected === item.title;
+    const itemClass = cn(styles.item, {
+      [styles.backgroundDark]: background === "dark",
+    });
+    const arrowClass = cn(styles.arrow, {
+      [styles.arrowOpen]: isOpen,
+    });
+
+    const onClick = () => {
+      setSelected((v) => (v === item.title ? null : item.title));
+    };
+
+    return (
+      <div key={"item" + i} className={itemClass}>
+        <button className={styles.button} onClick={onClick}>
+          {item.title}
+          <img className={arrowClass} src={arrow} />
+        </button>
+        <Collapse in={isOpen}>
+          <div>
+            <div className={styles.content}>{item.body}</div>
+          </div>
+        </Collapse>
+      </div>
+    );
+  };
 
   return (
     <div className="row">
       {chunks.map((chunk, i) => (
         <div key={"col" + i} className="col-lg-4 px-lg-2">
-          {chunk.map((item, ii) => (
-            <div
-              key={"item" + ii}
-              className="collapse-variant-1 background-{{bg}}"
-            >
-              <button
-                className="btn btn-block text-left"
-                type="button"
-                data-toggle="collapse"
-                onClick={() =>
-                  setSelected((v) => (v === item.title ? null : item.title))
-                }
-              >
-                {item.title}
-                <img src={arrow} />
-              </button>
-              <Collapse in={selected === item.title}>
-                <div>
-                  <div className="collapse__content">{item.body}</div>
-                </div>
-              </Collapse>
-            </div>
-          ))}
+          {chunk.map(renderItem)}
         </div>
       ))}
     </div>

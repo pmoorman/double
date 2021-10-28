@@ -1,13 +1,14 @@
 import React from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col } from "react-bootstrap";
+import cn from "classnames";
 
 import {
   ClientBox,
   ClientBoxProps,
 } from "@app/page-components/clients/client-box";
 
-import "./index.scss";
+import * as styles from "./index.module.scss";
 
 const services = [
   "All",
@@ -256,9 +257,12 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
               <h1 className="mb-4 mb-lg-0">Clients</h1>
 
               {/* Service filters */}
-              <div className="service_filters dropdown d-none d-lg-block">
+              <div className="dropdown d-none d-lg-block">
                 <button
-                  className="service_filters__btn btn btn-light dropdown-toggle"
+                  className={cn(
+                    styles.serviceFiltersBtn,
+                    "btn btn-light dropdown-toggle"
+                  )}
                   type="button"
                   id="service_filters"
                   data-toggle="dropdown"
@@ -286,14 +290,17 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
           <div className="row">
             <div className="col-lg-12">
               <div
-                className="industry_filters btn-group d-none d-lg-flex"
+                className={cn(
+                  styles.industryFilters,
+                  "btn-group d-none d-lg-flex"
+                )}
                 role="group"
               >
                 {industries.map((industry, i) => (
                   <button
                     key={industry}
                     type="button"
-                    className="industry_filters__item"
+                    className={styles.industryFiltersItem}
                   >
                     {industry}
                   </button>

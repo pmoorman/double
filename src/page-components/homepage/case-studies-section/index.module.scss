@@ -1,4 +1,4 @@
-.case-studies {
+.caseStudies {
   &__intro {
     &__title {
       @include media-breakpoint-down(md) {
@@ -55,12 +55,12 @@
   }
 }
 
-#case-studies-tiktok {
+.caseStudiesTiktok {
   padding-bottom: 25px;
   @include media-breakpoint-down(md) {
     margin-bottom: 25px;
   }
-  .case-studies__item__content {
+  .caseStudies__item__content {
     padding-top: 40px;
     position: relative;
     left: 105px;
@@ -74,12 +74,12 @@
   }
 }
 
-#case-studies-alpian {
+.caseStudiesAlpian {
   @include media-breakpoint-down(md) {
     padding-top: 160px;
     padding-bottom: 0;
   }
-  .case-studies__item__content {
+  .caseStudies__item__content {
     padding-top: 340px;
     .text-highlight {
       color: #292f47;
@@ -90,12 +90,12 @@
   }
 }
 
-#case-studies-cla {
+.caseStudiesCla {
   padding-bottom: 250px;
   @include media-breakpoint-down(md) {
     padding-bottom: 100px;
   }
-  .case-studies__item {
+  .caseStudies__item {
     &__logo {
       @include media-breakpoint-down(md) {
         width: 201px;
