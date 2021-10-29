@@ -1,6 +1,6 @@
 .clients {
   &__lines {
-    &--line1 {
+    &_line1 {
       position: absolute;
       left: 45%;
       top: 130px;
@@ -11,7 +11,7 @@
         top: -7px;
       }
     }
-    &--line2 {
+    &_line2 {
       position: absolute;
       bottom: 100px;
       right: 19%;
@@ -37,12 +37,12 @@
         }
       }
     }
-    &--desktop {
+    &_desktop {
       > .d-flex {
         margin-bottom: 100px;
       }
     }
-    &--mobile {
+    &_mobile {
       width: 140%;
       position: relative;
       left: -20%;
@@ -102,17 +102,17 @@
     margin-bottom: 50px;
 
     &__curved-text {
-      &--mobile {
+      &_mobile {
         position: absolute;
         bottom: -85px;
         left: -15px;
       }
-      &--desktop {
+      &_desktop {
         position: absolute;
         bottom: -60px;
         left: -70px;
       }
-      &--wrapper {
+      &_wrapper {
         width: 100%;
         position: absolute;
         left: 0;
@@ -125,7 +125,7 @@
       }
     }
 
-    & [class*="--circle"] {
+    & [class*="_circle"] {
       width: 528px;
       height: 528px;
       color: #fff;
@@ -139,17 +139,17 @@
       }
     }
 
-    &--circle1 {
-      background: var(--secondary);
+    &_circle1 {
+      background: var(--bs-secondary);
       transform: translateX(60%);
       opacity: 0;
     }
 
-    &--circle2 {
+    &_circle2 {
       position: absolute;
       top: 0;
       left: -50px;
-      background: var(--primary);
+      background: var(--bs-primary);
       transform: translateX(-60%);
       opacity: 0;
     }

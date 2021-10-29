@@ -1,23 +1,26 @@
 import React, { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useInView } from "react-intersection-observer";
+import cn from "classnames";
 
 import { AnimatedLine } from "@app/components";
 
-import "./index.scss";
+import * as styles from "./index.module.scss";
 
 export const ClientsSection = () => {
   return (
-    <section id="clients" className="clients">
+    <section id="clients" className={styles.clients}>
       <div className="container">
         <div className="position-relative">
-          <div className="clients__logos--desktop d-none d-lg-block">
+          <div
+            className={cn(styles.clients__logos_desktop, "d-none d-lg-block")}
+          >
             {/* Lines */}
-            <div className="clients__lines">
-              <AnimatedLine className="clients__lines--line1 ">
+            <div className={styles.clients__lines}>
+              <AnimatedLine className={styles.clients__lines_line1}>
                 <StaticImage src="./explode-line1.svg" alt="" />
               </AnimatedLine>
-              <AnimatedLine className="clients__lines--line2 ">
+              <AnimatedLine className={styles.clients__lines_line2}>
                 <StaticImage src="./explode-line2.svg" alt="" />
               </AnimatedLine>
             </div>
@@ -25,7 +28,7 @@ export const ClientsSection = () => {
             <div className="d-flex justify-content-around align-items-center">
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-tiktok.png"
                   alt=""
                 />
@@ -40,7 +43,7 @@ export const ClientsSection = () => {
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-sendcloud.png"
                   alt=""
                 />
@@ -51,28 +54,28 @@ export const ClientsSection = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-klooker.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-startlife.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-fulfillment.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-diesel.png"
                   alt=""
                 />
@@ -83,14 +86,14 @@ export const ClientsSection = () => {
             <div className="d-flex justify-content-around align-items-center">
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-simplabs.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-elugie.png"
                   alt=""
                 />
@@ -109,21 +112,21 @@ export const ClientsSection = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-h.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-corelifeanalytics.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-insecto.png"
                   alt=""
                 />
@@ -133,25 +136,27 @@ export const ClientsSection = () => {
             </div>
           </div>
 
-          <div className="clients__logos--mobile d-block d-lg-none">
+          <div
+            className={cn(styles.clients__logos_mobile, "d-block d-lg-none")}
+          >
             <div className="d-flex justify-content-between align-items-center">
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-tiktok.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-sendcloud.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-klooker.png"
                   alt=""
                 />
@@ -171,21 +176,21 @@ export const ClientsSection = () => {
 
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-startlife.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-fulfillment.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-diesel.png"
                   alt=""
                 />
@@ -195,21 +200,21 @@ export const ClientsSection = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-simplabs.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-elugie.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-h.png"
                   alt=""
                 />
@@ -225,21 +230,21 @@ export const ClientsSection = () => {
             <div className="d-flex justify-content-between align-items-center position-relative">
               <AnimatedLine className="clients__lines--line2">
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./explode-line3.svg"
                   alt=""
                 />
               </AnimatedLine>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-corelifeanalytics.png"
                   alt=""
                 />
               </div>
               <div>
                 <StaticImage
-                  className="clients__logoitem"
+                  className={styles.clients__logoitem}
                   src="./logo-insecto.png"
                   alt=""
                 />
@@ -248,7 +253,12 @@ export const ClientsSection = () => {
           </div>
 
           <div className="d-flex justify-content-center pt-5 pt-lg-0 pb-4 pb-lg-0">
-            <p className="clients__logos__text2 lead-lg text-center mb-0">
+            <p
+              className={cn(
+                styles.clients__logos__text2,
+                "lead-lg text-center mb-0"
+              )}
+            >
               ...chances are that we can <br /> help you <span>scale up</span>
             </p>
           </div>

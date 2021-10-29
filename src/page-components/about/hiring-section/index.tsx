@@ -30,9 +30,7 @@ export const HiringSection = () => {
         {/* title */}
         <div className={cn(styles.hiring__intro, "row mb-5")}>
           <div className="col-lg-12 text-center text-lg-start">
-            <h2 className={cn(styles.hiring__title, "mb-3 mb-lg-0")}>
-              And guess who’s hiring?
-            </h2>
+            <h2 className="mb-3 mb-lg-0">And guess who’s hiring?</h2>
             <h4 className={styles.hiring__subtitle}>
               Would you feel at home in an environment where…
             </h4>

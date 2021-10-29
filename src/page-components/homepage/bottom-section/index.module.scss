@@ -3,7 +3,7 @@
     padding-bottom: 50px;
   }
   &__bg {
-    &--item1 {
+    &_item1 {
       position: absolute;
       width: 209px;
       height: 225px;
@@ -44,11 +44,11 @@
         height: 330px;
       }
 
-      & [class*="--item"] {
+      & [class*="_item"] {
         position: absolute;
       }
 
-      &--item1 {
+      &_item1 {
         width: 311px;
         height: 413px;
         background: #359bfa;
@@ -62,7 +62,7 @@
         }
       }
 
-      &--item2 {
+      &_item2 {
         right: 140px;
         top: 140px;
         z-index: 1;
@@ -74,7 +74,7 @@
         }
       }
 
-      &--item3 {
+      &_item3 {
         top: -140px;
         right: -140px;
         width: 344px;

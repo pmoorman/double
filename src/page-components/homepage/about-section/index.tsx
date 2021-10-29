@@ -1,30 +1,31 @@
 import React from "react";
+import cn from "classnames";
 import { StaticImage } from "gatsby-plugin-image";
 
-import "./index.scss";
 import { AnimatedLine, ArrowButton } from "@app/components";
+import * as styles from "./index.module.scss";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="about py-0 position-relative">
+    <section id="about" className={cn(styles.about, "py-0 position-relative")}>
       {/* Background */}
-      <div className="about__bg"></div>
+      <div className={styles.about__bg}></div>
 
       <div className="container position-relative">
         {/* Background blocks */}
-        <div className="about__bgblocks">
-          <div className="about__bgblocks--item1"></div>
-          <div className="about__bgblocks--item2"></div>
-          <div className="about__bgblocks--item3"></div>
-          <div className="about__bgblocks--item4"></div>
-          <div className="about__bgblocks--item5"></div>
-          <div className="about__bgblocks--item6"></div>
-          <div className="about__bgblocks--item7"></div>
-          <div className="about__bgblocks--item8"></div>
+        <div className={styles.about__bgblocks}>
+          <div className={styles.about__bgblocks_item1}></div>
+          <div className={styles.about__bgblocks_item2}></div>
+          <div className={styles.about__bgblocks_item3}></div>
+          <div className={styles.about__bgblocks_item4}></div>
+          <div className={styles.about__bgblocks_item5}></div>
+          <div className={styles.about__bgblocks_item6}></div>
+          <div className={styles.about__bgblocks_item7}></div>
+          <div className={styles.about__bgblocks_item8}></div>
         </div>
 
         {/* title box */}
-        <div className="about__titlebox">
+        <div className={styles.about__titlebox}>
           <p className="lead-lg">Who Is</p>
           <div className="d-flex align-items-center">
             <StaticImage alt="" className="img-fluid" src="./logo-double.png" />
@@ -35,20 +36,33 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        <div className="about__items">
+        <div className={styles.about__items}>
           {/* Image 1 */}
-          <div className="about__items--item1 d-flex justify-content-end">
+          <div
+            className={cn(
+              styles.about__items_item1,
+              "d-flex justify-content-end"
+            )}
+          >
             <div className="d-flex flex-column align-items-end">
               <StaticImage
                 alt=""
-                className="about__items--item1__img mb-2 mb-lg-4 img-fluid"
+                className={cn(
+                  styles.about__items_item1__img,
+                  "mb-2 mb-lg-4 img-fluid"
+                )}
                 src="./about-1.png"
               />
-              <p className="about__items--item1__text lead-lg px-3 px-lg-0">
+              <p
+                className={cn(
+                  styles.about__items_item1__text,
+                  "lead-lg px-3 px-lg-0"
+                )}
+              >
                 We’re marketing super nerds
               </p>
             </div>
-            <AnimatedLine className="about--line1">
+            <AnimatedLine className={styles.about_line1}>
               <StaticImage
                 alt=""
                 className="d-none d-lg-block"
@@ -63,18 +77,26 @@ export const AboutSection = () => {
           </div>
 
           {/* Image 2 */}
-          <div className="about__items--item2 d-flex">
+          <div className={cn(styles.about__items_item2, "d-flex")}>
             <div className="d-flex flex-column">
               <StaticImage
                 alt=""
-                className="about__items--item2__img mb-2 mb-lg-4 img-fluid"
+                className={cn(
+                  styles.about__items_item2__img,
+                  "mb-2 mb-lg-4 img-fluid"
+                )}
                 src="./about-2.png"
               />
-              <p className="about__items--item2__text lead px-3 px-lg-0">
+              <p
+                className={cn(
+                  styles.about__items_item2__text,
+                  "lead px-3 px-lg-0"
+                )}
+              >
                 In other words, we’re writers with a knack for maths...
               </p>
             </div>
-            <AnimatedLine className="about--line2">
+            <AnimatedLine className={styles.about_line2}>
               <StaticImage
                 alt=""
                 className="d-none d-lg-block"
@@ -89,14 +111,19 @@ export const AboutSection = () => {
           </div>
 
           {/* Image 3 */}
-          <div className="about__items--item3 row justify-content-lg-end">
+          <div
+            className={cn(
+              styles.about__items_item3,
+              "row justify-content-lg-end"
+            )}
+          >
             <div className="d-flex flex-column align-items-lg-end">
               <StaticImage
                 alt=""
-                className="about__items--item3__img mb-4 img-fluid"
+                className={cn(styles.about__items_item3__img, "mb-4 img-fluid")}
                 src="./about-3.png"
               />
-              <p className="about__items--item3__text lead">
+              <p className={(cn(styles.about__items_item3__text), "lead")}>
                 ... who you can count on to open your Google Analytics and spot
                 exactly which part of your marketing funnel is holding up the
                 show.

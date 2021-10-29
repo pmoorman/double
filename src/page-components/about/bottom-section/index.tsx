@@ -34,7 +34,7 @@ export const BottomSection = () => {
               </ArrowButton>
             </div>
 
-            <div className={cn(styles.contact_info, "mb-5")}>
+            <div className={cn(styles.bottom__contact_info, "mb-5")}>
               <span className="fw-bold"> Email </span>
               : pieter@double-agency.com <br />
               <span className="fw-bold"> WhatsApp </span>: +316 230 555 90

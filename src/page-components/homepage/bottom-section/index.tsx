@@ -1,33 +1,34 @@
 import React from "react";
+import cn from "classnames";
 import { StaticImage } from "gatsby-plugin-image";
 
-import "./index.scss";
 import { ArrowButton } from "@app/components";
+import * as styles from "./index.module.scss";
 
 export const BottomSection = () => {
   return (
-    <section id="bottom" className="bottom">
+    <section id="bottom" className={styles.bottom}>
       <div className="container position-relative">
         {/* Background block */}
         <div className="bottom__bg--item1"></div>
 
         {/* Content */}
-        <div className="bottom__content row position-relative position-relative">
-          <div className="bottom__content__col1 col-lg-6">
+        <div className="row position-relative position-relative">
+          <div className="col-lg-6">
             <h2 className="mb-5">Still here?</h2>
             <p className="lead-lg">Then let's get something straight.</p>
           </div>
-          <div className="bottom__content__col2 col-lg-6">
+          <div className={cn(styles.bottom__content__col2, "col-lg-6")}>
             <div>
-              <div className="bottom__content__col2--item1"></div>
+              <div className={styles.bottom__content__col2_item1}></div>
               <StaticImage
                 alt=""
-                className="bottom__content__col2--item2"
+                className={styles.bottom__content__col2_item2}
                 src="./footer-img-1.png"
               />
               <StaticImage
                 alt=""
-                className="bottom__content__col2--item3"
+                className={styles.bottom__content__col2_item3}
                 src="./footer-img-2.png"
               />
             </div>
@@ -35,7 +36,9 @@ export const BottomSection = () => {
         </div>
         <div className="row">
           <div className="col-lg-6 pr-lg-0">
-            <p className="bottom__content__par1 lead mb-3 mb-lg-5">
+            <p
+              className={cn(styles.bottom__content__par1, "lead mb-3 mb-lg-5")}
+            >
               <br />
               <i>You're in a funnel right now.</i>
               <br />

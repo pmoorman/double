@@ -31,10 +31,10 @@
   }
 
   &__bg {
-    & [class*="--img"] {
+    & [class*="_img"] {
       position: absolute;
     }
-    &--img1 {
+    &_img1 {
       top: -250px;
       left: -220px;
       width: 378px;
@@ -46,7 +46,7 @@
         z-index: 1;
       }
     }
-    &--img2 {
+    &_img2 {
       bottom: -30px;
       left: 115px;
       width: 222px;
@@ -57,7 +57,7 @@
         left: -40px;
       }
     }
-    &--img3 {
+    &_img3 {
       bottom: -265px;
       right: 20px;
       width: 322px;
@@ -67,7 +67,7 @@
         right: -80px;
       }
     }
-    &--img4 {
+    &_img4 {
       top: -65px;
       right: -120px;
       width: 260px;

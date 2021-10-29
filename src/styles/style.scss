@@ -1,8 +1,8 @@
 @import "variables";
 
-// Generics
-@import "./generic/general-1";
-@import "./generic/typography-2";
-@import "./generic/font";
-
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Generics
+@import "./general-1";
+@import "./typography-2";
+@import "./font";

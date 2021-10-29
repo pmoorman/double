@@ -4,11 +4,11 @@
     margin-bottom: 0;
   }
 
-  & [class*="--line"] {
+  & [class*="_line"] {
     position: absolute;
   }
 
-  &--line1 {
+  &_line1 {
     left: 36%;
     top: 260px;
     @include media-breakpoint-down(md) {
@@ -17,7 +17,7 @@
     }
   }
 
-  &--line2 {
+  &_line2 {
     left: 300px;
     top: 145px;
     @include media-breakpoint-down(md) {
@@ -42,10 +42,10 @@
     width: 100%;
     top: 0;
     bottom: 0;
-    & [class*="--item"] {
+    & [class*="_item"] {
       position: absolute;
     }
-    &--item1 {
+    &_item1 {
       width: 264px;
       height: 170px;
       background: #ffffff;
@@ -59,7 +59,7 @@
         top: 50%;
       }
     }
-    &--item2 {
+    &_item2 {
       width: 342px;
       height: 184px;
       background: #ffffff;
@@ -73,7 +73,7 @@
         bottom: 135px;
       }
     }
-    &--item3 {
+    &_item3 {
       width: 282px;
       height: 160px;
       background: #2788e1;
@@ -86,7 +86,7 @@
         top: 200px;
       }
     }
-    &--item4 {
+    &_item4 {
       width: 243px;
       height: 152px;
       background: #d9effb;
@@ -102,7 +102,7 @@
         top: 40px;
       }
     }
-    &--item5 {
+    &_item5 {
       width: 474px;
       height: 322px;
       background: #ffffff;
@@ -116,7 +116,7 @@
         top: 44%;
       }
     }
-    &--item6 {
+    &_item6 {
       width: 220px;
       height: 143px;
       background: #ffffff;
@@ -133,7 +133,7 @@
         right: -30px;
       }
     }
-    &--item7 {
+    &_item7 {
       width: 134px;
       height: 92px;
       background: #ffffff;
@@ -144,7 +144,7 @@
         display: none;
       }
     }
-    &--item8 {
+    &_item8 {
       width: 137px;
       height: 86px;
       background: #d9effb;
@@ -180,11 +180,11 @@
       flex-direction: column;
       align-items: center;
     }
-    & [class*="--item"] {
+    & [class*="_item"] {
       position: relative;
       color: #fff;
     }
-    &--item1 {
+    &_item1 {
       top: -120px;
       right: 90px;
       @include media-breakpoint-down(md) {
@@ -203,7 +203,7 @@
         max-width: 475px;
       }
     }
-    &--item2 {
+    &_item2 {
       top: -160px;
       left: 105px;
       @include media-breakpoint-down(md) {
@@ -228,7 +228,7 @@
         }
       }
     }
-    &--item3 {
+    &_item3 {
       color: initial;
       right: 120px;
       top: -185px;

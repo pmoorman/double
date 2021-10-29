@@ -1,7 +1,9 @@
-import { ShadowBox } from "@app/components";
 import React from "react";
+import cn from "classnames";
 
-import "./index.scss";
+import { ShadowBox } from "@app/components";
+
+import * as styles from "./index.module.scss";
 
 const items = [
   { title: "Our focus is building systems" },
@@ -18,37 +20,34 @@ const items = [
 
 export const ProcessSection = () => {
   return (
-    <section id="process" className="process">
+    <section id="process" className={styles.process}>
       <div className="container">
         {/* Intro */}
         <div className="row mb-5">
           <div className="col-lg-11">
-            <h1 className="mb-4 mb-lg-5 font-weight-bold">
+            <h1 className="mb-4 mb-lg-5 fw-bold">
               Our <br />
               Process
             </h1>
             <p className="lead-lg">
               You can expect deliverables in the first two weeks, and
-              <span className="font-weight-bold">
-                impossible-to-ignore
-              </span>{" "}
-              results in the first two months.
+              <span className="fw-bold"> impossible-to-ignore</span> results in
+              the first two months.
             </p>
           </div>
         </div>
 
         {/* List items */}
-        <div className="process__items row">
+        <div className="row">
           <div className="col-lg-8 pe-lg-0">
             {items.map((item, i) => (
-              <div
-                key={item.title + i}
-                className="process__items__item d-flex mb-5"
-              >
+              <div key={item.title + i} className="d-flex mb-5">
                 <div>
                   <ShadowBox checkbox className="me-4 me-lg-5" />
                 </div>
-                <p className="process__items__item__text mb-0 lead">
+                <p
+                  className={cn(styles.process__items__item__text, "mb-0 lead")}
+                >
                   {item.title}
                   {item.body && (
                     <span>

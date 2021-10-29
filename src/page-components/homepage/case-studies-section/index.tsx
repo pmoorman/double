@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import cn from "classnames";
 
-import { ArrowButton } from "@app/components";
+import { AnimatedLine, ArrowButton } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -10,22 +10,29 @@ export const CaseStudiesSection = () => {
   return (
     <>
       {/* Case Studies: Intro */}
-      <section id="case-studies" className={styles.caseStudies}>
-        <div className="caseStudies__intro container text-center text-lg-start">
+      <section id="case-studies">
+        <div className="container text-center text-lg-start">
           <div className="row">
             <div className="col-lg-7 position-relative order-2 order-lg-1">
-              <h2 className="caseStudies__intro__title mb-3 mb-lg-5">
+              <h2
+                className={cn(styles.casestudies__intro__title, "mb-3 mb-lg-5")}
+              >
                 Curious to see what our work looks like in action?
               </h2>
               <p className="lead">Check out these case studies.</p>
-              <div className="caseStudies__intro__line1 animated-line active-in-view d-none d-lg-block">
+              <AnimatedLine
+                className={cn(
+                  styles.casestudies__intro__line1,
+                  "d-none d-lg-block"
+                )}
+              >
                 <StaticImage alt="" src="./studies-line1.svg" />
-              </div>
+              </AnimatedLine>
             </div>
             <div className="col-lg-5 text-center text-lg-end order-1 order-lg-2 mb-4 mb-lg-0">
               <StaticImage
                 alt=""
-                className="caseStudies__intro__warningimg"
+                className={styles.casestudies__intro__warningimg}
                 src="./contains-warning.png"
               />
             </div>
@@ -36,10 +43,10 @@ export const CaseStudiesSection = () => {
       {/* Case Studies: Tiktok */}
       <section
         id="case-studies-tiktok"
-        className={cn(styles.caseStudiesTiktok, "caseStudies__item")}
+        className={cn(styles.casestudies_tiktok, styles.casestudies__item)}
       >
         {/* background */}
-        <div className="caseStudies__item__bg">
+        <div className={styles.casestudies__item__bg}>
           <StaticImage
             alt=""
             className="d-none d-lg-block"
@@ -53,12 +60,12 @@ export const CaseStudiesSection = () => {
         </div>
 
         {/* content */}
-        <div className="caseStudies__item__content container">
+        <div className={cn(styles.casestudies__item__content, "container")}>
           <div className="row">
             <div className="col-lg-8 px-lg-4">
               <StaticImage
                 alt=""
-                className="caseStudies__item__logo img-fluid"
+                className={cn(styles.casestudies__item__logo, "img-fluid")}
                 src="./studies-tiktok-logo.png"
               />
               <p>
@@ -68,13 +75,13 @@ export const CaseStudiesSection = () => {
               </p>
               <p className="lead-lg">
                 We help TikTok build stronger lead nurturing via
-                <span className="text-highlight">
+                <span className={styles.text_highlight}>
                   eye-catching landing pages, better email marketing and spiffy
                   visual content
                 </span>
                 .
               </p>
-              <hr className="caseStudies__item__divider" />
+              <hr className={styles.casestudies__item__divider} />
               <div className="d-flex flex-column flex-lg-row">
                 <ArrowButton to="/clients" variant="6">
                   Read more
@@ -88,10 +95,10 @@ export const CaseStudiesSection = () => {
       {/* Case Studies: Alpian */}
       <section
         id="case-studies-alpian"
-        className={cn(styles.caseStudiesAlpian, "caseStudies__item")}
+        className={cn(styles.casestudies_alpian, styles.casestudies__item)}
       >
         {/* background */}
-        <div className="caseStudies__item__bg">
+        <div className={styles.casestudies__item__bg}>
           <StaticImage
             alt=""
             className="d-none d-lg-block"
@@ -105,12 +112,12 @@ export const CaseStudiesSection = () => {
         </div>
 
         {/* content */}
-        <div className="caseStudies__item__content container">
+        <div className={cn(styles.casestudies__item__content, "container")}>
           <div className="row justify-content-end">
             <div className="col-lg-7 pr-lg-4">
               <StaticImage
                 alt=""
-                className="caseStudies__item__logo img-fluid mb-4"
+                className={cn(styles.casestudies__item__logo, "img-fluid mb-4")}
                 src="./studies-alpian-logo.png"
               />
               <p>
@@ -122,7 +129,7 @@ export const CaseStudiesSection = () => {
                 <span className="text-highlight">$32 million in funding</span>,
                 Alpian has a serious appetite for growth.
               </p>
-              <hr className="caseStudies__item__divider" />
+              <hr className={styles.casestudies__item__divider} />
               <div className="d-flex flex-column flex-lg-row">
                 <ArrowButton to="/clients" variant="5">
                   Read more
@@ -136,10 +143,10 @@ export const CaseStudiesSection = () => {
       {/* Case Studies: Core Life Analytics */}
       <section
         id="case-studies-cla"
-        className={cn(styles.caseStudiesCla, "caseStudies__item")}
+        className={cn(styles.casestudies_cla, styles.casestudies__item)}
       >
         {/* background */}
-        <div className="caseStudies__item__bg">
+        <div className={styles.casestudies__item__bg}>
           <StaticImage
             alt=""
             className="d-none d-lg-block"
@@ -153,12 +160,12 @@ export const CaseStudiesSection = () => {
         </div>
 
         {/* content */}
-        <div className="caseStudies__item__content container">
+        <div className={cn(styles.casestudies__item__content, "container")}>
           <div className="row">
             <div className="col-lg-7 px-lg-5 position-relative">
               <StaticImage
                 alt=""
-                className="mb-4 caseStudies__item__logo img-fluid"
+                className={cn(styles.casestudies__item__logo, "mb-4 img-fluid")}
                 src="./studies-corelifeanalytics-logo.png"
               />
               <p>
@@ -174,7 +181,7 @@ export const CaseStudiesSection = () => {
                 </span>
                 ”.
               </p>
-              <hr className="caseStudies__item__divider" />
+              <hr className={styles.casestudies__item__divider} />
               <div className="d-flex flex-column flex-lg-row">
                 <ArrowButton to="/clients" variant="4">
                   Read more

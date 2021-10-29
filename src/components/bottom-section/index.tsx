@@ -21,7 +21,7 @@ export const BottomSection: FC<BottomSectionProps> = ({
     <section className={styles.bottom_section}>
       <div className="container position-relative">
         {/* Background */}
-        <div className={styles.bottom_section__bg_items}>
+        <div>
           <div
             className={cn(
               styles.bottom_section__bg_items__item,
