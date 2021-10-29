@@ -1,6 +1,7 @@
 .hero {
   padding-top: 100px;
   padding-bottom: 0;
+  position: relative;
   @include media-breakpoint-down(md) {
     padding-top: 50px;
     padding-bottom: 100px;
@@ -48,7 +49,7 @@
         top: 50px;
       }
     }
-    &--arrow1 {
+    &_arrow1 {
       right: -140px;
       bottom: 45px;
       z-index: -2;
@@ -60,7 +61,7 @@
         height: 271px;
       }
     }
-    &--arrow2 {
+    &_arrow2 {
       left: 0;
       bottom: 0;
       @include media-breakpoint-down(md) {
@@ -72,7 +73,7 @@
         height: 261px;
       }
     }
-    &--img1 {
+    &_img1 {
       bottom: -130px;
       left: 105px;
       width: 145px;
@@ -83,7 +84,7 @@
         right: 55px;
       }
     }
-    &--img2 {
+    &_img2 {
       left: 120px;
       top: 230px;
       width: 178px;
@@ -93,7 +94,7 @@
         top: 100px;
       }
     }
-    &--img3 {
+    &_img3 {
       left: 390px;
       top: 500px;
       z-index: -1;
@@ -104,7 +105,7 @@
         top: 290px;
       }
     }
-    &--img4 {
+    &_img4 {
       right: 175px;
       top: 300px;
       z-index: -1;
@@ -116,7 +117,7 @@
         top: 180px;
       }
     }
-    &--img5 {
+    &_img5 {
       right: 10px;
       top: 0;
       width: 124px;
@@ -156,21 +157,21 @@
     }
   }
 
-  &__bottom-arrow-wrapper {
+  &__bottom_arrow_wrapper {
     position: absolute;
     bottom: -23px;
   }
-  &__bottom-arrow {
+  &__bottom_arrow {
     width: 51.97px;
     height: 51.97px;
-    background: var(--primary);
+    background: var(--bs-primary);
     transform: rotate(45deg);
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 10px;
     &:before {
-      content: url("/assets/images/icon-arrow_down.png");
+      content: url("./icon-arrow_down.png");
       transform: rotate(-45deg);
       position: relative;
       left: 3px;

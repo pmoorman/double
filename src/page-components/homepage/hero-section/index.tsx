@@ -1,13 +1,15 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import cn from "classnames";
 
-import "./index.scss";
+import * as styles from "./index.module.scss";
+import { Link } from "@app/components";
 
 export const HeroSection = () => {
   return (
-    <section id="hero" className="hero position-relative">
+    <section id="hero" className={styles.hero}>
       {/* Background */}
-      <div className="hero__bg position-absolute w-100">
+      <div className={cn(styles.hero__bg, "position-absolute w-100")}>
         <StaticImage
           className="w-100 d-none d-lg-block"
           src="./hero-bg.png"
@@ -23,7 +25,10 @@ export const HeroSection = () => {
       <div className="container position-relative">
         {/* intro */}
         <div
-          className="hero__intro px-3 px-lg-0 text-center text-lg-start"
+          className={cn(
+            styles.hero__intro,
+            "px-3 px-lg-0 text-center text-lg-start"
+          )}
           data-aos="fade-in"
         >
           <h1 className="text-primary font-weight-bold mb-4">
@@ -37,41 +42,62 @@ export const HeroSection = () => {
         </div>
 
         {/* Arrows and images */}
-        <div className="hero__bggraphics">
-          <div className="hero__bggraphics__arrows">
+        <div className={styles.hero__bggraphics}>
+          <div className={styles.hero__bggraphics__arrows}>
             <StaticImage
-              className="hero__bggraphics--arrow1 img-fluid position-relative"
+              className={cn(
+                styles.hero__bggraphics_arrow1,
+                "img-fluid position-relative"
+              )}
               src="./hero-arrow-light.png"
               alt=""
             />
             <StaticImage
-              className="hero__bggraphics--arrow2 img-fluid position-absolute"
+              className={cn(
+                styles.hero__bggraphics_arrow2,
+                "img-fluid position-absolute"
+              )}
               src="./hero-arrow-dark.png"
               alt=""
             />
           </div>
           <StaticImage
-            className="hero__bggraphics--img1 img-fluid position-absolute"
+            className={cn(
+              styles.hero__bggraphics_img1,
+              "img-fluid position-absolute"
+            )}
             src="./hero-1.png"
             alt=""
           />
           <StaticImage
-            className="hero__bggraphics--img2 img-fluid position-absolute"
+            className={cn(
+              styles.hero__bggraphics_img2,
+              "img-fluid position-absolute"
+            )}
             src="./hero-2.png"
             alt=""
           />
           <StaticImage
-            className="hero__bggraphics--img3 img-fluid position-absolute"
+            className={cn(
+              styles.hero__bggraphics_img3,
+              "img-fluid position-absolute"
+            )}
             src="./hero-3.png"
             alt=""
           />
           <StaticImage
-            className="hero__bggraphics--img4 img-fluid position-absolute"
+            className={cn(
+              styles.hero__bggraphics_img4,
+              "img-fluid position-absolute"
+            )}
             src="./hero-4.png"
             alt=""
           />
           <StaticImage
-            className="hero__bggraphics--img5 img-fluid position-absolute"
+            className={cn(
+              styles.hero__bggraphics_img5,
+              "img-fluid position-absolute"
+            )}
             src="./hero-5.png"
             alt=""
           />
@@ -79,10 +105,13 @@ export const HeroSection = () => {
 
         {/* bottom */}
         <div
-          className="hero__bottom text-center text-lg-start px-3 px-lg-0 d-flex justify-content-end"
+          className={cn(
+            styles.hero__bottom,
+            "text-center text-lg-start px-3 px-lg-0 d-flex justify-content-end"
+          )}
           data-aos="fade-in"
         >
-          <div className="hero__bottom__inner">
+          <div className={styles.hero__bottom__inner}>
             <p className="lead">
               We’re marketing
               <span className="text-highlight">super-nerds</span> who can
@@ -97,12 +126,15 @@ export const HeroSection = () => {
       </div>
 
       {/* Bottom arrow */}
-      <a
-        href="#clients"
-        className="hero__bottom-arrow-wrapper w-100 d-flex d-lg-none justify-content-center"
+      <Link
+        to="#clients"
+        className={cn(
+          styles.hero__bottom_arrow_wrapper,
+          "w-100 d-flex d-lg-none justify-content-center"
+        )}
       >
-        <div className="hero__bottom-arrow"></div>
-      </a>
+        <div className={styles.hero__bottom_arrow}></div>
+      </Link>
     </section>
   );
 };

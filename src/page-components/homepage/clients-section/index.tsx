@@ -9,14 +9,14 @@ import * as styles from "./index.module.scss";
 
 export const ClientsSection = () => {
   return (
-    <section id="clients" className={styles.clients}>
+    <section id="clients">
       <div className="container">
         <div className="position-relative">
           <div
             className={cn(styles.clients__logos_desktop, "d-none d-lg-block")}
           >
             {/* Lines */}
-            <div className={styles.clients__lines}>
+            <div>
               <AnimatedLine className={styles.clients__lines_line1}>
                 <StaticImage src="./explode-line1.svg" alt="" />
               </AnimatedLine>
@@ -25,7 +25,7 @@ export const ClientsSection = () => {
               </AnimatedLine>
             </div>
             {/* Row 1 */}
-            <div className="d-flex justify-content-around align-items-center">
+            <div className={styles.logoRow}>
               <div>
                 <StaticImage
                   className={styles.clients__logoitem}
@@ -51,7 +51,7 @@ export const ClientsSection = () => {
             </div>
 
             {/* Row 2 */}
-            <div className="d-flex justify-content-between align-items-center">
+            <div className={styles.logoRow}>
               <div>
                 <StaticImage
                   className={styles.clients__logoitem}
@@ -83,7 +83,7 @@ export const ClientsSection = () => {
             </div>
 
             {/* Row 3 */}
-            <div className="d-flex justify-content-around align-items-center">
+            <div className={styles.logoRow}>
               <div>
                 <StaticImage
                   className={styles.clients__logoitem}
@@ -109,7 +109,7 @@ export const ClientsSection = () => {
             </div>
 
             {/* Row 4 */}
-            <div className="d-flex justify-content-between align-items-center">
+            <div className={styles.logoRow}>
               <div>
                 <StaticImage
                   className={styles.clients__logoitem}
@@ -139,7 +139,7 @@ export const ClientsSection = () => {
           <div
             className={cn(styles.clients__logos_mobile, "d-block d-lg-none")}
           >
-            <div className="d-flex justify-content-between align-items-center">
+            <div className={styles.logoRow}>
               <div>
                 <StaticImage
                   className={styles.clients__logoitem}
@@ -163,14 +163,14 @@ export const ClientsSection = () => {
               </div>
             </div>
 
-            <div className="d-flex justify-content-center align-items-center">
+            <div className={styles.logoRow}>
               <p className="lead-lg text-center mb-0" style={{ width: "65%" }}>
                 Whether you’re a billion-dollar company,
               </p>
             </div>
 
-            <div className="d-flex justify-content-between align-items-center position-relative">
-              <AnimatedLine className="clients__lines--line1 ">
+            <div className={cn(styles.logoRow, "position-relative")}>
+              <AnimatedLine className={styles.clients__lines_line1}>
                 <StaticImage alt="" src="./explode-line1.svg" />
               </AnimatedLine>
 
@@ -197,7 +197,7 @@ export const ClientsSection = () => {
               </div>
             </div>
 
-            <div className="d-flex justify-content-between align-items-center">
+            <div className={styles.logoRow}>
               <div>
                 <StaticImage
                   className={styles.clients__logoitem}
@@ -221,14 +221,14 @@ export const ClientsSection = () => {
               </div>
             </div>
 
-            <div className="d-flex justify-content-center align-items-center">
+            <div className={styles.logoRow}>
               <p className="lead-lg text-center mb-0" style={{ width: "80%" }}>
                 ...or a bootstrapped powerhouse,
               </p>
             </div>
 
-            <div className="d-flex justify-content-between align-items-center position-relative">
-              <AnimatedLine className="clients__lines--line2">
+            <div className={cn(styles.logoRow, "position-relative")}>
+              <AnimatedLine className={styles.clients__lines_line2}>
                 <StaticImage
                   className={styles.clients__logoitem}
                   src="./explode-line3.svg"
@@ -252,7 +252,7 @@ export const ClientsSection = () => {
             </div>
           </div>
 
-          <div className="d-flex justify-content-center pt-5 pt-lg-0 pb-4 pb-lg-0">
+          <div className={cn(styles.logoRow, "pt-5 pt-lg-0 pb-4 pb-lg-0")}>
             <p
               className={cn(
                 styles.clients__logos__text2,
@@ -279,16 +279,14 @@ const Explode = () => {
   useEffect(() => {
     if (inView) {
       (async () => {
-        const textClass = "clients__logos__text2";
-        const explodeClass = "clients__explode";
-
-        const sleep = (ms) => {
-          return new Promise((resolve) => setTimeout(resolve, ms));
-        };
-
-        document.querySelector(`.${textClass}`).classList.add("active");
-        await sleep(100);
-        document.querySelector(`.${explodeClass}`).classList.add("active");
+        // const textClass = "clients__logos__text2";
+        // const explodeClass = "clients__explode";
+        // const sleep = (ms) => {
+        //   return new Promise((resolve) => setTimeout(resolve, ms));
+        // };
+        // document.querySelector(`.${textClass}`).classList.add("active");
+        // await sleep(100);
+        // document.querySelector(`.${explodeClass}`).classList.add("active");
       })();
     }
   }, [inView]);
@@ -319,79 +317,68 @@ const Circles = () => {
   useEffect(() => {
     if (inView) {
       (async () => {
-        const footer = document.querySelector(".clients__footer");
-        const circle1 = document.querySelector(".clients__circles--circle1");
-        const circle2 = document.querySelector(".clients__circles--circle2");
-        const circle1TextEl = document.querySelector(
-          ".clients__circles--circle1__text"
-        );
-        const circle2TextEl = document.querySelector(
-          ".clients__circles--circle2__text"
-        );
-        const curvedText = document.querySelector(
-          ".clients__circles__curved-text--wrapper"
-        );
-
-        const sleep = (ms) => {
-          return new Promise((resolve) => setTimeout(resolve, ms));
-        };
-
-        const animateCircle = (circle, startPoint, duration) => {
-          circle.animate(
-            [
-              { transform: `translateX(${startPoint})`, opacity: 0 },
-              { transform: "translateX(0%)", opacity: 1 },
-            ],
-            { duration, fill: "both" }
-          );
-        };
-
-        const animateCircleText = (textEl, duration) => {
-          textEl.animate([{ opacity: 1 }, { opacity: 0 }, { opacity: 1 }], {
-            duration,
-            fill: "both",
-          });
-        };
-
-        const animateCurvedText = async (delayDuration) => {
-          await sleep(delayDuration);
-          curvedText.animate(
-            [
-              { opacity: 0, transform: "rotate(45deg)" },
-              { opacity: 1, transform: "rotate(0)" },
-            ],
-            { duration: 1000, fill: "both" }
-          );
-        };
-
-        const fadeIn = async (el, duration) => {
-          el.animate([{ opacity: 0 }, { opacity: 1 }], {
-            duration,
-            fill: "both",
-          });
-        };
-
-        const changeCircle2Text = () => {
-          circle2TextEl.innerHTML = circle2TextEl.getAttribute(
-            "data-animationend-text"
-          );
-        };
-
-        animateCircle(circle1, "60%", 1500);
-        animateCircle(circle2, "-60%", 1500);
-        fadeIn(footer, 2250);
-
-        // Should be half of animateCircle anmimation
-        await sleep(750);
-
-        animateCircleText(circle1TextEl, 750);
-        animateCircleText(circle2TextEl, 750);
-        animateCurvedText(200);
-
-        // Should be half of animateCircleText anmimation
-        await sleep(375);
-
-        changeCircle2Text();
+        // const footer = document.querySelector(".clients__footer");
+        // const circle1 = document.querySelector(".clients__circles--circle1");
+        // const circle2 = document.querySelector(".clients__circles--circle2");
+        // const circle1TextEl = document.querySelector(
+        //   ".clients__circles--circle1__text"
+        // );
+        // const circle2TextEl = document.querySelector(
+        //   ".clients__circles--circle2__text"
+        // );
+        // const curvedText = document.querySelector(
+        //   ".clients__circles__curved-text--wrapper"
+        // );
+        // const sleep = (ms) => {
+        //   return new Promise((resolve) => setTimeout(resolve, ms));
+        // };
+        // const animateCircle = (circle, startPoint, duration) => {
+        //   circle.animate(
+        //     [
+        //       { transform: `translateX(${startPoint})`, opacity: 0 },
+        //       { transform: "translateX(0%)", opacity: 1 },
+        //     ],
+        //     { duration, fill: "both" }
+        //   );
+        // };
+        // const animateCircleText = (textEl, duration) => {
+        //   textEl.animate([{ opacity: 1 }, { opacity: 0 }, { opacity: 1 }], {
+        //     duration,
+        //     fill: "both",
+        //   });
+        // };
+        // const animateCurvedText = async (delayDuration) => {
+        //   await sleep(delayDuration);
+        //   curvedText.animate(
+        //     [
+        //       { opacity: 0, transform: "rotate(45deg)" },
+        //       { opacity: 1, transform: "rotate(0)" },
+        //     ],
+        //     { duration: 1000, fill: "both" }
+        //   );
+        // };
+        // const fadeIn = async (el, duration) => {
+        //   el.animate([{ opacity: 0 }, { opacity: 1 }], {
+        //     duration,
+        //     fill: "both",
+        //   });
+        // };
+        // const changeCircle2Text = () => {
+        //   circle2TextEl.innerHTML = circle2TextEl.getAttribute(
+        //     "data-animationend-text"
+        //   );
+        // };
+        // animateCircle(circle1, "60%", 1500);
+        // animateCircle(circle2, "-60%", 1500);
+        // fadeIn(footer, 2250);
+        // // Should be half of animateCircle anmimation
+        // await sleep(750);
+        // animateCircleText(circle1TextEl, 750);
+        // animateCircleText(circle2TextEl, 750);
+        // animateCurvedText(200);
+        // // Should be half of animateCircleText anmimation
+        // await sleep(375);
+        // changeCircle2Text();
       })();
     }
   }, [inView]);

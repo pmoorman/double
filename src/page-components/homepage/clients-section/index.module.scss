@@ -38,7 +38,7 @@
       }
     }
     &_desktop {
-      > .d-flex {
+      > .logoRow {
         margin-bottom: 100px;
       }
     }
@@ -46,7 +46,7 @@
       width: 140%;
       position: relative;
       left: -20%;
-      > .d-flex {
+      > .logoRow {
         margin-bottom: 65px;
       }
     }
@@ -160,4 +160,10 @@
       opacity: 0;
     }
   }
+}
+
+.logoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
