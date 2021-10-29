@@ -12,8 +12,6 @@ import {
   BottomSection,
 } from "@app/page-components/homepage";
 
-import "@app/styles/home.scss";
-
 const IndexPage = () => {
   return (
     <>

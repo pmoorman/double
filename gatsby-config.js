@@ -15,13 +15,6 @@ module.exports = {
         `,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Poppins\:300,400,600`],
-        display: "swap",
-      },
-    },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-tsconfig-paths",
