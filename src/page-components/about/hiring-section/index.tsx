@@ -1,6 +1,9 @@
 import React from "react";
+import cn from "classnames";
 
 import * as styles from "./index.module.scss";
+import { StaticImage } from "gatsby-plugin-image";
+import { ShadowBox } from "@app/components";
 
 const hiring_positions = [
   {
@@ -22,15 +25,15 @@ const hiring_positions = [
 
 export const HiringSection = () => {
   return (
-    <section id="hiring" className="hiring">
+    <section id="hiring" className={styles.hiring}>
       <div className="container">
         {/* title */}
-        <div className="hiring__intro row mb-5">
-          <div className="col-lg-12 text-center text-lg-left">
-            <h2 className="hiring__title mb-3 mb-lg-0">
+        <div className={cn(styles.hiring__intro, "row mb-5")}>
+          <div className="col-lg-12 text-center text-lg-start">
+            <h2 className={cn(styles.hiring__title, "mb-3 mb-lg-0")}>
               And guess who’s hiring?
             </h2>
-            <h4 className="hiring__subtitle">
+            <h4 className={styles.hiring__subtitle}>
               Would you feel at home in an environment where…
             </h4>
           </div>
@@ -38,9 +41,12 @@ export const HiringSection = () => {
 
         {/* boxes */}
         <div className="row mb-lg-5 pt-lg-5">
-          <div className="col-lg-4 mb-5 mb-lg-0 px-0 px-lg-3">
-            <div className="hiring__box">
-              <div className="shadowbox variant-1-check mr-4 mr-lg-5 active-in-view"></div>
+          <div className="col-lg-4 mb-5 mb-lg-0 px-0 px-lg-3 position-relative">
+            <div className={styles.hiring__box}>
+              <ShadowBox
+                checkbox
+                className={cn(styles.hiring__box_check, "me-4 me-lg-5")}
+              />
               <p className="mb-0">
                 The group chat is filled with
                 <span className="text-highlight">
@@ -49,9 +55,12 @@ export const HiringSection = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 mb-5 mb-lg-0 px-0 px-lg-3">
-            <div className="hiring__box">
-              <div className="shadowbox variant-1-check mr-4 mr-lg-5 active-in-view"></div>
+          <div className="col-lg-4 mb-5 mb-lg-0 px-0 px-lg-3 position-relative">
+            <div className={styles.hiring__box}>
+              <ShadowBox
+                checkbox
+                className={cn(styles.hiring__box_check, "me-4 me-lg-5")}
+              />
               <p className="mb-0">
                 All of your colleagues
                 <span className="text-highlight">ferociously learn</span> in
@@ -62,9 +71,12 @@ export const HiringSection = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 mb-5 mb-lg-0 px-0 px-lg-3">
-            <div className="hiring__box">
-              <div className="shadowbox variant-1-check mr-4 mr-lg-5 active-in-view"></div>
+          <div className="col-lg-4 mb-5 mb-lg-0 px-0 px-lg-3 position-relative">
+            <div className={styles.hiring__box}>
+              <ShadowBox
+                checkbox
+                className={cn(styles.hiring__box_check, "me-4 me-lg-5")}
+              />
               <p className="mb-0">
                 The team works from
                 <span className="text-highlight">around the globe</span>
@@ -78,43 +90,41 @@ export const HiringSection = () => {
 
         {/* positions */}
         <div className="row justify-content-center mb-4 pt-lg-5">
-          <div
-            className="
-          col-lg-4
-          mb-3 mb-lg-0
-          px-0
-          pl-lg-3
-          pr-lg-5
-          text-center text-lg-left
-        "
-          >
+          <div className="col-lg-4 mb-3 mb-lg-0 px-0 ps-lg-3 pe-lg-5 text-center text-lg-start">
             <p className="lead-lg">
               Then check out the
               <span className="text-highlight">roles we’re looking</span> for:
             </p>
           </div>
           <div className="col-lg-8 px-0 px-lg-3">
-            <div className="hiring__positions-box bg-secondary text-white px-4">
-              {hiring_positions.map((i) => (
+            <div
+              className={cn(
+                styles.hiring__positions_box,
+                "bg-secondary text-white px-4"
+              )}
+            >
+              {hiring_positions.map((i, ii) => (
                 <a
+                  key={i.title + ii}
                   href={i.url}
-                  className="
-              hiring__positions-box__item
-              d-flex
-              justify-content-between
-              align-items-center
-              text-white
-              py-4
-            "
+                  className={cn(
+                    styles.hiring__positions_box__item,
+                    "d-flex justify-content-between align-items-center text-white py-4"
+                  )}
                 >
                   <div>
                     <p className="lead mb-0">{i.title}</p>
-                    <p className="hiring__positions-box__item__subtitle mb-0">
+                    <p
+                      className={cn(
+                        styles.hiring__positions_box__item__subtitle,
+                        "mb-0"
+                      )}
+                    >
                       {i.location}
                     </p>
                   </div>
                   <div>
-                    <img src="/assets/images/arrow-right.svg" />
+                    <StaticImage alt="" src="./arrow-end.svg" />
                   </div>
                 </a>
               ))}

@@ -8,3 +8,4 @@ export * from "./shadow-box";
 export * from "./double-logo";
 export * from "./multi-collapse";
 export * from "./bottom-section";
+export * from "./wistia-video";

@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import cn from "classnames";
 
-import { AnimatedLine } from "@app/components";
+import { AnimatedLine, ArrowButton } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -121,30 +121,23 @@ export const GallerySection = () => {
 
         <div className={cn(styles.gallery__bottom, "row")}>
           <div className="col-lg-4">
-            <h3 style={{ lineHeight: 62 }}>Want to hire us?</h3>
-            <div
-              className="
-            d-flex
-            flex-column flex-lg-row
-            justify-content-center justify-content-lg-end
-          "
-            >
-              <a
-                href="mailto:pieter@double-agency.com"
-                className="arrow-btn variant-1"
-              >
+            <h3 style={{ lineHeight: "62px" }}>Want to hire us?</h3>
+            <div className="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-end">
+              <ArrowButton to="mailto:pieter@double-agency.com">
                 Contact us
-              </a>
+              </ArrowButton>
             </div>
             {/* line */}
             <AnimatedLine className={styles.gallery__line}>
-              <img
+              <StaticImage
+                alt=""
                 className="d-none d-lg-block"
-                src="/assets/images/about/line2.svg"
+                src="./line2.svg"
               />
-              <img
+              <StaticImage
+                alt=""
                 className="d-lg-none"
-                src="/assets/images/about/line2-mobile.svg"
+                src="./line2-mobile.svg"
               />
             </AnimatedLine>
           </div>
