@@ -1,7 +1,23 @@
 import React from "react";
 
+import {
+  AboutSection,
+  BottomSection,
+  GallerySection,
+  HeroSection,
+  HiringSection,
+} from "@app/page-components/about";
+
 export const AboutPage = () => {
-  return <h1>About</h1>;
+  return (
+    <>
+      <HeroSection />
+      <AboutSection />
+      <GallerySection />
+      <HiringSection />
+      <BottomSection />
+    </>
+  );
 };
 
 export default AboutPage;
