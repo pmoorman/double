@@ -17,24 +17,30 @@ export const ClientsSection = () => {
           </div>
           <div className="clients__logos col-lg-6">
             <div className="d-flex justify-content-between align-items-center mb-5">
-              <StaticImage
-                alt=""
-                data-aos="fade-in"
-                className="clients__logos__item--1"
-                src="./logo-sendcloud.png"
-              />
-              <StaticImage
-                alt=""
-                data-aos="fade-in"
-                className="clients__logos__item--2"
-                src="./logo-klooker.png"
-              />
-              <StaticImage
-                alt=""
-                data-aos="fade-in"
-                className="clients__logos__item--3"
-                src="./logo-cla.png"
-              />
+              <div>
+                <StaticImage
+                  alt=""
+                  data-aos="fade-in"
+                  className="clients__logos__item--1"
+                  src="./logo-sendcloud.png"
+                />
+              </div>
+              <div>
+                <StaticImage
+                  alt=""
+                  data-aos="fade-in"
+                  className="clients__logos__item--2"
+                  src="./logo-klooker.png"
+                />
+              </div>
+              <div>
+                <StaticImage
+                  alt=""
+                  data-aos="fade-in"
+                  className="clients__logos__item--3"
+                  src="./logo-cla.png"
+                />
+              </div>
             </div>
             <div className="d-flex justify-content-between align-items-center">
               <StaticImage

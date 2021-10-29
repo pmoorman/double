@@ -8,6 +8,7 @@ import {
   PerformanceSection,
   ClientsSection,
 } from "@app/page-components/services";
+import { BottomSection } from "@app/components";
 
 export const ServicesPage = () => {
   return (
@@ -18,6 +19,11 @@ export const ServicesPage = () => {
       <MarketingSection />
       <InfrastructureSection />
       <ClientsSection />
+      <BottomSection
+        title="Still here?"
+        subtitle="We should talk."
+        body="You got this far because the evidence is hard to ignore: we’ve grown businesses and will grow yours, too."
+      />
     </>
   );
 };
