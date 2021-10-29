@@ -29,7 +29,7 @@ export const ServicesSection = () => {
           <div className="col-lg-12 d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
             <h1>Services</h1>
             <p
-              className="lead-lg text-lg-right mb-0"
+              className="lead-lg text-lg-end mb-0"
               style={{ maxWidth: "400px" }}
             >
               We crack our knuckles and take the lead on:

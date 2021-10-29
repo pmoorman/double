@@ -11,9 +11,7 @@ export const PricingSection = () => {
       <div className={styles.pricing__bg}></div>
 
       {/* Content */}
-      <div
-        className={cn(styles.pricing__content, "container position-relative")}
-      >
+      <div className="container position-relative">
         {/* Background */}
         <div className={styles.pricing__content__bg}></div>
 
@@ -42,7 +40,7 @@ export const PricingSection = () => {
           <div className="col-lg-7 position-relative">
             <div className={styles.pricing__content__col2__bg}></div>
             <div className={styles.pricing__content__col2}>
-              <div className="d-flex flex-column text-right">
+              <div className="d-flex flex-column text-end">
                 <h2 className={styles.pricing__content__col2__price}>€90</h2>
                 <p className="lead-lg">/hour</p>
               </div>
@@ -59,7 +57,7 @@ export const PricingSection = () => {
         </div>
 
         {/* bottom */}
-        <div className={cn(styles.pricing__bottom, "row mt-4 mt-lg-0")}>
+        <div className="row mt-4 mt-lg-0">
           <div className="col-lg-12">
             <div className="d-flex flex-column flex-lg-row flex-wrap justify-content-between align-items-center py-5">
               <div>

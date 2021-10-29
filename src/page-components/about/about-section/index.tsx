@@ -15,7 +15,7 @@ export const AboutSection = () => {
         </AnimatedLine>
         {/* text 1 */}
         <div className={cn(styles.about__text1, "row")}>
-          <div className="col-lg-10 pr-lg-5">
+          <div className="col-lg-10 pe-lg-5">
             <h2>
               A bunch of nerds who've mastered marketing and love to try it out
               on the world.
@@ -53,7 +53,7 @@ export const AboutSection = () => {
 
         {/* text 4 */}
         <div className="row text-center">
-          <div className="col-lg-12 pr-lg-0">
+          <div className="col-lg-12 pe-lg-0">
             <p className="lead-lg">
               <span className="text-highlight">Double,</span> then Double again.
             </p>

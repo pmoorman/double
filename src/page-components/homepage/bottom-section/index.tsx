@@ -35,7 +35,7 @@ export const BottomSection = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-6 pr-lg-0">
+          <div className="col-lg-6 pe-lg-0">
             <p
               className={cn(styles.bottom__content__par1, "lead mb-3 mb-lg-5")}
             >

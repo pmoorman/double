@@ -29,7 +29,7 @@ export const AboutSection = () => {
           <p className="lead-lg">Who Is</p>
           <div className="d-flex align-items-center">
             <StaticImage alt="" className="img-fluid" src="./logo-double.png" />
-            <p className="lead-lg ml-2 mb-0 d-none d-lg-block">?</p>
+            <p className="lead-lg ms-2 mb-0 d-none d-lg-block">?</p>
           </div>
           <div className="d-flex flex-column flex-lg-row mt-5">
             <ArrowButton to="/about">About Us</ArrowButton>

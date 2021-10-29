@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <div className="container">
         <hr className={styles.divider1} />
-        <div className=" d-flex justify-content-between mx-0 mb-4 flex-lg-row flex-column align-items-center align-items-lg-start text-center text-lg-left">
+        <div className=" d-flex justify-content-between mx-0 mb-4 flex-lg-row flex-column align-items-center align-items-lg-start text-center text-lg-start">
           <div
             style={{ maxWidth: "100px" }}
             className={cn(styles.doubleLogo, "mb3 mb-lg-0")}
@@ -39,7 +39,7 @@ export const Footer = () => {
           </div>
         </div>
         <hr className={styles.divider2} />
-        <div className="  d-flex justify-content-between mx-0 mb-4 flex-lg-row flex-column align-items-center align-items-lg-start text-center text-lg-left ">
+        <div className="  d-flex justify-content-between mx-0 mb-4 flex-lg-row flex-column align-items-center align-items-lg-start text-center text-lg-start ">
           <Link className={cn(styles.navLink, "mb-4 mb-lg-0")} to="/">
             Home
           </Link>

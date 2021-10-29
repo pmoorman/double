@@ -114,7 +114,7 @@ export const CaseStudiesSection = () => {
         {/* content */}
         <div className={cn(styles.casestudies__item__content, "container")}>
           <div className="row justify-content-end">
-            <div className="col-lg-7 pr-lg-4">
+            <div className="col-lg-7 pe-lg-4">
               <StaticImage
                 alt=""
                 className={cn(styles.casestudies__item__logo, "img-fluid mb-4")}

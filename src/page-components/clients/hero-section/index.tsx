@@ -42,7 +42,7 @@ export const HeroSection = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <img className="mr-2" src="chevron-down" />#
+                <img className="me-2" src="chevron-down" />#
                 <span v-html="selectedServiceLabel()"></span>
               </button>
               <div className="dropdown-menu" aria-labelledby="service_filters">
@@ -92,7 +92,7 @@ export const HeroSection = () => {
               >
                 Show <span v-html="selectedIndustry"></span>
                 <img
-                  className="mr-2 industry_filters-mobile__mainbtn__arrow"
+                  className="me-2 industry_filters-mobile__mainbtn__arrow"
                   src="chevron-down-light"
                 />
               </button>

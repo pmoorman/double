@@ -1,27 +1,28 @@
 import React from "react";
+import cn from "classnames";
 import { StaticImage } from "gatsby-plugin-image";
 
 import { AnimatedLine, ArrowButton } from "@app/components";
 
-import "./index.scss";
+import * as styles from "./index.module.scss";
 
 export const ClientsSection = () => {
   return (
-    <section id="clients" className="clients">
+    <section id="clients" className={styles.clients}>
       <div className="container">
         <div className="row">
           <div className="col-lg-6 px-0 px-lg-3">
-            <h2 className="clients__title mb-0 mb-lg-5">
+            <h2 className={cn(styles.clients__title, "mb-0 mb-lg-5")}>
               Learn what we did to help our clients grow.
             </h2>
           </div>
-          <div className="clients__logos col-lg-6">
+          <div className={cn(styles.clients__logos, "col-lg-6")}>
             <div className="d-flex justify-content-between align-items-center mb-5">
               <div>
                 <StaticImage
                   alt=""
                   data-aos="fade-in"
-                  className="clients__logos__item--1"
+                  className={styles.clients__logos__item_1}
                   src="./logo-sendcloud.png"
                 />
               </div>
@@ -29,7 +30,7 @@ export const ClientsSection = () => {
                 <StaticImage
                   alt=""
                   data-aos="fade-in"
-                  className="clients__logos__item--2"
+                  className={styles.clients__logos__item_2}
                   src="./logo-klooker.png"
                 />
               </div>
@@ -37,7 +38,7 @@ export const ClientsSection = () => {
                 <StaticImage
                   alt=""
                   data-aos="fade-in"
-                  className="clients__logos__item--3"
+                  className={styles.clients__logos__item_3}
                   src="./logo-cla.png"
                 />
               </div>
@@ -46,25 +47,25 @@ export const ClientsSection = () => {
               <StaticImage
                 alt=""
                 data-aos="fade-in"
-                className="clients__logos__item--4"
+                className={styles.clients__logos__item_4}
                 src="./logo-alpian.png"
               />
               <StaticImage
                 alt=""
                 data-aos="fade-in"
-                className="clients__logos__item--5"
+                className={styles.clients__logos__item_5}
                 src="./logo-tiktok.png"
               />
               <StaticImage
                 alt=""
                 data-aos="fade-in"
-                className="clients__logos__item--6"
+                className={styles.clients__logos__item_6}
                 src="./logo-h.png"
               />
               <StaticImage
                 alt=""
                 data-aos="fade-in"
-                className="clients__logos__item--7"
+                className={styles.clients__logos__item_7}
                 src="./logo-elugie.png"
               />
             </div>
@@ -73,7 +74,9 @@ export const ClientsSection = () => {
             <ArrowButton to="/clients">Case Studies</ArrowButton>
           </div>
         </div>
-        <AnimatedLine className="clients__line1 d-none d-lg-block">
+        <AnimatedLine
+          className={cn(styles.clients__line1, "d-none d-lg-block")}
+        >
           <StaticImage alt="" src="./clients-line1.svg" />
         </AnimatedLine>
       </div>

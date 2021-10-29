@@ -222,7 +222,7 @@ const ClientBoxLg: FC<ClientBoxProps> = (props) => {
               <Image image={logo} />
             </div>
           </div>
-          <div className="col-lg-8 pl-4 pr-0">
+          <div className="col-lg-8 ps-4 pe-0">
             {pageUrl && (
               <a
                 href="{{client.page_url}}"
@@ -286,7 +286,7 @@ const ClientBoxLg: FC<ClientBoxProps> = (props) => {
           <div className="col-lg-8 px-0 client-box__services__valuebox">
             <p>
               {services.map((s, i) => (
-                <span key={s + i} className="mr-4">
+                <span key={s + i} className="me-4">
                   #{s}
                 </span>
               ))}

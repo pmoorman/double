@@ -1,17 +1,21 @@
 import React from "react";
+import cn from "classnames";
 import { StaticImage } from "gatsby-plugin-image";
 
-import "./index.scss";
-import { AnimatedLine } from "@app/components";
+import { AnimatedLine, ShadowBox } from "@app/components";
+import * as styles from "./index.module.scss";
 
 export const HeroSection = () => {
   return (
-    <section id="hero" className="hero">
+    <section id="hero" className={styles.hero}>
       <div className="container position-relative">
         <StaticImage
           alt=""
           width={141}
-          className="hero__bggraphic-item--desktop hero__bggraphic-item--desktop--1"
+          className={cn(
+            styles.hero__bggraphic_item__desktop,
+            styles.hero__bggraphic_item__desktop_1
+          )}
           src="./hero-graphic-2.png"
         />
 
@@ -22,34 +26,46 @@ export const HeroSection = () => {
         >
           <div className="col-lg-5">
             <p className="intro__subtitle lead-lg mb-2">Complete Systematic</p>
-            <h1 className="hero__intro__title font-weight-bold mb-lg-4">
-              Growth Marketing Services
-            </h1>
+            <h1 className="fw-bold mb-lg-4">Growth Marketing Services</h1>
           </div>
         </div>
 
         {/* Graphics mobile 1 */}
-        <div className="hero__bggraphics-mobile--1 position-relative">
+        <div
+          className={cn(styles.hero__bggraphics_mobile_1, "position-relative")}
+        >
           <StaticImage
             alt=""
-            className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--1"
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_1
+            )}
             src="./hero-graphic-2.png"
           />
           <StaticImage
             alt=""
-            className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--2"
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_2
+            )}
             src="./hero-img-2.jpg"
           />
           <StaticImage
             alt=""
-            className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--3"
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_3
+            )}
             src="./hero-img-4.jpg"
           />
         </div>
 
         {/* text 1 */}
         <div
-          className="hero__text--1 d-flex text-center text-lg-start px-4 px-lg-3"
+          className={cn(
+            styles.hero__text_1,
+            "d-flex text-center text-lg-start px-4 px-lg-3"
+          )}
           data-aos="fade-in"
         >
           <div className="col-lg-6 pe-lg-5">
@@ -58,45 +74,75 @@ export const HeroSection = () => {
               <span className="text-highlight">we’ll bring it to life</span>.
             </p>
           </div>
-          <div className="hero__bggraphic-item--desktop hero__bggraphic-item--desktop--2">
-            <StaticImage alt="" src="./hero-graphic-3.png" />
-            <StaticImage alt="" src="./hero-img-4.jpg" />
+          <div
+            className={cn(
+              styles.hero__bggraphic_item__desktop,
+              styles.hero__bggraphic_item__desktop_2
+            )}
+          >
+            <StaticImage
+              className={styles.hero__bggraphic_item__desktop_2_img_1}
+              alt=""
+              src="./hero-graphic-3.png"
+            />
+            <StaticImage
+              className={styles.hero__bggraphic_item__desktop_2_img_2}
+              alt=""
+              src="./hero-img-4.jpg"
+            />
           </div>
-          <AnimatedLine className="hero__line--1">
+          <AnimatedLine className={styles.hero__line_1}>
             <StaticImage alt="" src="./hero-line-1.png" />
           </AnimatedLine>
         </div>
 
         {/* Graphics mobile 2 */}
-        <div className="hero__bggraphics-mobile--2 position-relative">
+        <div
+          className={cn(styles.hero__bggraphics_mobile_2, "position-relative")}
+        >
           <StaticImage
             alt=""
-            className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--4"
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_4
+            )}
             src="./hero-graphic-3.png"
           />
           <StaticImage
             alt=""
-            className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--5"
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_5
+            )}
             src="./hero-img-5.jpg"
           />
           <StaticImage
             alt=""
-            className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--6"
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_6
+            )}
             src="./hero-img-1.jpg"
           />
           <StaticImage
             alt=""
-            className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--7"
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_7
+            )}
             src="./hero-graphic-1.png"
           />
-          <AnimatedLine className="hero__line--1-mobile">
+          <AnimatedLine className={styles.hero__line_1_mobile}>
             <StaticImage alt="" src="./hero-line-1-mobile.svg" />
           </AnimatedLine>
         </div>
 
         {/* text 2 */}
         <div
-          className="hero__text--2 d-flex justify-content-end  text-center text-lg-start px-4 px-lg-3"
+          className={cn(
+            styles.hero__text_2,
+            "d-flex justify-content-end  text-center text-lg-start px-4 px-lg-3"
+          )}
           data-aos="fade-in"
         >
           <div className="col-lg-6 px-0 px-lg-3">
@@ -109,77 +155,124 @@ export const HeroSection = () => {
               for you.
             </p>
           </div>
-          <AnimatedLine className="hero__line--2">
+          <AnimatedLine className={styles.hero__line_2}>
             <StaticImage alt="" src="./hero-line-2.png" />
           </AnimatedLine>
         </div>
 
         {/* Graphics mobile 3 */}
-        <div className="hero__bggraphics-mobile--3 position-relative">
-          <AnimatedLine className="hero__line--2-mobile">
+        <div
+          className={cn(styles.hero__bggraphics_mobile_3, "position-relative")}
+        >
+          <AnimatedLine className={styles.hero__line_2_mobile}>
             <StaticImage alt="" src="./hero-line-2-mobile.svg" />
           </AnimatedLine>
           <StaticImage
             alt=""
-            className="hero__bggraphic-item--mobile hero__bggraphic-item--mobile--8"
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_8
+            )}
             src="./hero-img-3.jpg"
           />
         </div>
 
         {/* images */}
-        <div className="hero__desktop-image-section" data-aos="fade-in">
-          <div className="hero__bggraphic-item--desktop hero__bggraphic-item--desktop--3">
-            <StaticImage alt="" src="./hero-graphic-1.png" />
-            <StaticImage alt="" src="./hero-img-1.jpg" />
+        <div className={styles.hero__desktop_image_section} data-aos="fade-in">
+          <div
+            className={cn(
+              styles.hero__bggraphic_item__desktop,
+              styles.hero__bggraphic_item__desktop_3
+            )}
+          >
+            <StaticImage
+              className={styles.hero__bggraphic_item__desktop_3_img_1}
+              alt=""
+              src="./hero-graphic-1.png"
+            />
+            <StaticImage
+              className={styles.hero__bggraphic_item__desktop_3_img_2}
+              alt=""
+              src="./hero-img-1.jpg"
+            />
           </div>
-          <div className="hero__bggraphic-item--desktop hero__bggraphic-item--desktop--4">
-            <StaticImage alt="" src="./hero-img-2.jpg" />
+          <div
+            className={cn(
+              styles.hero__bggraphic_item__desktop,
+              styles.hero__bggraphic_item__desktop_4
+            )}
+          >
+            <StaticImage
+              className={styles.hero__bggraphic_item__desktop_4_img_1}
+              alt=""
+              src="./hero-img-2.jpg"
+            />
           </div>
-          <div className="hero__bggraphic-item--desktop hero__bggraphic-item--desktop--5">
-            <StaticImage alt="" src="./hero-img-5.jpg" />
+          <div
+            className={cn(
+              styles.hero__bggraphic_item__desktop,
+              styles.hero__bggraphic_item__desktop_5
+            )}
+          >
+            <StaticImage
+              className={styles.hero__bggraphic_item__desktop_5_img_1}
+              alt=""
+              src="./hero-img-5.jpg"
+            />
           </div>
         </div>
 
         {/* text 3 */}
-        <div className="hero__text--3 d-flex" data-aos="fade-in">
+        <div className={cn(styles.hero__text_3, "d-flex")} data-aos="fade-in">
           <div className="col-lg-7 pe-lg-5">
-            <div className="shadowbox variant-1-check mb-4 active-in-view"></div>
+            <ShadowBox checkbox className="mb-4" />
             <h2>
               We help you systematically drive traffic...
               <span>(= performance)</span>
             </h2>
           </div>
           <div className="col">
-            <div className="hero__bggraphic-item--desktop hero__bggraphic-item--desktop--6">
-              <StaticImage alt="" src="./hero-img-4.jpg" />
+            <div
+              className={cn(
+                styles.hero__bggraphic_item__desktop,
+                styles.hero__bggraphic_item__desktop_6
+              )}
+            >
+              <StaticImage
+                className={styles.hero__bggraphic_item__desktop_6_img_1}
+                alt=""
+                src="./hero-img-4.jpg"
+              />
             </div>
           </div>
         </div>
 
         {/* text 4 & 5 */}
         <div
-          className="hero__text--4 d-flex justify-content-between"
+          className={cn(styles.hero__text_4, "d-flex justify-content-between")}
           data-aos="fade-in"
         >
           <div className="col-lg-6">
-            <div className="shadowbox variant-1-check mb-4 active-in-view"></div>
+            <ShadowBox checkbox className="mb-4" />
             <p className="lead-lg">
               …and then we help you convert that traffic via funnels, nurturing
               & storytelling…
             </p>
           </div>
           <div className="col-lg-5 pe-lg-0">
-            <div className="shadowbox variant-1-check mb-4 active-in-view"></div>
+            <ShadowBox checkbox className="mb-4" />
             <p className="lead-lg">…and turn them into active product users.</p>
           </div>
-          <AnimatedLine className="hero__line--3">
+          <AnimatedLine className={styles.hero__line_3}>
             <StaticImage alt="" src="./hero-line-3.png" />
           </AnimatedLine>
         </div>
 
         {/* Graphics mobile 4 */}
-        <div className="hero__bggraphics-mobile--3 position-relative">
-          <AnimatedLine className="hero__line--3-mobile">
+        <div
+          className={cn(styles.hero__bggraphics_mobile_3, "position-relative")}
+        >
+          <AnimatedLine className={styles.hero__line_3_mobile}>
             <StaticImage alt="" src="./hero-line-3-mobile.svg" />
           </AnimatedLine>
         </div>

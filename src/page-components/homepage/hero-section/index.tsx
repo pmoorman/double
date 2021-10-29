@@ -31,7 +31,7 @@ export const HeroSection = () => {
           )}
           data-aos="fade-in"
         >
-          <h1 className="text-primary font-weight-bold mb-4">
+          <h1 className="text-primary fw-bold mb-4">
             Growth, <br />
             <span className="text-secondary">baby!</span>
           </h1>
