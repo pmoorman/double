@@ -59,9 +59,9 @@ export const WistiaVideo: FC<WistiaVideoProps> = ({ videoId, ...rest }) => {
                 width: "100%",
               }}
             >
-              <StaticImage
+              {/* <StaticImage
                 alt=""
-                src={`https://fast.wistia.com/embed/medias/${videoId}/swatch`}
+                src={`https://fast.wistia.com/embed/medias/TODO:/swatch`}
                 style={{
                   filter: "blur(5px)",
                   height: "100%",
@@ -69,7 +69,7 @@ export const WistiaVideo: FC<WistiaVideoProps> = ({ videoId, ...rest }) => {
                   width: "100%",
                 }}
                 aria-hidden="true"
-              />
+              /> */}
             </div>
           </div>
         </div>
