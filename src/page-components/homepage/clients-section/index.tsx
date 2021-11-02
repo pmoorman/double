@@ -251,22 +251,10 @@ export const ClientsSection = () => {
               </div>
             </div>
           </div>
-
-          <div className={cn(styles.logoRow, "pt-5 pt-lg-0 pb-4 pb-lg-0")}>
-            <p
-              className={cn(
-                styles.clients__logos__text2,
-                "lead-lg text-center mb-0"
-              )}
-            >
-              ...chances are that we can <br /> help you <span>scale up</span>
-            </p>
-          </div>
         </div>
-
-        <Explode />
-        <Circles />
       </div>
+      <Explode />
+      <Circles />
     </section>
   );
 };
@@ -276,32 +264,38 @@ const Explode = () => {
     triggerOnce: true,
   });
 
-  useEffect(() => {
-    if (inView) {
-      (async () => {
-        // const textClass = "clients__logos__text2";
-        // const explodeClass = "clients__explode";
-        // const sleep = (ms) => {
-        //   return new Promise((resolve) => setTimeout(resolve, ms));
-        // };
-        // document.querySelector(`.${textClass}`).classList.add("active");
-        // await sleep(100);
-        // document.querySelector(`.${explodeClass}`).classList.add("active");
-      })();
-    }
-  }, [inView]);
-
   return (
     <>
+      <div className={cn(styles.logoRow, "pt-5 pt-lg-0 pb-4 pb-lg-0")}>
+        <p
+          className={cn(
+            styles.clients__logos__text2,
+            "lead-lg justify-content-center text-center mb-0 m-auto",
+            { [styles.active]: inView }
+          )}
+        >
+          ...chances are that we can <br /> help you <span>scale up</span>
+        </p>
+      </div>
+
       {/* Explode */}
       <div
-        ref={ref}
-        className="clients__explode d-flex justify-content-center position-relative"
+        className={cn(
+          styles.clients__explode,
+          "d-flex justify-content-center position-relative",
+          { [styles.active]: inView }
+        )}
       >
-        <h1 className="clients__explode__text text-primary">explode</h1>
+        <h1
+          ref={ref}
+          className={cn(styles.clients__explode__text, "text-primary")}
+        >
+          explode
+        </h1>
         <StaticImage
           alt=""
-          className="clients__explode__bg position-absolute"
+          objectFit="none"
+          className={cn(styles.clients__explode__bg, "position-absolute")}
           src="./explode-stroke.svg"
         />
       </div>
