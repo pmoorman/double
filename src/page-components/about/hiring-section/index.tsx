@@ -121,8 +121,8 @@ export const HiringSection = () => {
                       {i.location}
                     </p>
                   </div>
-                  <div>
-                    <StaticImage alt="" src="./arrow-end.svg" />
+                  <div className="d-flex">
+                    <StaticImage alt="" src="./arrow-right.svg" />
                   </div>
                 </a>
               ))}

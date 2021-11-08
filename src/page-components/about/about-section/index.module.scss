@@ -45,6 +45,7 @@
     left: 100px;
     bottom: -85%;
     transform: rotate(20deg);
+    width: fit-content;
     @include media-breakpoint-down(lg) {
       top: 57%;
       transform: translateY(-50%);
