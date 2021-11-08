@@ -98,69 +98,16 @@
     }
   }
 
-  &__circles {
-    left: 25px;
-    margin-bottom: 50px;
-
-    &__curved-text {
-      &_mobile {
-        position: absolute;
-        bottom: -85px;
-        left: -15px;
-      }
-      &_desktop {
-        position: absolute;
-        bottom: -60px;
-        left: -70px;
-      }
-      &_wrapper {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 100%;
-        opacity: 0;
-        @include media-breakpoint-up(md) {
-          transform: rotate(45deg);
-        }
-      }
-    }
-
-    & [class*="_circle"] {
-      width: 528px;
-      height: 528px;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 100%;
-      @include media-breakpoint-down(md) {
-        width: 290px;
-        height: 290px;
-      }
-    }
-
-    &_circle1 {
-      background: var(--bs-secondary);
-      transform: translateX(60%);
-      opacity: 0;
-    }
-
-    &_circle2 {
-      position: absolute;
-      top: 0;
-      left: -50px;
-      background: var(--bs-primary);
-      transform: translateX(-60%);
-      opacity: 0;
-    }
-  }
-
   &__footer {
+    transition: 0.5s all ease-in-out;
     @include media-breakpoint-up(md) {
       opacity: 0;
     }
   }
+}
+
+.footerActive {
+  opacity: 1;
 }
 
 .logoRow {

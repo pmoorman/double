@@ -6,6 +6,7 @@ import cn from "classnames";
 import { AnimatedLine } from "@app/components";
 
 import * as styles from "./index.module.scss";
+import { Circles } from "../circles";
 
 export const ClientsSection = () => {
   return (
@@ -254,13 +255,15 @@ export const ClientsSection = () => {
         </div>
       </div>
       <Explode />
-      <Circles />
     </section>
   );
 };
 
 const Explode = () => {
   const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: footerRef, inView: footerInView } = useInView({
     triggerOnce: true,
   });
 
@@ -299,120 +302,20 @@ const Explode = () => {
           src="./explode-stroke.svg"
         />
       </div>
-    </>
-  );
-};
 
-const Circles = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      (async () => {
-        // const footer = document.querySelector(".clients__footer");
-        // const circle1 = document.querySelector(".clients__circles--circle1");
-        // const circle2 = document.querySelector(".clients__circles--circle2");
-        // const circle1TextEl = document.querySelector(
-        //   ".clients__circles--circle1__text"
-        // );
-        // const circle2TextEl = document.querySelector(
-        //   ".clients__circles--circle2__text"
-        // );
-        // const curvedText = document.querySelector(
-        //   ".clients__circles__curved-text--wrapper"
-        // );
-        // const sleep = (ms) => {
-        //   return new Promise((resolve) => setTimeout(resolve, ms));
-        // };
-        // const animateCircle = (circle, startPoint, duration) => {
-        //   circle.animate(
-        //     [
-        //       { transform: `translateX(${startPoint})`, opacity: 0 },
-        //       { transform: "translateX(0%)", opacity: 1 },
-        //     ],
-        //     { duration, fill: "both" }
-        //   );
-        // };
-        // const animateCircleText = (textEl, duration) => {
-        //   textEl.animate([{ opacity: 1 }, { opacity: 0 }, { opacity: 1 }], {
-        //     duration,
-        //     fill: "both",
-        //   });
-        // };
-        // const animateCurvedText = async (delayDuration) => {
-        //   await sleep(delayDuration);
-        //   curvedText.animate(
-        //     [
-        //       { opacity: 0, transform: "rotate(45deg)" },
-        //       { opacity: 1, transform: "rotate(0)" },
-        //     ],
-        //     { duration: 1000, fill: "both" }
-        //   );
-        // };
-        // const fadeIn = async (el, duration) => {
-        //   el.animate([{ opacity: 0 }, { opacity: 1 }], {
-        //     duration,
-        //     fill: "both",
-        //   });
-        // };
-        // const changeCircle2Text = () => {
-        //   circle2TextEl.innerHTML = circle2TextEl.getAttribute(
-        //     "data-animationend-text"
-        //   );
-        // };
-        // animateCircle(circle1, "60%", 1500);
-        // animateCircle(circle2, "-60%", 1500);
-        // fadeIn(footer, 2250);
-        // // Should be half of animateCircle anmimation
-        // await sleep(750);
-        // animateCircleText(circle1TextEl, 750);
-        // animateCircleText(circle2TextEl, 750);
-        // animateCurvedText(200);
-        // // Should be half of animateCircleText anmimation
-        // await sleep(375);
-        // changeCircle2Text();
-      })();
-    }
-  }, [inView]);
-  return (
-    <>
       {/* Circles */}
-      <div className="row justify-content-center">
-        <div ref={ref} className="clients__circles position-relative">
-          <div className="clients__circles--circle1">
-            <h3 className="clients__circles--circle1__text">Stories</h3>
-          </div>
-          <div className="clients__circles--circle2">
-            <h3
-              className="clients__circles--circle2__text"
-              data-animationend-text="Systems & Stories"
-            >
-              Systems
-            </h3>
-            <div className="clients__circles__curved-text">
-              <div className="clients__circles__curved-text--wrapper">
-                <StaticImage
-                  alt=""
-                  className="clients__circles__curved-text--mobile d-lg-none d-block"
-                  src="./explode-curved-text-mobile.png"
-                />
-
-                <StaticImage
-                  alt=""
-                  className="clients__circles__curved-text--desktop d-none d-lg-block"
-                  src="./explode-curved-text.png"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Circles />
 
       {/* Footer */}
-      <div className="clients__footer d-flex justify-content-center position-relative text-center mt-4 mt-lg-5">
-        <div className="col-lg-7 px-4">
+      <div
+        ref={footerRef}
+        className={cn(
+          styles.clients__footer,
+          { [styles.footerActive]: footerInView },
+          "d-flex justify-content-center position-relative text-center mt-4 mt-lg-5"
+        )}
+      >
+        <div className="col-lg-5 px-4">
           <p className="lead-lg">
             We build <span className="text-highlight">systems</span>, to tell
             your
