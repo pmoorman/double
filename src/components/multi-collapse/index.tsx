@@ -7,22 +7,15 @@ import lightArrow from "./icon-chevron_up-light.svg";
 
 import * as styles from "./index.module.scss";
 
-const indexes = [2, 0, 1, 2];
-
 export function createChunks<T>(arr: T[]): T[][] {
-  return arr.reduce(
-    (resultArray, item, index) => {
-      if (index < 3) {
-        resultArray[index].push(item);
-      } else {
-        const i = index % 3;
-        resultArray[indexes[i]].push(item);
-      }
+  const result = [[], [], []];
 
-      return resultArray;
-    },
-    [[], [], []]
-  );
+  arr.forEach((item, index) => {
+    const pos = index % 3;
+    result[pos].push(item);
+  });
+
+  return result;
 }
 
 export interface CollapseItem {
