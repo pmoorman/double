@@ -73,19 +73,13 @@ export const Circles = () => {
     <div className="d-flex justify-content-center">
       <div ref={ref} className={cn(styles.circles, "position-relative")}>
         <div ref={circle1Ref} className={styles.circles_circle1}>
-          <h3 ref={circle1TextElRef} className={styles.circles_circle1__text}>
-            Stories
-          </h3>
+          <h3 ref={circle1TextElRef}>Stories</h3>
         </div>
         <div ref={circle2Ref} className={styles.circles_circle2}>
-          <h3
-            ref={circle2TextElRef}
-            className={styles.circles_circle2__text}
-            data-animationend-text="Systems & Stories"
-          >
+          <h3 ref={circle2TextElRef} data-animationend-text="Systems & Stories">
             Systems
           </h3>
-          <div className={styles.circles__curved_text}>
+          <div>
             <div
               ref={curvedTextRef}
               className={styles.circles__curved_text_wrapper}
