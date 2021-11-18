@@ -54,7 +54,7 @@ export const FunnelsSection = () => {
           className={cn(styles.upper, "d-flex align-items-end px-3 px-lg-0")}
         >
           <div className="col">
-            <Navigation index={1} background="dark" />
+            <Navigation index={1} />
           </div>
           <div>
             <StaticImage alt="" className="img-fluid" src="./funnels.svg" />
