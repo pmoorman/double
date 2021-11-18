@@ -12,6 +12,7 @@ export const HeroSection = () => {
       <div className={cn(styles.hero__bg, "position-absolute w-100")}>
         <StaticImage
           className="w-100 d-none d-lg-block"
+          quality={100}
           src="./hero-bg.png"
           alt=""
         />
