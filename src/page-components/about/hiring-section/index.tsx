@@ -46,7 +46,7 @@ export const HiringSection = () => {
                 className={cn(styles.hiring__box_check, "me-4 me-lg-5")}
               />
               <p className="mb-0">
-                The group chat is filled with
+                The group chat is filled with{" "}
                 <span className="text-highlight">
                   equal parts inspiration and laughs
                 </span>
@@ -60,7 +60,7 @@ export const HiringSection = () => {
                 className={cn(styles.hiring__box_check, "me-4 me-lg-5")}
               />
               <p className="mb-0">
-                All of your colleagues
+                All of your colleagues{" "}
                 <span className="text-highlight">ferociously learn</span> in
                 their spare time{" "}
                 <span className="text-muted">
@@ -76,9 +76,10 @@ export const HiringSection = () => {
                 className={cn(styles.hiring__box_check, "me-4 me-lg-5")}
               />
               <p className="mb-0">
-                The team works from
+                The team works from{" "}
                 <span className="text-highlight">around the globe</span>
                 <span className="text-muted">
+                  {" "}
                   (and everyone's welcome to visit)
                 </span>
               </p>
@@ -90,7 +91,7 @@ export const HiringSection = () => {
         <div className="row justify-content-center mb-4 pt-lg-5">
           <div className="col-lg-4 mb-3 mb-lg-0 px-0 ps-lg-3 pe-lg-5 text-center text-lg-start">
             <p className="lead-lg">
-              Then check out the
+              Then check out the{" "}
               <span className="text-highlight">roles we’re looking</span> for:
             </p>
           </div>

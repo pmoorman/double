@@ -121,7 +121,9 @@ export const GallerySection = () => {
 
         <div className={cn(styles.gallery__bottom, "row")}>
           <div className="col-lg-4">
-            <h3 style={{ lineHeight: "62px" }}>Want to hire us?</h3>
+            <h3 style={{ lineHeight: "62px", paddingRight: "5px" }}>
+              Want to hire us?
+            </h3>
             <div className="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-end">
               <ArrowButton to="mailto:pieter@double-agency.com">
                 Contact us
