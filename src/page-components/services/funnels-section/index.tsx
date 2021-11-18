@@ -13,32 +13,32 @@ const funnels = [
     body: "From explainer videos to web animations, use engaging motion graphics to make your brand stand out.",
   },
   {
-    title: "Technical writing",
-    body: "Let our team dive into the topic of your choice and write on-point, but easy-to-understand content for your audience.",
-  },
-  {
-    title: "Brand strategy",
-    body: "We help new and existing brands with their brand positioning, voice, and visual style.",
-  },
-  {
     title: "Sales funnel architecture",
     body: "Reach your company objectives by building a well-oiled sales funnel. This is the moment you will systemize your marketing.",
-  },
-  {
-    title: "Copywriting",
-    body: "Our team of copywriters will help you find your brand’s voice and produce out-of-this-world pieces of content.",
-  },
-  {
-    title: "Story-driven email copywriting",
-    body: "Build a list of loyal subscribers through story-telling. Get your readers hooked and convert them into paying customers later.",
   },
   {
     title: "Lead nurturing",
     body: "Let us help you close more deals by designing a powerful lead nurture strategy. ",
   },
   {
+    title: "Technical writing",
+    body: "Let our team dive into the topic of your choice and write on-point, but easy-to-understand content for your audience.",
+  },
+  {
+    title: "Copywriting",
+    body: "Our team of copywriters will help you find your brand’s voice and produce out-of-this-world pieces of content.",
+  },
+  {
     title: "Content creation",
     body: "To complement your marketing campaigns, we help you create the right type of content. Think photos, videos, GIFs, blogposts, social media banners and more. ",
+  },
+  {
+    title: "Brand strategy",
+    body: "We help new and existing brands with their brand positioning, voice, and visual style.",
+  },
+  {
+    title: "Story-driven email copywriting",
+    body: "Build a list of loyal subscribers through story-telling. Get your readers hooked and convert them into paying customers later.",
   },
   {
     title: "Website design",

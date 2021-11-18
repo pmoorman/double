@@ -13,20 +13,20 @@ const marketing = [
     body: "Our passion is to architect your automated growth 'machines' that integrate all aspects of your acquisition, conversion, and retention into a never-ending loop.",
   },
   {
-    title: "Onboarding",
-    body: "Delight your new users or customers with a world-class onboarding experience. The most crucial step for successful long-term retention.",
-  },
-  {
     title: "Product-driven growth",
     body: "We help you find ways for your product or service to generate more (user) growth. Let your product do the work for you.",
   },
   {
-    title: "Retention",
-    body: "Turn new users into loyal customers by finding a strategy for long-term retention.",
-  },
-  {
     title: "Referral & virality",
     body: "We will unlock the potential of word-of-mouth and virality by giving your customers something worth talking about.",
+  },
+  {
+    title: "Onboarding",
+    body: "Delight your new users or customers with a world-class onboarding experience. The most crucial step for successful long-term retention.",
+  },
+  {
+    title: "Retention",
+    body: "Turn new users into loyal customers by finding a strategy for long-term retention.",
   },
 ];
 
