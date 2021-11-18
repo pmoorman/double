@@ -114,12 +114,10 @@ export const HeroSection = () => {
         >
           <div className={styles.hero__bottom__inner}>
             <p className="lead">
-              We’re marketing
-              <span className="text-highlight">super-nerds</span> who can
-              <span className="text-highlight">
-                build, test, and optimize
-              </span>{" "}
-              a strategy for sending your sales into
+              We’re marketing{" "}
+              <span className="text-highlight">super-nerds</span> who can{" "}
+              <span className="text-highlight">build, test, and optimize</span>{" "}
+              a strategy for sending your sales into{" "}
               <span className="text-highlight">orbit</span>.
             </p>
           </div>

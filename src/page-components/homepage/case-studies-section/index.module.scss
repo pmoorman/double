@@ -68,9 +68,9 @@
       padding-top: 65px;
       left: 0;
     }
-    .text_highlight {
-      color: #ea3354;
-    }
+  }
+  &__text_highlight {
+    color: #ea3354;
   }
 }
 
@@ -81,12 +81,12 @@
   }
   .casestudies__item__content {
     padding-top: 340px;
-    .text_highlight {
-      color: #292f47;
-    }
     @include media-breakpoint-down(md) {
       padding-top: 65px;
     }
+  }
+  &__text_highlight {
+    color: #292f47;
   }
 }
 
@@ -107,9 +107,9 @@
       @include media-breakpoint-down(md) {
         padding-top: 160px;
       }
-      .text_highlight {
-        color: #b63e86;
-      }
     }
+  }
+  &__text_highlight {
+    color: #b63e86;
   }
 }

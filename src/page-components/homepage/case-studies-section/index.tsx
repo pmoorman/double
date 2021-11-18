@@ -74,8 +74,13 @@ export const CaseStudiesSection = () => {
                 Long story short…
               </p>
               <p className="lead-lg">
-                We help TikTok build stronger lead nurturing via
-                <span className={styles.text_highlight}>
+                We help TikTok build stronger lead nurturing via{" "}
+                <span
+                  className={cn(
+                    styles.casestudies_tiktok__text_highlight,
+                    "text-highlight"
+                  )}
+                >
                   eye-catching landing pages, better email marketing and spiffy
                   visual content
                 </span>
@@ -125,9 +130,16 @@ export const CaseStudiesSection = () => {
                 executing on everything that's digital and growth…
               </p>
               <p className="lead-lg">
-                and with
-                <span className="text-highlight">$32 million in funding</span>,
-                Alpian has a serious appetite for growth.
+                and with{" "}
+                <span
+                  className={cn(
+                    styles.casestudies_alpian__text_highlight,
+                    "text-highlight"
+                  )}
+                >
+                  $32 million in funding
+                </span>
+                , Alpian has a serious appetite for growth.
               </p>
               <hr className={styles.casestudies__item__divider} />
               <div className="d-flex flex-column flex-lg-row">
@@ -176,7 +188,12 @@ export const CaseStudiesSection = () => {
               <p className="lead-lg">
                 That’s when we came in, built new sales funnels, and delivered
                 video content that CEO David described as “
-                <span className="text-highlight">
+                <span
+                  className={cn(
+                    styles.casestudies_cla__text_highlight,
+                    "text-highlight"
+                  )}
+                >
                   unparalleled in our space
                 </span>
                 ”.
