@@ -198,6 +198,7 @@
     }
 
     &__services {
+      z-index: 2;
       &__titlebox {
         display: flex;
         align-items: center;

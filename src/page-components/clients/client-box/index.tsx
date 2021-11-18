@@ -1,21 +1,8 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React, { FC, ReactNode } from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { ClientImage } from "../client-image";
 
 import "./index.scss";
-
-// helper
-const Image: FC<{ image: { childImageSharp?: any; publicURL: string } }> = ({
-  image,
-}) => {
-  console.log({ image });
-  if (!image) return null;
-
-  if (image.childImageSharp) {
-    return <GatsbyImage image={getImage(image.childImageSharp)} alt="" />;
-  }
-
-  return <img src={image.publicURL} alt="" />;
-};
 
 export interface ClientBoxProps {
   size?: 1 | 2 | 3;
@@ -76,12 +63,19 @@ const ClientBoxSm: FC<ClientBoxProps> = (props) => {
               </div>
             </a>
           )}
-          <Image image={logo} />
+          <ClientImage
+            item={logo}
+            alt=""
+            style={{ maxHeight: "54px", maxWidth: "270px" }}
+          />
         </div>
         <div className="client-box__content">
           <h3 className="client-box__content__title">{title}</h3>
           <p className="client-box__content__industry">{industry}</p>
-          <p className="client-box__content__description">{description}</p>
+          <p
+            className="client-box__content__description"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           <div className="d-block d-lg-none">
             {pageUrl && (
               <a
@@ -126,8 +120,19 @@ const ClientBoxMd: FC<ClientBoxProps> = (props) => {
 
   return (
     <div className="client-box client-box__md">
-      <div className="client-box__md__bg">
-        <Image image={backgroundImage} />
+      <div
+        className="client-box__md__bg"
+        style={{ backgroundColor, zIndex: 1 }}
+      >
+        <ClientImage
+          item={backgroundImage}
+          alt=""
+          style={{
+            width: "100%",
+            textAlign: "center",
+            maxHeight: "100%",
+          }}
+        />
       </div>
       <div className="client-box__logo" style={{ backgroundColor }}>
         {pageUrl && (
@@ -145,17 +150,29 @@ const ClientBoxMd: FC<ClientBoxProps> = (props) => {
             </div>
           </a>
         )}
-        <Image image={logo} />
+        <ClientImage
+          item={logo}
+          alt=""
+          style={{
+            maxHeight: "54px",
+            maxWidth: "270px",
+            zIndex: 2,
+          }}
+        />
       </div>
-      <div className="client-box__content">
+      <div className="client-box__content" style={{ zIndex: 2 }}>
         <h3 className="client-box__content__title">{title}</h3>
         <p className="client-box__content__industry">{industry}</p>
-        <p className="client-box__content__description">{description}</p>
+        <p
+          className="client-box__content__description"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
         {testimonialName && (
           <div className="client-box__testimonial">
-            <img
+            <StaticImage
               className="client-box__testimonial__line"
-              src="/assets/images/clients/testimonial_line.svg"
+              src="./testimonial_line.svg"
+              alt=""
             />
             <p className="client-box__testimonial__name">{testimonialName}</p>
             <p className="client-box__testimonial__jobtitle">
@@ -219,7 +236,14 @@ const ClientBoxLg: FC<ClientBoxProps> = (props) => {
         <div className="row">
           <div className="col-lg-4 px-0">
             <div className="client-box__logo" style={{ backgroundColor }}>
-              <Image image={logo} />
+              <ClientImage
+                item={logo}
+                alt=""
+                style={{
+                  maxHeight: "166px",
+                  maxWidth: "207px",
+                }}
+              />
             </div>
           </div>
           <div className="col-lg-8 ps-4 pe-0">
@@ -243,15 +267,17 @@ const ClientBoxLg: FC<ClientBoxProps> = (props) => {
               <div className="client-box__content__inner">
                 <h3 className="client-box__content__title">{title}</h3>
                 <p className="client-box__content__industry">{industry}</p>
-                <p className="client-box__content__description">
-                  {description}
-                </p>
+                <p
+                  className="client-box__content__description"
+                  dangerouslySetInnerHTML={{ __html: description }}
+                />
               </div>
               {testimonialName && (
                 <div className="client-box__testimonial">
-                  <img
+                  <StaticImage
                     className="client-box__testimonial__line"
-                    src="/assets/images/clients/testimonial_line.svg"
+                    src="./testimonial_line.svg"
+                    alt=""
                   />
                   <p className="client-box__testimonial__name">
                     {testimonialName}

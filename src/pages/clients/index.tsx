@@ -90,6 +90,7 @@ const clients: Client[] = [
     testimonialName: null,
     testimonialJobtitle: null,
     backgroundImage: "Alpian_background",
+    backgroundColor: "#000000",
     arrow: "light",
     size: 2,
   },
@@ -259,7 +260,7 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
                     (e) => e.node.name === client.backgroundImage
                   )?.node;
                   return (
-                    <Col lg={width}>
+                    <Col lg={width} className="mb-3">
                       <ClientBox {...client} logo={logo} backgroundImage={bg} />
                     </Col>
                   );
