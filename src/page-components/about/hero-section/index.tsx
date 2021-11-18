@@ -14,12 +14,7 @@ export const HeroSection = () => {
           <div className="col-8">
             <div className="mb-5 pb-4 text-center">
               <h3 className={styles.hero__title}>Hey, we’re</h3>
-              <StaticImage
-                alt=""
-                className="img-fluid"
-                width={344}
-                src="./logo.svg"
-              />
+              <StaticImage alt="" src="./logo.svg" />
             </div>
           </div>
         </div>
