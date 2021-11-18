@@ -7,6 +7,7 @@ import {
   MarketingSection,
   PerformanceSection,
   ClientsSection,
+  NavigationMobile,
 } from "@app/page-components/services";
 import { BottomSection } from "@app/components";
 
@@ -24,6 +25,7 @@ export const ServicesPage = () => {
         subtitle="We should talk."
         body="You got this far because the evidence is hard to ignore: we’ve grown businesses and will grow yours, too."
       />
+      <NavigationMobile />
     </>
   );
 };
