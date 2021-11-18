@@ -307,30 +307,32 @@ const Explode = () => {
       <Circles />
 
       {/* Footer */}
-      <div
-        ref={footerRef}
-        className={cn(
-          styles.clients__footer,
-          { [styles.footerActive]: footerInView },
-          "d-flex justify-content-center position-relative text-center mt-4 mt-lg-5"
-        )}
-      >
-        <div className="col-lg-5 px-4">
-          <p className="lead-lg">
-            We build <span className="text-highlight">systems</span>, to tell
-            your
-            <span className="text-highlight">story</span>
-          </p>
-          <p className="mb-0">
-            The ultimate salesperson happens to be
-            <span className="text-highlight">an intoxicating story</span>. The
-            key to repeatable outputs is{" "}
-            <span className="text-highlight">systems</span>. Combine them both
-            and you get (deadly)
-            <span className="text-highlight">
-              story-powered growth systems.
-            </span>
-          </p>
+      <div className="container">
+        <div
+          ref={footerRef}
+          className={cn(
+            styles.clients__footer,
+            { [styles.footerActive]: footerInView },
+            "row justify-content-center position-relative text-center mt-4 mt-lg-5"
+          )}
+        >
+          <div className="col-lg-7 px-4">
+            <p className="lead-lg">
+              We build <span className="text-highlight">systems</span>, to tell
+              your
+              <span className="text-highlight">story</span>
+            </p>
+            <p className="mb-0">
+              The ultimate salesperson happens to be
+              <span className="text-highlight">an intoxicating story</span>. The
+              key to repeatable outputs is{" "}
+              <span className="text-highlight">systems</span>. Combine them both
+              and you get (deadly)
+              <span className="text-highlight">
+                story-powered growth systems.
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </>

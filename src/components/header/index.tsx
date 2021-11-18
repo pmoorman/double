@@ -1,8 +1,8 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import { DoubleLogo } from "..";
 
 import { Link } from "../link";
+import { DoubleLogo } from "..";
 import * as styles from "./index.module.scss";
 
 const ID = "main-nav";
@@ -25,19 +25,44 @@ export const Header = () => {
 
         <Navbar.Collapse className={styles.navbarCollapse} id={ID}>
           <Nav className="ms-auto">
-            <Nav.Link className={styles.navLink} as={Link} to="/">
+            <Nav.Link
+              className={styles.navLink}
+              activeClassName={styles.navLinkActive}
+              as={Link}
+              to="/"
+            >
               Home
             </Nav.Link>
-            <Nav.Link className={styles.navLink} as={Link} to="/services">
+            <Nav.Link
+              className={styles.navLink}
+              activeClassName={styles.navLinkActive}
+              as={Link}
+              to="/services"
+            >
               Services
             </Nav.Link>
-            <Nav.Link className={styles.navLink} as={Link} to="/clients">
+            <Nav.Link
+              className={styles.navLink}
+              activeClassName={styles.navLinkActive}
+              as={Link}
+              to="/clients"
+            >
               Clients
             </Nav.Link>
-            <Nav.Link className={styles.navLink} as={Link} to="/blog">
+            <Nav.Link
+              className={styles.navLink}
+              activeClassName={styles.navLinkActive}
+              as={Link}
+              to="/blog"
+            >
               Blog
             </Nav.Link>
-            <Nav.Link className={styles.navLink} as={Link} to="/about">
+            <Nav.Link
+              className={styles.navLink}
+              activeClassName={styles.navLinkActive}
+              as={Link}
+              to="/about"
+            >
               About
             </Nav.Link>
             <Nav.Link
