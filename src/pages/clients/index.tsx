@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col } from "react-bootstrap";
 import cn from "classnames";
@@ -10,6 +10,7 @@ import {
 } from "@app/page-components/clients";
 
 import * as styles from "./index.module.scss";
+import { useQueryParams } from "@app/hooks";
 
 interface Client extends Omit<ClientBoxProps, "logo" | "backgroundImage"> {
   logo: string;
@@ -217,27 +218,45 @@ export interface ClientsPageProps {
 }
 
 export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
-  const rows = clients.reduce(
-    (prev, curr) => {
-      const lastIndex = prev.length - 1;
-      const lastRow = prev[lastIndex];
-      const sum = lastRow.reduce((p, c) => p + c.size, 0);
-      if (sum >= 3) {
-        prev[lastIndex + 1] = [curr];
-      } else {
-        prev[lastIndex].push(curr);
-      }
-      return prev;
-    },
-    [[]] as Array<Client[]>
-  );
+  const { queryParams } =
+    useQueryParams<{ service?: string; industry: string }>();
+
+  const filteredItems = useMemo(() => {
+    return clients.filter((c) => {
+      const hasIndustry =
+        !queryParams?.industry || queryParams?.industry === "All"
+          ? true
+          : c.industry === queryParams?.industry;
+      const hasService = queryParams?.service
+        ? c.services.includes(queryParams?.service)
+        : true;
+      return hasIndustry;
+    });
+  }, [queryParams]);
+
+  const orderedItems = useMemo(() => {
+    return filteredItems.reduce(
+      (prev, curr) => {
+        const lastIndex = prev.length - 1;
+        const lastRow = prev[lastIndex];
+        const sum = lastRow.reduce((p, c) => p + c.size, 0);
+        if (sum >= 3) {
+          prev[lastIndex + 1] = [curr];
+        } else {
+          prev[lastIndex].push(curr);
+        }
+        return prev;
+      },
+      [[]] as Array<Client[]>
+    );
+  }, [filteredItems]);
 
   return (
     <div id="clients-page">
       <HeroSection />
       {/* Clients */}
       <section className="client-boxes pt-0">
-        {rows.map((row, i) => {
+        {orderedItems.map((row, i) => {
           if (row.length === 1) {
             const logo = data.allFile.edges.find(
               (e) => e.node.name === row[0].logo

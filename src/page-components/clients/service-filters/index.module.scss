@@ -1,0 +1,10 @@
+.service_filters {
+  &__btn {
+    background-color: transparent;
+    color: #292f47;
+    font-size: 20px;
+    &:after {
+      display: none;
+    }
+  }
+}
