@@ -23,6 +23,7 @@ export const ClientsSection = () => {
                   alt=""
                   data-aos="fade-in"
                   className={styles.clients__logos__item_1}
+                  quality={60}
                   src="./logo-sendcloud.png"
                 />
               </div>
@@ -31,6 +32,7 @@ export const ClientsSection = () => {
                   alt=""
                   data-aos="fade-in"
                   className={styles.clients__logos__item_2}
+                  quality={60}
                   src="./logo-klooker.png"
                 />
               </div>
@@ -39,6 +41,7 @@ export const ClientsSection = () => {
                   alt=""
                   data-aos="fade-in"
                   className={styles.clients__logos__item_3}
+                  quality={60}
                   src="./logo-cla.png"
                 />
               </div>
@@ -48,24 +51,28 @@ export const ClientsSection = () => {
                 alt=""
                 data-aos="fade-in"
                 className={styles.clients__logos__item_4}
+                quality={60}
                 src="./logo-alpian.png"
               />
               <StaticImage
                 alt=""
                 data-aos="fade-in"
                 className={styles.clients__logos__item_5}
+                quality={60}
                 src="./logo-tiktok.png"
               />
               <StaticImage
                 alt=""
                 data-aos="fade-in"
                 className={styles.clients__logos__item_6}
+                quality={60}
                 src="./logo-h.png"
               />
               <StaticImage
                 alt=""
                 data-aos="fade-in"
                 className={styles.clients__logos__item_7}
+                quality={60}
                 src="./logo-elugie.png"
               />
             </div>
