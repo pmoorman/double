@@ -70,7 +70,7 @@ export const HeroSection = () => {
         >
           <div className="col-lg-6 pe-lg-5">
             <p className="lead">
-              If you’ve already dreamed up a marketing plan,
+              If you’ve already dreamed up a marketing plan,{" "}
               <span className="text-highlight">we’ll bring it to life</span>.
             </p>
           </div>
@@ -148,10 +148,10 @@ export const HeroSection = () => {
           <div className="col-lg-6 px-0 px-lg-3">
             <p className="lead">
               And if you’re working with a blank canvas… we’ll design, build and
-              maintain a
+              maintain a{" "}
               <span className="text-highlight">
                 complete user acquisition system
-              </span>
+              </span>{" "}
               for you.
             </p>
           </div>
@@ -284,7 +284,7 @@ export const HeroSection = () => {
         >
           <div className="col-lg-6 px-0 px-lg-3">
             <p className="lead-lg">
-              All while building the
+              All while building the{" "}
               <span className="text-highlight">
                 right systems & infrastructure
               </span>{" "}
