@@ -52,7 +52,7 @@ export const SEO: FC<SEOProps> = ({
   };
 
   const metaItems: MetaItem[] = [
-    { name: "description", content: description },
+    { name: "description", content: _description },
     ...getOpenGraph(),
     ...getTwitterCard(),
     ...meta,
