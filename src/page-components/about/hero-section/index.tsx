@@ -21,7 +21,7 @@ export const HeroSection = () => {
         <div className={cn(styles.hero__content, "row justify-content-center")}>
           {/* Images */}
           <div className={styles.hero__images}>
-            <div className={styles.hero__images1} data-aos="fade-in">
+            <div className={styles.hero__images__1} data-aos="fade-in">
               <StaticImage
                 alt=""
                 className="img-fluid"
@@ -29,7 +29,7 @@ export const HeroSection = () => {
               />
               <p>Devoted coffee lovers</p>
             </div>
-            <div className={styles.hero__images2} data-aos="fade-in">
+            <div className={styles.hero__images__2} data-aos="fade-in">
               <StaticImage
                 alt=""
                 className="img-fluid"
@@ -37,7 +37,7 @@ export const HeroSection = () => {
               />
               <p>Lunch time jokers</p>
             </div>
-            <div className={styles.hero__images3} data-aos="fade-in">
+            <div className={styles.hero__images__3} data-aos="fade-in">
               <StaticImage
                 alt=""
                 className="img-fluid"
@@ -45,15 +45,15 @@ export const HeroSection = () => {
               />
               <p>Philosophical debaters</p>
             </div>
-            <div className={styles.hero__images4} data-aos="fade-in">
+            <div className={styles.hero__images__4} data-aos="fade-in">
               <StaticImage
                 alt=""
-                className="img-fluid"
+                className={cn(styles.hero__images__4__img, "img-fluid")}
                 src="./hero-img-4.jpg"
               />
               <p>Part-time bag designers</p>
             </div>
-            <div className={styles.hero__images5} data-aos="fade-in">
+            <div className={styles.hero__images__5} data-aos="fade-in">
               <StaticImage
                 alt=""
                 className="img-fluid"
@@ -61,10 +61,10 @@ export const HeroSection = () => {
               />
               <p>Fair-weather sailors</p>
             </div>
-            <div className={styles.hero__images6} data-aos="fade-in">
+            <div className={styles.hero__images__6} data-aos="fade-in">
               <StaticImage
                 alt=""
-                className="img-fluid"
+                className={cn(styles.hero__images__6__img, "img-fluid")}
                 src="./hero-img-6.jpg"
               />
               <p>Copywriting Kiwis</p>

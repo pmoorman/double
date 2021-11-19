@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col } from "react-bootstrap";
-import cn from "classnames";
 
 import {
   ClientBox,
@@ -9,8 +8,8 @@ import {
   HeroSection,
 } from "@app/page-components/clients";
 
-import * as styles from "./index.module.scss";
 import { useQueryParams } from "@app/hooks";
+import { SEO } from "@app/components";
 
 interface Client extends Omit<ClientBoxProps, "logo" | "backgroundImage"> {
   logo: string;
@@ -313,12 +312,15 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
   );
 
   return (
-    <div id="clients-page">
-      <HeroSection />
-      <section className="client-boxes pt-0">
-        {sortedItems[0].length === 0 ? renderNotFound() : renderContent()}
-      </section>
-    </div>
+    <>
+      <SEO title="Clients" />
+      <div id="clients-page">
+        <HeroSection />
+        <section className="client-boxes pt-0">
+          {sortedItems[0].length === 0 ? renderNotFound() : renderContent()}
+        </section>
+      </div>
+    </>
   );
 };
 

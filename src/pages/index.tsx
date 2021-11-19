@@ -11,10 +11,12 @@ import {
   ServicesSection,
   BottomSection,
 } from "@app/page-components/homepage";
+import { SEO } from "@app/components";
 
 const IndexPage = () => {
   return (
     <>
+      <SEO />
       <HeroSection />
       <ClientsSection />
       <ServicesSection />

@@ -7,10 +7,12 @@ import {
   HeroSection,
   HiringSection,
 } from "@app/page-components/about";
+import { SEO } from "@app/components";
 
 export const AboutPage = () => {
   return (
     <>
+      <SEO title="About" />
       <HeroSection />
       <AboutSection />
       <div className="container">

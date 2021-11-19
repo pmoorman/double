@@ -9,11 +9,12 @@ import {
   ClientsSection,
   NavigationMobile,
 } from "@app/page-components/services";
-import { BottomSection } from "@app/components";
+import { BottomSection, SEO } from "@app/components";
 
 export const ServicesPage = () => {
   return (
     <>
+      <SEO title="Services" />
       <HeroSection />
       <PerformanceSection />
       <FunnelsSection />

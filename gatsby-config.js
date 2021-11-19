@@ -1,7 +1,11 @@
+const siteUrl = "https://double-agency.com";
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl,
     title: "Double Agency",
+    description:
+      "Growthmarketing and Growth Hacking are new business strategies for startups that incorporate marketing within your product and core business values. Build growth right into the hard of your company, by using feedback and customer data to test, enhance your product, build a lean and sustainable business and become a master entrepreneur.",
   },
   plugins: [
     {

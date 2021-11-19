@@ -21,7 +21,7 @@
   }
 
   &__images {
-    & [class*="--"] {
+    & [class*="__"] {
       position: absolute;
       p {
         position: absolute;
@@ -38,7 +38,7 @@
         right: -15px;
       }
     }
-    &1 {
+    &__1 {
       width: 190px;
       left: -140px;
       top: 100px;
@@ -68,7 +68,7 @@
         }
       }
     }
-    &2 {
+    &__2 {
       width: 190px;
       left: 50%;
       bottom: -150px;
@@ -97,7 +97,7 @@
         }
       }
     }
-    &3 {
+    &__3 {
       width: 322px;
       right: -175px;
       top: 150px;
@@ -136,11 +136,11 @@
         }
       }
     }
-    &4 {
+    &__4 {
       width: 225px;
       left: -85px;
       bottom: -100px;
-      img {
+      &__img {
         box-shadow: 16px 16px 0px #359bfa;
       }
       p {
@@ -163,7 +163,7 @@
         left: -30px;
         bottom: -140px;
         z-index: 1;
-        img {
+        &__img {
           box-shadow: 10px 10px 0px #359bfa;
         }
         p {
@@ -174,7 +174,7 @@
         }
       }
     }
-    &5 {
+    &__5 {
       width: 160px;
       left: 280px;
       bottom: -200px;
@@ -197,11 +197,11 @@
         }
       }
     }
-    &6 {
+    &__6 {
       width: 270px;
       bottom: -205px;
       right: -50px;
-      img {
+      &__img {
         box-shadow: 20px 20px 0px #89c6ff;
       }
       p {
@@ -215,7 +215,7 @@
         bottom: -295px;
         right: 0;
         z-index: 1;
-        img {
+        &__img {
           box-shadow: 10px 10px 0px #89c6ff;
         }
         p {
