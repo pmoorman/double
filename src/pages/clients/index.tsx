@@ -221,20 +221,30 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
   const { queryParams } =
     useQueryParams<{ service?: string; industry: string }>();
 
+  const clientsNormalized = useMemo(() => {
+    return clients.reduce((prev, curr) => {
+      prev[curr.title] = curr;
+      return prev;
+    }, {});
+  }, []);
+
+  // Filter instustry and service based on query params
   const filteredItems = useMemo(() => {
     return clients.filter((c) => {
       const hasIndustry =
         !queryParams?.industry || queryParams?.industry === "All"
           ? true
           : c.industry === queryParams?.industry;
-      const hasService = queryParams?.service
-        ? c.services.includes(queryParams?.service)
-        : true;
-      return hasIndustry;
+      const hasService =
+        !queryParams?.service || queryParams?.service === "All"
+          ? true
+          : c.services.includes(queryParams?.service);
+      return hasService && hasIndustry;
     });
   }, [queryParams]);
 
-  const orderedItems = useMemo(() => {
+  // Sort and set width size of columns
+  const sortedItems = useMemo(() => {
     return filteredItems.reduce(
       (prev, curr) => {
         const lastIndex = prev.length - 1;
@@ -251,43 +261,61 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
     );
   }, [filteredItems]);
 
+  console.log(sortedItems);
+
+  const getLogo = (logo: string) => {
+    return data.allFile.edges.find((e) => e.node.name === logo)?.node;
+  };
+
+  const getBackgroundImage = (backgroundImage: string) => {
+    return data.allFile.edges.find((e) => e.node.name === backgroundImage)
+      ?.node;
+  };
+
+  const renderContent = () => {
+    return sortedItems.map((row, i) => {
+      const key = "c" + i;
+      if (clientsNormalized[row[0].title].size === 3) {
+        const logo = getLogo(row[0].logo);
+        const bg = getBackgroundImage(row[0].backgroundImage);
+        return (
+          <ClientBox {...row[0]} key={key} logo={logo} backgroundImage={bg} />
+        );
+      }
+
+      return (
+        <div key={key} className="container">
+          <div className="row">
+            {row.map((client, ii) => {
+              const width = client.size === 2 ? 8 : 4;
+              const logo = getLogo(client.logo);
+              const bg = getBackgroundImage(client.backgroundImage);
+              return (
+                <Col key={"client" + i * ii} lg={width} className="mb-3">
+                  <ClientBox {...client} logo={logo} backgroundImage={bg} />
+                </Col>
+              );
+            })}
+          </div>
+        </div>
+      );
+    });
+  };
+
+  const renderNotFound = () => (
+    <div className="container text-center">
+      <div className="row">
+        <div className="col-md-12">No clients found with this critiria</div>
+      </div>
+    </div>
+  );
+
   return (
     <div id="clients-page">
       <HeroSection />
       {/* Clients */}
       <section className="client-boxes pt-0">
-        {orderedItems.map((row, i) => {
-          if (row.length === 1) {
-            const logo = data.allFile.edges.find(
-              (e) => e.node.name === row[0].logo
-            )?.node;
-            const bg = data.allFile.edges.find(
-              (e) => e.node.name === row[0].backgroundImage
-            )?.node;
-            return <ClientBox {...row[0]} logo={logo} backgroundImage={bg} />;
-          }
-
-          return (
-            <div className="container">
-              <div className="row">
-                {row.map((client, ii) => {
-                  const width = client.size === 2 ? 8 : 4;
-                  const logo = data.allFile.edges.find(
-                    (e) => e.node.name === client.logo
-                  )?.node;
-                  const bg = data.allFile.edges.find(
-                    (e) => e.node.name === client.backgroundImage
-                  )?.node;
-                  return (
-                    <Col lg={width} className="mb-3">
-                      <ClientBox {...client} logo={logo} backgroundImage={bg} />
-                    </Col>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+        {sortedItems[0].length === 0 ? renderNotFound() : renderContent()}
       </section>
     </div>
   );

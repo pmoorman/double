@@ -8,6 +8,12 @@ export const updateQueryParams = (
 ) => {
   const query = qs.parse(location?.search?.replace("?", ""));
   const newQueries = { ...query, ...value };
+  console.log({
+    value,
+    newQueries,
+    query,
+    stringify: qs.stringify(newQueries),
+  });
   navigate(`?${qs.stringify(newQueries)}`, { replace: true });
 };
 
@@ -21,12 +27,7 @@ export const useQueryParams = <T,>() => {
   }, {});
 
   const handleUpdate = (params: Record<string, string>) => {
-    const q = Object.keys(params).reduce((prev, key) => {
-      const value = params[key] as string;
-      prev[key] = encodeURIComponent(value);
-      return prev;
-    }, {});
-    updateQueryParams(location, q);
+    updateQueryParams(location, params);
   };
 
   return {

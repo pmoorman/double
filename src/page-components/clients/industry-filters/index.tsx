@@ -26,7 +26,7 @@ export const IndustryFilters: FC<IndustryFiltersProps> = () => {
         >
           {industries.map((industry, i) => (
             <button
-              key={industry}
+              key={industry + i}
               type="button"
               onClick={() => handleChange(industry)}
               className={cn(styles.industry_filters__item, {
@@ -65,6 +65,7 @@ export const IndustryFilters: FC<IndustryFiltersProps> = () => {
           >
             {industries.map((industry, i) => (
               <button
+                key={"mobile" + industry + i}
                 type="button"
                 className="industry_filters_mobile__item"
                 onClick={() => handleChange(industry)}

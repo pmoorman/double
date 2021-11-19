@@ -4,6 +4,8 @@ import cn from "classnames";
 import { useQueryParams } from "@app/hooks";
 
 import * as styles from "./index.module.scss";
+import { Dropdown } from "react-bootstrap";
+import { StaticImage } from "gatsby-plugin-image";
 
 const services = [
   "All",
@@ -31,32 +33,21 @@ export const ServiceFilters: FC<ServiceFiltersProps> = () => {
   };
 
   return (
-    <div className="dropdown d-none d-lg-block">
-      <button
-        className={cn(
-          styles.service_filters__btn,
-          "btn btn-light dropdown-toggle"
-        )}
-        type="button"
-        id="service_filters"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
+    <Dropdown className="d-none d-lg-block">
+      <Dropdown.Toggle
+        className={cn(styles.service_filters__btn, "btn btn-light")}
       >
-        <img className="me-2" src="chevron-down" />#
-        <span v-html="selectedServiceLabel()"></span>
-      </button>
-      <div className="dropdown-menu" aria-labelledby="service_filters">
+        <StaticImage alt="" className="me-2" src="./chevron-down.svg" />#
+        {selected}
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
         {services.map((s, i) => (
-          <button
-            key={s + i}
-            className="dropdown-item"
-            onClick={() => handleChange(s)}
-          >
+          <Dropdown.Item key={s + i} onClick={() => handleChange(s)}>
             {s}
-          </button>
+          </Dropdown.Item>
         ))}
-      </div>
-    </div>
+      </Dropdown.Menu>
+    </Dropdown>
   );
 };

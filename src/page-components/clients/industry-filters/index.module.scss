@@ -9,10 +9,10 @@
     line-height: 42px;
     flex: 1 1 auto;
     position: relative;
-    &:not(.active) {
+    &:not(&__active) {
       border: 1px solid #e5e5e5 !important;
     }
-    &:not(.active):hover {
+    &:not(&__active):hover {
       border: 1px solid #000 !important;
     }
     &__active {

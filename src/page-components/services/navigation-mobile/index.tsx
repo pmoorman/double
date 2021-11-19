@@ -21,18 +21,10 @@ export const NavigationMobile: FC<NavigationMobileProps> = () => {
       </button>
       <Collapse in={open}>
         <div id="mobile-nav" className={styles.mobile_nav__content}>
-          <a href="#performance" className={styles.mobile_nav__item}>
-            Performance
-          </a>
-          <a href="#funnels" className={styles.mobile_nav__item}>
-            Funnels & creative
-          </a>
-          <a href="#marketing" className={styles.mobile_nav__item}>
-            Product marketing
-          </a>
-          <a href="#infrastructure" className={styles.mobile_nav__item}>
-            Infrastructure
-          </a>
+          <a href="#performance">Performance</a>
+          <a href="#funnels">Funnels & creative</a>
+          <a href="#marketing">Product marketing</a>
+          <a href="#infrastructure">Infrastructure</a>
         </div>
       </Collapse>
     </div>

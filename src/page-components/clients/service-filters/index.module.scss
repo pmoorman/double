@@ -3,6 +3,8 @@
     background-color: transparent;
     color: #292f47;
     font-size: 20px;
+    display: flex;
+    align-items: center;
     &:after {
       display: none;
     }
