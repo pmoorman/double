@@ -1,33 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 
 import { Link } from "../link";
 import { DoubleLogo } from "..";
 import * as styles from "./index.module.scss";
+import cn from "classnames";
 
 const ID = "main-nav";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglerClass = cn(styles.navbarToggler, {
+    [styles.navbarTogglerCollapsed]: !isOpen,
+  });
+
   return (
     <Navbar expand="lg" className={styles.navbar}>
       <div className="container">
         <Navbar.Brand as={Link} to="/" style={{ width: "120px" }}>
           <DoubleLogo />
         </Navbar.Brand>
-        <Navbar.Toggle className={styles.navbarToggler} aria-controls={ID}>
-          <div className="toggler-menu-text">Menu</div>
-          <span className="navbar-toggle">
-            <span className="icon-bar top-bar"></span>
-            <span className="icon-bar middle-bar"></span>
-            <span className="icon-bar bottom-bar"></span>
+        <Navbar.Toggle
+          onClick={() => setIsOpen((v) => !v)}
+          className={togglerClass}
+          aria-controls={ID}
+        >
+          <div className={styles.navbarTogglerText}>Menu</div>
+          <span className={styles.navbarToggle}>
+            <span className={cn(styles.iconBar, styles.topBar)}></span>
+            <span className={cn(styles.iconBar, styles.middleBar)}></span>
+            <span className={cn(styles.iconBar, styles.bottomBar)}></span>
           </span>
         </Navbar.Toggle>
 
-        <Navbar.Collapse className={styles.navbarCollapse} id={ID}>
-          <Nav className="ms-auto">
+        <Navbar.Collapse in={isOpen} className={styles.navbarCollapse} id={ID}>
+          <Nav className={styles.navbarNav}>
             <Nav.Link
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              onClick={() => setIsOpen(false)}
               as={Link}
               to="/"
             >
@@ -36,6 +48,7 @@ export const Header = () => {
             <Nav.Link
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              onClick={() => setIsOpen(false)}
               as={Link}
               to="/services"
             >
@@ -44,6 +57,7 @@ export const Header = () => {
             <Nav.Link
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              onClick={() => setIsOpen(false)}
               as={Link}
               to="/clients"
             >
@@ -52,6 +66,7 @@ export const Header = () => {
             <Nav.Link
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              onClick={() => setIsOpen(false)}
               as={Link}
               to="/blog"
             >
@@ -60,6 +75,7 @@ export const Header = () => {
             <Nav.Link
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              onClick={() => setIsOpen(false)}
               as={Link}
               to="/about"
             >
