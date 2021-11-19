@@ -261,8 +261,6 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
     );
   }, [filteredItems]);
 
-  console.log(sortedItems);
-
   const getLogo = (logo: string) => {
     return data.allFile.edges.find((e) => e.node.name === logo)?.node;
   };
@@ -274,7 +272,7 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
 
   const renderContent = () => {
     return sortedItems.map((row, i) => {
-      const key = "c" + i;
+      const key = "c" + row[0].title + i;
       if (clientsNormalized[row[0].title].size === 3) {
         const logo = getLogo(row[0].logo);
         const bg = getBackgroundImage(row[0].backgroundImage);
@@ -284,14 +282,18 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
       }
 
       return (
-        <div key={key} className="container">
+        <div key={"container" + i} className="container">
           <div className="row">
             {row.map((client, ii) => {
               const width = client.size === 2 ? 8 : 4;
               const logo = getLogo(client.logo);
               const bg = getBackgroundImage(client.backgroundImage);
               return (
-                <Col key={"client" + i * ii} lg={width} className="mb-3">
+                <Col
+                  key={"client" + client.title + i * ii}
+                  lg={width}
+                  className="mb-3"
+                >
                   <ClientBox {...client} logo={logo} backgroundImage={bg} />
                 </Col>
               );
@@ -313,7 +315,6 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
   return (
     <div id="clients-page">
       <HeroSection />
-      {/* Clients */}
       <section className="client-boxes pt-0">
         {sortedItems[0].length === 0 ? renderNotFound() : renderContent()}
       </section>
