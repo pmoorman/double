@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import cn from "classnames";
 
 import * as styles from "./index.module.scss";
-import { Link } from "@app/components";
+import { Link, Parallax } from "@app/components";
 
 export const HeroSection = () => {
   return (
@@ -43,7 +43,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Arrows and images */}
-        <div className={styles.hero__bggraphics}>
+        <Parallax y={[0, -30]} className={styles.hero__bggraphics}>
           <div className={styles.hero__bggraphics__arrows}>
             <StaticImage
               className={cn(
@@ -102,7 +102,7 @@ export const HeroSection = () => {
             src="./hero-5.png"
             alt=""
           />
-        </div>
+        </Parallax>
 
         {/* bottom */}
         <div
