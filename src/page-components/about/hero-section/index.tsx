@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import cn from "classnames";
 
-import { WistiaVideo } from "@app/components";
+import { WistiaVideo, Parallax } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -21,54 +21,56 @@ export const HeroSection = () => {
         <div className={cn(styles.hero__content, "row justify-content-center")}>
           {/* Images */}
           <div className={styles.hero__images}>
-            <div className={styles.hero__images__1} data-aos="fade-in">
+            <Parallax className={styles.hero__images__1} data-aos="fade-in">
               <StaticImage
                 alt=""
                 className="img-fluid"
                 src="./hero-img-1.jpg"
               />
               <p>Devoted coffee lovers</p>
-            </div>
-            <div className={styles.hero__images__2} data-aos="fade-in">
+            </Parallax>
+            <Parallax className={styles.hero__images__2} data-aos="fade-in">
               <StaticImage
                 alt=""
                 className="img-fluid"
                 src="./hero-img-2.jpg"
               />
               <p>Lunch time jokers</p>
-            </div>
-            <div className={styles.hero__images__3} data-aos="fade-in">
+            </Parallax>
+            <Parallax className={styles.hero__images__3} data-aos="fade-in">
               <StaticImage
                 alt=""
                 className="img-fluid"
                 src="./hero-img-3.jpg"
               />
               <p>Philosophical debaters</p>
-            </div>
-            <div className={styles.hero__images__4} data-aos="fade-in">
+            </Parallax>
+            <Parallax className={styles.hero__images__4} data-aos="fade-in">
               <StaticImage
                 alt=""
-                className={cn(styles.hero__images__4__img, "img-fluid")}
+                className={cn(styles.hero__images__4_img, "img-fluid")}
                 src="./hero-img-4.jpg"
               />
               <p>Part-time bag designers</p>
-            </div>
-            <div className={styles.hero__images__5} data-aos="fade-in">
+            </Parallax>
+            <Parallax className={styles.hero__images__5} data-aos="fade-in">
               <StaticImage
                 alt=""
                 className="img-fluid"
                 src="./hero-img-5.jpg"
               />
               <p>Fair-weather sailors</p>
-            </div>
-            <div className={styles.hero__images__6} data-aos="fade-in">
+            </Parallax>
+            <Parallax className={styles.hero__images__6} data-aos="fade-in">
               <StaticImage
                 alt=""
-                className={cn(styles.hero__images__6__img, "img-fluid")}
+                className={cn(styles.hero__images__6_img, "img-fluid")}
+                width={270}
+                height={179}
                 src="./hero-img-6.jpg"
               />
               <p>Copywriting Kiwis</p>
-            </div>
+            </Parallax>
           </div>
           <div className="col-lg-8">
             <div className="position-relative">
