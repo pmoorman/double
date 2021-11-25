@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import cn from "classnames";
 
-import { ArrowButton } from "..";
+import { ArrowButton, Parallax } from "..";
 
 import * as styles from "./index.module.scss";
 
@@ -22,48 +22,54 @@ export const BottomSection: FC<BottomSectionProps> = ({
       <div className="container position-relative">
         {/* Background */}
         <div>
-          <div
+          <Parallax
             className={cn(
               styles.bottom_section__bg_items__item,
               styles.bottom_section__bg_items__item1
             )}
-          />
-          <div
+          >
+            <div className={styles.bottom_section__bg_items__item1_inner} />
+          </Parallax>
+          <Parallax
             className={cn(
               styles.bottom_section__bg_items__item,
               styles.bottom_section__bg_items__item2
             )}
-          />
-          <div
+          >
+            <div className={styles.bottom_section__bg_items__item2_inner} />
+          </Parallax>
+          <Parallax
             className={cn(
               styles.bottom_section__bg_items__item,
               styles.bottom_section__bg_items__item3
             )}
-          />
-          <StaticImage
-            alt=""
-            src="./bottom-img-1.jpg"
+          >
+            <div className={styles.bottom_section__bg_items__item3_inner} />
+          </Parallax>
+          <Parallax
             className={cn(
               styles.bottom_section__bg_items__item,
               styles.bottom_section__bg_items__item4
             )}
-          />
-          <StaticImage
-            alt=""
-            src="./bottom-img-2.jpg"
+          >
+            <StaticImage alt="" src="./bottom-img-1.jpg" />
+          </Parallax>
+          <Parallax
             className={cn(
               styles.bottom_section__bg_items__item,
               styles.bottom_section__bg_items__item5
             )}
-          />
-          <StaticImage
-            alt=""
-            src="./bottom-img-3.jpg"
+          >
+            <StaticImage alt="" src="./bottom-img-2.jpg" />
+          </Parallax>
+          <Parallax
             className={cn(
               styles.bottom_section__bg_items__item,
               styles.bottom_section__bg_items__item6
             )}
-          />
+          >
+            <StaticImage alt="" src="./bottom-img-3.jpg" />
+          </Parallax>
         </div>
 
         {/* Content */}

@@ -48,37 +48,48 @@
         top: -85px;
         right: -20px;
         z-index: -1;
+        &_inner {
+        }
         @include media-breakpoint-down(md) {
           right: 0;
           left: initial;
           top: 35px;
-          width: 85px;
-          height: 115px;
-          background: #d9effb;
+
           opacity: 0.8;
+          &_inner {
+            width: 85px;
+            height: 115px;
+            background: #d9effb;
+          }
         }
       }
       &2 {
-        width: 234px;
-        height: 313px;
-        background: #3497f3;
         top: 140px;
         left: -20px;
+        &_inner {
+          width: 234px;
+          height: 313px;
+          background: #3497f3;
+        }
         @include media-breakpoint-down(md) {
-          width: 116px;
-          height: 110px;
           top: -45px;
           z-index: -1;
           left: 20px;
+          &_inner {
+            width: 116px;
+            height: 110px;
+          }
         }
       }
       &3 {
-        width: 176px;
-        height: 105px;
-        background: #e5e7ef;
         bottom: -140px;
         right: 100px;
         opacity: 0.65;
+        &_inner {
+          width: 176px;
+          height: 105px;
+          background: #e5e7ef;
+        }
         @include media-breakpoint-down(md) {
           bottom: -70px;
           left: 70px;
