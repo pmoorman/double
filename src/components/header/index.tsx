@@ -28,9 +28,9 @@ export const Header = () => {
         >
           <div className={styles.navbarTogglerText}>Menu</div>
           <span className={styles.navbarToggle}>
-            <span className={cn(styles.iconBar, styles.topBar)}></span>
-            <span className={cn(styles.iconBar, styles.middleBar)}></span>
-            <span className={cn(styles.iconBar, styles.bottomBar)}></span>
+            <span className={styles.iconBar}></span>
+            <span className={styles.iconBar}></span>
+            <span className={styles.iconBar}></span>
           </span>
         </Navbar.Toggle>
 
