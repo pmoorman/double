@@ -46,111 +46,149 @@
       position: absolute;
     }
     &_item1 {
-      width: 264px;
-      height: 170px;
-      background: #ffffff;
-      opacity: 0.1;
       left: -195px;
       top: 220px;
+      &_inner {
+        width: 264px;
+        height: 170px;
+        background: #ffffff;
+        opacity: 0.1;
+        position: relative !important;
+      }
       @include media-breakpoint-down(md) {
-        width: 134px;
-        height: 92px;
         left: -66px;
         top: 50%;
+        &_inner {
+          width: 134px;
+          height: 92px;
+        }
       }
     }
     &_item2 {
-      width: 342px;
-      height: 184px;
-      background: #ffffff;
       bottom: 270px;
       left: -70px;
+      &_inner {
+        width: 342px;
+        height: 184px;
+        background: #ffffff;
+        position: relative !important;
+      }
       @include media-breakpoint-down(md) {
-        width: 100px;
-        height: 103px;
         right: 0;
         left: initial;
         bottom: 135px;
+        &_inner {
+          width: 100px;
+          height: 103px;
+        }
       }
     }
     &_item3 {
-      width: 282px;
-      height: 160px;
-      background: #2788e1;
       top: 375px;
       left: 235px;
+      &_inner {
+        width: 282px;
+        height: 160px;
+        background: #2788e1;
+        position: relative !important;
+      }
       @include media-breakpoint-down(md) {
-        width: 225px;
-        height: 128px;
         left: -132px;
         top: 200px;
+        &_inner {
+          width: 225px;
+          height: 128px;
+        }
       }
     }
     &_item4 {
-      width: 243px;
-      height: 152px;
-      background: #d9effb;
       opacity: 0.3;
       bottom: 615px;
       left: 340px;
+      &_inner {
+        width: 243px;
+        height: 152px;
+        background: #d9effb;
+        position: relative !important;
+      }
       @include media-breakpoint-down(md) {
-        width: 142px;
-        height: 91px;
         left: -69px;
-        background: #ffffff;
+
         opacity: 0.1;
         top: 40px;
+        &_inner {
+          width: 142px;
+          height: 91px;
+          background: #ffffff;
+          position: relative !important;
+        }
       }
     }
     &_item5 {
-      width: 474px;
-      height: 322px;
-      background: #ffffff;
       opacity: 0.5;
       right: -205px;
       top: 85px;
+      &_inner {
+        width: 474px;
+        height: 322px;
+        background: #ffffff;
+        position: relative !important;
+      }
       @include media-breakpoint-down(md) {
-        width: 224px;
-        height: 152px;
         right: -35px;
         top: 44%;
+        &_inner {
+          width: 224px;
+          height: 152px;
+        }
       }
     }
     &_item6 {
-      width: 220px;
-      height: 143px;
-      background: #ffffff;
       opacity: 0.1;
       right: 20px;
       top: 395px;
+      &_inner {
+        width: 220px;
+        height: 143px;
+        background: #ffffff;
+        position: relative !important;
+      }
       @include media-breakpoint-down(md) {
-        width: 186px;
-        height: 116px;
-        background: #d9effb;
         opacity: 0.6;
         bottom: -60px;
         top: initial;
         right: -30px;
+        &_inner {
+          width: 186px;
+          height: 116px;
+          background: #d9effb;
+        }
       }
     }
     &_item7 {
-      width: 134px;
-      height: 92px;
-      background: #ffffff;
       opacity: 0.1;
       bottom: 725px;
       right: -50px;
+      &_inner {
+        width: 134px;
+        height: 92px;
+        background: #ffffff;
+        position: relative !important;
+      }
       @include media-breakpoint-down(md) {
         display: none;
       }
     }
     &_item8 {
-      width: 137px;
-      height: 86px;
-      background: #d9effb;
       opacity: 0.6;
       bottom: 295px;
       right: 50px;
+      &_inner {
+        width: 137px;
+        height: 86px;
+        background: #d9effb;
+        position: relative !important;
+      }
       @include media-breakpoint-down(md) {
         display: none;
       }

@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { AnimatedLine, ArrowButton } from "@app/components";
+import { AnimatedLine, ArrowButton, Parallax } from "@app/components";
 import * as styles from "./index.module.scss";
 
 export const AboutSection = () => {
@@ -14,14 +14,30 @@ export const AboutSection = () => {
       <div className="container position-relative">
         {/* Background blocks */}
         <div className={styles.about__bgblocks}>
-          <div className={styles.about__bgblocks_item1}></div>
-          <div className={styles.about__bgblocks_item2}></div>
-          <div className={styles.about__bgblocks_item3}></div>
-          <div className={styles.about__bgblocks_item4}></div>
-          <div className={styles.about__bgblocks_item5}></div>
-          <div className={styles.about__bgblocks_item6}></div>
-          <div className={styles.about__bgblocks_item7}></div>
-          <div className={styles.about__bgblocks_item8}></div>
+          <Parallax className={styles.about__bgblocks_item1}>
+            <div className={styles.about__bgblocks_item1_inner}></div>
+          </Parallax>
+          <Parallax className={styles.about__bgblocks_item2}>
+            <div className={styles.about__bgblocks_item2_inner}></div>
+          </Parallax>
+          <Parallax className={styles.about__bgblocks_item3}>
+            <div className={styles.about__bgblocks_item3_inner}></div>
+          </Parallax>
+          <Parallax className={styles.about__bgblocks_item4}>
+            <div className={styles.about__bgblocks_item4_inner}></div>
+          </Parallax>
+          <Parallax className={styles.about__bgblocks_item5}>
+            <div className={styles.about__bgblocks_item5_inner}></div>
+          </Parallax>
+          <Parallax className={styles.about__bgblocks_item6}>
+            <div className={styles.about__bgblocks_item6_inner}></div>
+          </Parallax>
+          <Parallax className={styles.about__bgblocks_item7}>
+            <div className={styles.about__bgblocks_item7_inner}></div>
+          </Parallax>
+          <Parallax className={styles.about__bgblocks_item8}>
+            <div className={styles.about__bgblocks_item8_inner}></div>
+          </Parallax>
         </div>
 
         {/* title box */}
