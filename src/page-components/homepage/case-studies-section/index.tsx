@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import cn from "classnames";
 
-import { AnimatedLine, ArrowButton } from "@app/components";
+import { AnimatedLine, ArrowButton, Parallax } from "@app/components";
 
 import * as styles from "./index.module.scss";
 
@@ -46,7 +46,7 @@ export const CaseStudiesSection = () => {
         className={cn(styles.casestudies_tiktok, styles.casestudies__item)}
       >
         {/* background */}
-        <div className={styles.casestudies__item__bg}>
+        <Parallax y={[15, -15]} className={styles.casestudies__item__bg}>
           <StaticImage
             alt=""
             className="d-none d-lg-block"
@@ -57,7 +57,7 @@ export const CaseStudiesSection = () => {
             className="d-lg-none d-block img-fluid"
             src="./studies-tiktok-bg-mobile.png"
           />
-        </div>
+        </Parallax>
 
         {/* content */}
         <div className={cn(styles.casestudies__item__content, "container")}>
@@ -103,7 +103,7 @@ export const CaseStudiesSection = () => {
         className={cn(styles.casestudies_alpian, styles.casestudies__item)}
       >
         {/* background */}
-        <div className={styles.casestudies__item__bg}>
+        <Parallax y={[15, -15]} className={styles.casestudies__item__bg}>
           <StaticImage
             alt=""
             className="d-none d-lg-block"
@@ -114,7 +114,7 @@ export const CaseStudiesSection = () => {
             className="d-lg-none d-block img-fluid"
             src="./studies-alpian-bg-mobile.png"
           />
-        </div>
+        </Parallax>
 
         {/* content */}
         <div className={cn(styles.casestudies__item__content, "container")}>
@@ -158,7 +158,7 @@ export const CaseStudiesSection = () => {
         className={cn(styles.casestudies_cla, styles.casestudies__item)}
       >
         {/* background */}
-        <div className={styles.casestudies__item__bg}>
+        <Parallax y={[15, -15]} className={styles.casestudies__item__bg}>
           <StaticImage
             alt=""
             className="d-none d-lg-block"
@@ -169,7 +169,7 @@ export const CaseStudiesSection = () => {
             className="d-lg-none d-block img-fluid"
             src="./studies-corelifeanalytics-bg-mobile.png"
           />
-        </div>
+        </Parallax>
 
         {/* content */}
         <div className={cn(styles.casestudies__item__content, "container")}>
