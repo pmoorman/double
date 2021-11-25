@@ -6,6 +6,8 @@ module.exports = {
     title: "Double Agency",
     description:
       "Growthmarketing and Growth Hacking are new business strategies for startups that incorporate marketing within your product and core business values. Build growth right into the hard of your company, by using feedback and customer data to test, enhance your product, build a lean and sustainable business and become a master entrepreneur.",
+    dripAccountId: 3029595,
+    quoraId: "734fe9ad62044edc880c170a76f4f321",
   },
   plugins: [
     {
@@ -73,12 +75,6 @@ module.exports = {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
         pixelId: "1613747988773735",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-drip-widget`,
-      options: {
-        account: "3029595",
       },
     },
     {
