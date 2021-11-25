@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { ArrowButton } from "@app/components";
+import { ArrowButton, Parallax } from "@app/components";
 import * as styles from "./index.module.scss";
 
 export const BottomSection = () => {
@@ -10,7 +10,9 @@ export const BottomSection = () => {
     <section id="bottom" className={styles.bottom}>
       <div className="container position-relative">
         {/* Background block */}
-        <div className="bottom__bg--item1"></div>
+        <Parallax className={styles.bottom__bg_item1}>
+          <div className={styles.bottom__bg_item1_inner} />
+        </Parallax>
 
         {/* Content */}
         <div className="row position-relative position-relative">
@@ -20,17 +22,15 @@ export const BottomSection = () => {
           </div>
           <div className={cn(styles.bottom__content__col2, "col-lg-6")}>
             <div>
-              <div className={styles.bottom__content__col2_item1}></div>
-              <StaticImage
-                alt=""
-                className={styles.bottom__content__col2_item2}
-                src="./footer-img-1.png"
-              />
-              <StaticImage
-                alt=""
-                className={styles.bottom__content__col2_item3}
-                src="./footer-img-2.png"
-              />
+              <Parallax className={styles.bottom__content__col2_item1}>
+                <div className={styles.bottom__content__col2_item1_inner}></div>
+              </Parallax>
+              <Parallax className={styles.bottom__content__col2_item2}>
+                <StaticImage alt="" src="./footer-img-1.png" />
+              </Parallax>
+              <Parallax className={styles.bottom__content__col2_item3}>
+                <StaticImage alt="" src="./footer-img-2.png" />
+              </Parallax>
             </div>
           </div>
         </div>

@@ -5,17 +5,21 @@
   &__bg {
     &_item1 {
       position: absolute;
-      width: 209px;
-      height: 225px;
-      background: #292f47;
       left: -300px;
       top: 50px;
+      &_inner {
+        width: 209px;
+        height: 225px;
+        background: #292f47;
+      }
       @include media-breakpoint-down(md) {
         top: 43%;
         right: -70px;
         left: initial;
-        width: 91px;
-        height: 125px;
+        &_inner {
+          width: 91px;
+          height: 125px;
+        }
       }
     }
   }
@@ -49,16 +53,21 @@
       }
 
       &_item1 {
-        width: 311px;
-        height: 413px;
-        background: #359bfa;
         right: 0;
         top: 35px;
+        &_inner {
+          width: 311px;
+          height: 413px;
+          background: #359bfa;
+          position: relative !important;
+        }
         @include media-breakpoint-down(md) {
-          width: 154px;
-          height: 207px;
           right: 30%;
           top: 80px;
+          &_inner {
+            width: 154px;
+            height: 207px;
+          }
         }
       }
 
