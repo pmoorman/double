@@ -2,22 +2,24 @@ import React from "react";
 import cn from "classnames";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { AnimatedLine, ShadowBox } from "@app/components";
+import { AnimatedLine, Parallax, ShadowBox } from "@app/components";
 import * as styles from "./index.module.scss";
 
 export const HeroSection = () => {
   return (
     <section id="hero" className={styles.hero}>
       <div className="container position-relative">
-        <StaticImage
-          alt=""
-          width={141}
-          className={cn(
-            styles.hero__bggraphic_item__desktop,
-            styles.hero__bggraphic_item__desktop_1
-          )}
-          src="./hero-graphic-2.png"
-        />
+        <Parallax>
+          <StaticImage
+            alt=""
+            width={141}
+            className={cn(
+              styles.hero__bggraphic_item__desktop,
+              styles.hero__bggraphic_item__desktop_1
+            )}
+            src="./hero-graphic-2.png"
+          />
+        </Parallax>
 
         {/* intro */}
         <div
@@ -34,30 +36,36 @@ export const HeroSection = () => {
         <div
           className={cn(styles.hero__bggraphics_mobile_1, "position-relative")}
         >
-          <StaticImage
-            alt=""
-            className={cn(
-              styles.hero__bggraphic_item_mobile,
-              styles.hero__bggraphic_item_mobile_1
-            )}
-            src="./hero-graphic-2.png"
-          />
-          <StaticImage
-            alt=""
-            className={cn(
-              styles.hero__bggraphic_item_mobile,
-              styles.hero__bggraphic_item_mobile_2
-            )}
-            src="./hero-img-2.jpg"
-          />
-          <StaticImage
-            alt=""
-            className={cn(
-              styles.hero__bggraphic_item_mobile,
-              styles.hero__bggraphic_item_mobile_3
-            )}
-            src="./hero-img-4.jpg"
-          />
+          <Parallax>
+            <StaticImage
+              alt=""
+              className={cn(
+                styles.hero__bggraphic_item_mobile,
+                styles.hero__bggraphic_item_mobile_1
+              )}
+              src="./hero-graphic-2.png"
+            />
+          </Parallax>
+          <Parallax>
+            <StaticImage
+              alt=""
+              className={cn(
+                styles.hero__bggraphic_item_mobile,
+                styles.hero__bggraphic_item_mobile_2
+              )}
+              src="./hero-img-2.jpg"
+            />
+          </Parallax>
+          <Parallax>
+            <StaticImage
+              alt=""
+              className={cn(
+                styles.hero__bggraphic_item_mobile,
+                styles.hero__bggraphic_item_mobile_3
+              )}
+              src="./hero-img-4.jpg"
+            />
+          </Parallax>
         </div>
 
         {/* text 1 */}
@@ -80,16 +88,20 @@ export const HeroSection = () => {
               styles.hero__bggraphic_item__desktop_2
             )}
           >
-            <StaticImage
-              className={styles.hero__bggraphic_item__desktop_2_img_1}
-              alt=""
-              src="./hero-graphic-3.png"
-            />
-            <StaticImage
-              className={styles.hero__bggraphic_item__desktop_2_img_2}
-              alt=""
-              src="./hero-img-4.jpg"
-            />
+            <Parallax>
+              <StaticImage
+                className={styles.hero__bggraphic_item__desktop_2_img_1}
+                alt=""
+                src="./hero-graphic-3.png"
+              />
+            </Parallax>
+            <Parallax>
+              <StaticImage
+                className={styles.hero__bggraphic_item__desktop_2_img_2}
+                alt=""
+                src="./hero-img-4.jpg"
+              />
+            </Parallax>
           </div>
           <AnimatedLine className={styles.hero__line_1}>
             <StaticImage alt="" src="./hero-line-1.png" />
@@ -100,38 +112,46 @@ export const HeroSection = () => {
         <div
           className={cn(styles.hero__bggraphics_mobile_2, "position-relative")}
         >
-          <StaticImage
-            alt=""
-            className={cn(
-              styles.hero__bggraphic_item_mobile,
-              styles.hero__bggraphic_item_mobile_4
-            )}
-            src="./hero-graphic-3.png"
-          />
-          <StaticImage
-            alt=""
-            className={cn(
-              styles.hero__bggraphic_item_mobile,
-              styles.hero__bggraphic_item_mobile_5
-            )}
-            src="./hero-img-5.jpg"
-          />
-          <StaticImage
-            alt=""
-            className={cn(
-              styles.hero__bggraphic_item_mobile,
-              styles.hero__bggraphic_item_mobile_6
-            )}
-            src="./hero-img-1.jpg"
-          />
-          <StaticImage
-            alt=""
-            className={cn(
-              styles.hero__bggraphic_item_mobile,
-              styles.hero__bggraphic_item_mobile_7
-            )}
-            src="./hero-graphic-1.png"
-          />
+          <Parallax>
+            <StaticImage
+              alt=""
+              className={cn(
+                styles.hero__bggraphic_item_mobile,
+                styles.hero__bggraphic_item_mobile_4
+              )}
+              src="./hero-graphic-3.png"
+            />
+          </Parallax>
+          <Parallax>
+            <StaticImage
+              alt=""
+              className={cn(
+                styles.hero__bggraphic_item_mobile,
+                styles.hero__bggraphic_item_mobile_5
+              )}
+              src="./hero-img-5.jpg"
+            />
+          </Parallax>
+          <Parallax>
+            <StaticImage
+              alt=""
+              className={cn(
+                styles.hero__bggraphic_item_mobile,
+                styles.hero__bggraphic_item_mobile_6
+              )}
+              src="./hero-img-1.jpg"
+            />
+          </Parallax>
+          <Parallax>
+            <StaticImage
+              alt=""
+              className={cn(
+                styles.hero__bggraphic_item_mobile,
+                styles.hero__bggraphic_item_mobile_7
+              )}
+              src="./hero-graphic-1.png"
+            />
+          </Parallax>
           <AnimatedLine className={styles.hero__line_1_mobile}>
             <StaticImage alt="" src="./hero-line-1-mobile.svg" />
           </AnimatedLine>
@@ -167,14 +187,16 @@ export const HeroSection = () => {
           <AnimatedLine className={styles.hero__line_2_mobile}>
             <StaticImage alt="" src="./hero-line-2-mobile.svg" />
           </AnimatedLine>
-          <StaticImage
-            alt=""
-            className={cn(
-              styles.hero__bggraphic_item_mobile,
-              styles.hero__bggraphic_item_mobile_8
-            )}
-            src="./hero-img-3.jpg"
-          />
+          <Parallax>
+            <StaticImage
+              alt=""
+              className={cn(
+                styles.hero__bggraphic_item_mobile,
+                styles.hero__bggraphic_item_mobile_8
+              )}
+              src="./hero-img-3.jpg"
+            />
+          </Parallax>
         </div>
 
         {/* images */}
@@ -185,16 +207,20 @@ export const HeroSection = () => {
               styles.hero__bggraphic_item__desktop_3
             )}
           >
-            <StaticImage
-              className={styles.hero__bggraphic_item__desktop_3_img_1}
-              alt=""
-              src="./hero-graphic-1.png"
-            />
-            <StaticImage
-              className={styles.hero__bggraphic_item__desktop_3_img_2}
-              alt=""
-              src="./hero-img-1.jpg"
-            />
+            <Parallax>
+              <StaticImage
+                className={styles.hero__bggraphic_item__desktop_3_img_1}
+                alt=""
+                src="./hero-graphic-1.png"
+              />
+            </Parallax>
+            <Parallax>
+              <StaticImage
+                className={styles.hero__bggraphic_item__desktop_3_img_2}
+                alt=""
+                src="./hero-img-1.jpg"
+              />
+            </Parallax>
           </div>
           <div
             className={cn(
@@ -202,11 +228,13 @@ export const HeroSection = () => {
               styles.hero__bggraphic_item__desktop_4
             )}
           >
-            <StaticImage
-              className={styles.hero__bggraphic_item__desktop_4_img_1}
-              alt=""
-              src="./hero-img-2.jpg"
-            />
+            <Parallax>
+              <StaticImage
+                className={styles.hero__bggraphic_item__desktop_4_img_1}
+                alt=""
+                src="./hero-img-2.jpg"
+              />
+            </Parallax>
           </div>
           <div
             className={cn(
@@ -214,11 +242,13 @@ export const HeroSection = () => {
               styles.hero__bggraphic_item__desktop_5
             )}
           >
-            <StaticImage
-              className={styles.hero__bggraphic_item__desktop_5_img_1}
-              alt=""
-              src="./hero-img-5.jpg"
-            />
+            <Parallax>
+              <StaticImage
+                className={styles.hero__bggraphic_item__desktop_5_img_1}
+                alt=""
+                src="./hero-img-5.jpg"
+              />
+            </Parallax>
           </div>
         </div>
 
@@ -238,11 +268,13 @@ export const HeroSection = () => {
                 styles.hero__bggraphic_item__desktop_6
               )}
             >
-              <StaticImage
-                className={styles.hero__bggraphic_item__desktop_6_img_1}
-                alt=""
-                src="./hero-img-4.jpg"
-              />
+              <Parallax>
+                <StaticImage
+                  className={styles.hero__bggraphic_item__desktop_6_img_1}
+                  alt=""
+                  src="./hero-img-4.jpg"
+                />
+              </Parallax>
             </div>
           </div>
         </div>
