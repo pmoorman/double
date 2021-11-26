@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
-import { ParallaxProvider, useController } from "react-scroll-parallax";
+import React from "react";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import { Footer, Header, ParallaxCache } from "@app/components";
+import { isBrowser } from "@app/utils";
 
 export const Layout = ({ children }) => {
-  const isBrowser = typeof window !== "undefined";
-
   return (
     <ParallaxProvider>
-      {isBrowser && <ParallaxCache />}
+      {isBrowser() && <ParallaxCache />}
       <Header />
       <main>{children}</main>
       <Footer />
