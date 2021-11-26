@@ -50,7 +50,7 @@ export const Header = () => {
               activeClassName={styles.navLinkActive}
               onClick={() => setIsOpen(false)}
               as={Link}
-              to="/services"
+              to="/services/"
             >
               Services
             </Nav.Link>
@@ -59,7 +59,7 @@ export const Header = () => {
               activeClassName={styles.navLinkActive}
               onClick={() => setIsOpen(false)}
               as={Link}
-              to="/clients"
+              to="/clients/"
             >
               Clients
             </Nav.Link>
@@ -68,7 +68,7 @@ export const Header = () => {
               activeClassName={styles.navLinkActive}
               onClick={() => setIsOpen(false)}
               as={Link}
-              to="/blog"
+              to="/blog/"
             >
               Blog
             </Nav.Link>
@@ -77,7 +77,7 @@ export const Header = () => {
               activeClassName={styles.navLinkActive}
               onClick={() => setIsOpen(false)}
               as={Link}
-              to="/about"
+              to="/about/"
             >
               About
             </Nav.Link>
