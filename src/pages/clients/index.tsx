@@ -1,6 +1,7 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect } from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col } from "react-bootstrap";
+import sal from "sal.js";
 
 import {
   ClientBox,
@@ -204,6 +205,11 @@ const clients: Client[] = [
   },
 ];
 
+const clientsNormalized = clients.reduce((prev, curr) => {
+  prev[curr.title] = curr;
+  return prev;
+}, {});
+
 export interface ClientsPageProps {
   allFile: {
     edges: {
@@ -220,12 +226,9 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
   const { queryParams } =
     useQueryParams<{ service?: string; industry: string }>();
 
-  const clientsNormalized = useMemo(() => {
-    return clients.reduce((prev, curr) => {
-      prev[curr.title] = curr;
-      return prev;
-    }, {});
-  }, []);
+  useEffect(() => {
+    sal();
+  }, [queryParams]);
 
   // Filter instustry and service based on query params
   const filteredItems = useMemo(() => {
@@ -260,6 +263,8 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
     );
   }, [filteredItems]);
 
+  console.log(sortedItems);
+
   const getLogo = (logo: string) => {
     return data.allFile.edges.find((e) => e.node.name === logo)?.node;
   };
@@ -279,9 +284,9 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
           <ClientBox
             {...row[0]}
             key={key}
+            data-sal="fade"
             logo={logo}
             backgroundImage={bg}
-            data-sal="fade"
           />
         );
       }
@@ -295,7 +300,7 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
               const bg = getBackgroundImage(client.backgroundImage);
               return (
                 <Col
-                  key={"client" + client.title + i * ii}
+                  key={"client" + key + client.title + i * ii}
                   lg={width}
                   className="mb-3"
                   data-sal="fade"
