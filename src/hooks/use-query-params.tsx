@@ -8,12 +8,6 @@ export const updateQueryParams = (
 ) => {
   const query = qs.parse(location?.search?.replace("?", ""));
   const newQueries = { ...query, ...value };
-  console.log({
-    value,
-    newQueries,
-    query,
-    stringify: qs.stringify(newQueries),
-  });
   navigate(`?${qs.stringify(newQueries)}`, { replace: true });
 };
 
