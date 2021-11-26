@@ -85,24 +85,26 @@ export const Circles = () => {
               className={styles.circles__curved_text_wrapper}
             >
               <div>
-                <StaticImage
-                  alt=""
+                <div
                   className={cn(
                     styles.circles__curved_text_mobile,
                     "d-lg-none d-block"
                   )}
-                  src="./explode-curved-text-mobile.png"
-                />
-
-                <StaticImage
-                  alt=""
-                  objectFit="contain"
+                >
+                  <StaticImage alt="" src="./explode-curved-text-mobile.png" />
+                </div>
+                <div
                   className={cn(
                     styles.circles__curved_text_desktop,
                     "d-none d-lg-block"
                   )}
-                  src="./explode-curved-text.png"
-                />
+                >
+                  <StaticImage
+                    alt=""
+                    objectFit="contain"
+                    src="./explode-curved-text.png"
+                  />
+                </div>
               </div>
             </div>
           </div>
