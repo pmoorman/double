@@ -12,7 +12,7 @@ exports.onRenderBody = ({ setPostBodyComponents }) => {
           __html: `
             var _dcq = _dcq || [];
             var _dcs = _dcs || {};
-            _dcs.account = ${dripAccountId};
+            _dcs.account = '${dripAccountId}';
             (function() {
               var dc = document.createElement('script');
               dc.type = 'text/javascript'; dc.async = true;
@@ -28,7 +28,7 @@ exports.onRenderBody = ({ setPostBodyComponents }) => {
         dangerouslySetInnerHTML={{
           __html: `
             !function(q,e,v,n,t,s){if(q.qp) return; n=q.qp=function(){n.qp?n.qp.apply(n,arguments):n.queue.push(arguments);}; n.queue=[];t=document.createElement(e);t.async=!0;t.src=v; s=document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);}(window, 'script', 'https://a.quora.com/qevents.js');
-            qp('init', ${quoraId});
+            qp('init', '${quoraId}');
             qp('track', 'ViewContent');
           `,
         }}

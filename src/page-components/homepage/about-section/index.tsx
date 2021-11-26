@@ -139,7 +139,7 @@ export const AboutSection = () => {
                 className={cn(styles.about__items_item3__img, "mb-4 img-fluid")}
                 src="./about-3.png"
               />
-              <p className={(cn(styles.about__items_item3__text), "lead")}>
+              <p className={cn(styles.about__items_item3__text, "lead")}>
                 ... who you can count on to open your Google Analytics and spot
                 exactly which part of your marketing funnel is holding up the
                 show.

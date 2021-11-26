@@ -7,7 +7,9 @@
   }
 
   &__intro {
+    z-index: 1;
     margin-bottom: 50px;
+    position: relative;
     @include media-breakpoint-down(md) {
       margin-bottom: 0;
     }

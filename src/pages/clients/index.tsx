@@ -263,8 +263,6 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
     );
   }, [filteredItems]);
 
-  console.log(sortedItems);
-
   const getLogo = (logo: string) => {
     return data.allFile.edges.find((e) => e.node.name === logo)?.node;
   };

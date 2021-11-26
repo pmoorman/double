@@ -43,7 +43,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Arrows and images */}
-        <Parallax y={[0, -20]} className={styles.hero__bggraphics}>
+        <Parallax y={[20, -20]} className={styles.hero__bggraphics}>
           <div className={styles.hero__bggraphics__arrows}>
             <StaticImage
               className={cn(

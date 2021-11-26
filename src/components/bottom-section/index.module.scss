@@ -6,7 +6,7 @@
       margin-right: 0;
     }
   }
-  > .container {
+  > div {
     @include media-breakpoint-down(md) {
       padding-top: 100px;
       padding-bottom: 150px;
@@ -42,19 +42,18 @@
     &__item {
       position: absolute;
       &1 {
-        width: 231px;
-        height: 309px;
-        background: #292f47;
         top: -85px;
         right: -20px;
         z-index: -1;
         &_inner {
+          width: 231px;
+          height: 309px;
+          background: #292f47;
         }
         @include media-breakpoint-down(md) {
           right: 0;
           left: initial;
           top: 35px;
-
           opacity: 0.8;
           &_inner {
             width: 85px;

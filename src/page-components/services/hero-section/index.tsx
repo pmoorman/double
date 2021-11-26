@@ -23,11 +23,16 @@ export const HeroSection = () => {
 
         {/* intro */}
         <div
-          className="intro d-flex px-3 px-lg-0 text-center text-lg-start"
+          className={cn(
+            styles.hero__intro,
+            "d-flex px-3 px-lg-0 text-center text-lg-start"
+          )}
           data-sal="fade"
         >
           <div className="col-lg-5">
-            <p className="intro__subtitle lead-lg mb-2">Complete Systematic</p>
+            <p className={cn(styles.hero__intro__subtitle, "lead-lg mb-2")}>
+              Complete Systematic
+            </p>
             <h1 className="fw-bold mb-lg-4">Growth Marketing Services</h1>
           </div>
         </div>
@@ -76,7 +81,7 @@ export const HeroSection = () => {
           )}
           data-sal="fade"
         >
-          <div className="col-lg-6 pe-lg-5">
+          <div className="col-lg-6 px-3 px-lg-5">
             <p className="lead">
               If you’ve already dreamed up a marketing plan,{" "}
               <span className="text-highlight">we’ll bring it to life</span>.
@@ -110,35 +115,29 @@ export const HeroSection = () => {
         <div
           className={cn(styles.hero__bggraphics_mobile_2, "position-relative")}
         >
-          <Parallax>
-            <StaticImage
-              alt=""
-              className={cn(
-                styles.hero__bggraphic_item_mobile,
-                styles.hero__bggraphic_item_mobile_4
-              )}
-              src="./hero-graphic-3.png"
-            />
+          <Parallax
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_4
+            )}
+          >
+            <StaticImage alt="" src="./hero-graphic-3.png" />
           </Parallax>
-          <Parallax>
-            <StaticImage
-              alt=""
-              className={cn(
-                styles.hero__bggraphic_item_mobile,
-                styles.hero__bggraphic_item_mobile_5
-              )}
-              src="./hero-img-5.jpg"
-            />
+          <Parallax
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_5
+            )}
+          >
+            <StaticImage alt="" src="./hero-img-5.jpg" />
           </Parallax>
-          <Parallax>
-            <StaticImage
-              alt=""
-              className={cn(
-                styles.hero__bggraphic_item_mobile,
-                styles.hero__bggraphic_item_mobile_6
-              )}
-              src="./hero-img-1.jpg"
-            />
+          <Parallax
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_6
+            )}
+          >
+            <StaticImage alt="" src="./hero-img-1.jpg" />
           </Parallax>
           <Parallax>
             <StaticImage
@@ -185,53 +184,50 @@ export const HeroSection = () => {
           <AnimatedLine className={styles.hero__line_2_mobile}>
             <StaticImage alt="" src="./hero-line-2-mobile.svg" />
           </AnimatedLine>
-          <Parallax>
-            <StaticImage
-              alt=""
-              className={cn(
-                styles.hero__bggraphic_item_mobile,
-                styles.hero__bggraphic_item_mobile_8
-              )}
-              src="./hero-img-3.jpg"
-            />
+
+          <Parallax
+            className={cn(
+              styles.hero__bggraphic_item_mobile,
+              styles.hero__bggraphic_item_mobile_8
+            )}
+          >
+            <StaticImage alt="" src="./hero-img-3.jpg" />
           </Parallax>
         </div>
 
         {/* images */}
         <div className={styles.hero__desktop_image_section} data-sal="fade">
-          <div
+          <Parallax
             className={cn(
               styles.hero__bggraphic_item__desktop,
               styles.hero__bggraphic_item__desktop_3
             )}
           >
-            <Parallax>
-              <StaticImage
-                className={styles.hero__bggraphic_item__desktop_3_img_1}
-                alt=""
-                src="./hero-graphic-1.png"
-              />
-              <StaticImage
-                className={styles.hero__bggraphic_item__desktop_3_img_2}
-                alt=""
-                src="./hero-img-1.jpg"
-              />
-            </Parallax>
-          </div>
-          <div
+            <StaticImage
+              className={styles.hero__bggraphic_item__desktop_3_img_1}
+              alt=""
+              src="./hero-graphic-1.png"
+            />
+            <StaticImage
+              className={styles.hero__bggraphic_item__desktop_3_img_2}
+              alt=""
+              src="./hero-img-1.jpg"
+            />
+          </Parallax>
+
+          <Parallax
             className={cn(
               styles.hero__bggraphic_item__desktop,
               styles.hero__bggraphic_item__desktop_4
             )}
           >
-            <Parallax>
-              <StaticImage
-                className={styles.hero__bggraphic_item__desktop_4_img_1}
-                alt=""
-                src="./hero-img-2.jpg"
-              />
-            </Parallax>
-          </div>
+            <StaticImage
+              className={styles.hero__bggraphic_item__desktop_4_img_1}
+              alt=""
+              src="./hero-img-2.jpg"
+            />
+          </Parallax>
+
           <div
             className={cn(
               styles.hero__bggraphic_item__desktop,
@@ -249,9 +245,9 @@ export const HeroSection = () => {
         </div>
 
         {/* text 3 */}
-        <div className={cn(styles.hero__text_3, "d-flex")} data-sal="fade">
-          <div className="col-lg-7 pe-lg-5">
-            <ShadowBox checkbox className="mb-4" />
+        <div className={cn(styles.hero__text_3, "row")} data-sal="fade">
+          <div className="col-lg-7 px-5 ps-lg-0 pe-lg-5">
+            <ShadowBox checkbox className="mb-4 mx-auto mx-lg-0" />
             <h2>
               We help you systematically drive traffic...{" "}
               <span>(= performance)</span>
@@ -277,18 +273,18 @@ export const HeroSection = () => {
 
         {/* text 4 & 5 */}
         <div
-          className={cn(styles.hero__text_4, "d-flex justify-content-between")}
+          className={cn(styles.hero__text_4, "row justify-content-between")}
           data-sal="fade"
         >
           <div className="col-lg-6">
-            <ShadowBox checkbox className="mb-4" />
+            <ShadowBox checkbox className="mb-4 mx-auto mx-lg-0" />
             <p className="lead-lg">
               …and then we help you convert that traffic via funnels, nurturing
               & storytelling…
             </p>
           </div>
-          <div className="col-lg-5 pe-lg-0">
-            <ShadowBox checkbox className="mb-4" />
+          <div className="col-lg-5 px-5 ps-lg-3 pe-lg-0">
+            <ShadowBox checkbox className="mb-4 mx-auto mx-lg-0" />
             <p className="lead-lg">…and turn them into active product users.</p>
           </div>
           <AnimatedLine className={styles.hero__line_3}>
@@ -307,7 +303,7 @@ export const HeroSection = () => {
 
         {/* Text 6 */}
         <div className="row justify-content-center text-center" data-sal="fade">
-          <div className="col-lg-6 px-0 px-lg-3">
+          <div className="col-lg-6">
             <p className="lead-lg">
               All while building the{" "}
               <span className="text-highlight">

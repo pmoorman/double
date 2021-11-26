@@ -36,7 +36,7 @@ export const ClientsSection = () => {
             </div>
             <div className="d-flex justify-content-between align-items-center">
               <div className={styles.clients__logos__item_4}>
-                <div data-sal="fade">
+                <div data-sal="fade" data-sal-threshold="0.1">
                   <StaticImage alt="" quality={60} src="./logo-alpian.png" />
                 </div>
               </div>

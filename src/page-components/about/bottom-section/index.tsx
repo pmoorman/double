@@ -9,7 +9,7 @@ export const BottomSection = () => {
     <section id="bottom" className={styles.bottom}>
       <div className="container">
         <div className="row justify-content-center text-center">
-          <div className="col-lg-8 px-0 px-lg-3">
+          <div className="col-lg-8">
             <h2 className="mb-4">That’s us</h2>
             <p className="lead">
               Long story short, you should send us an email if you’re looking

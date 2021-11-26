@@ -39,7 +39,7 @@ export const HiringSection = () => {
 
         {/* boxes */}
         <div className="row mb-lg-5 pt-lg-5">
-          <div className="col-lg-4 mb-5 mb-lg-0 px-0 px-lg-3 position-relative">
+          <div className="col-lg-4 mb-5 mb-lg-0 position-relative">
             <div className={styles.hiring__box}>
               <ShadowBox
                 checkbox
@@ -53,7 +53,7 @@ export const HiringSection = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 mb-5 mb-lg-0 px-0 px-lg-3 position-relative">
+          <div className="col-lg-4 mb-5 mb-lg-0 position-relative">
             <div className={styles.hiring__box}>
               <ShadowBox
                 checkbox
@@ -69,7 +69,7 @@ export const HiringSection = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 mb-5 mb-lg-0 px-0 px-lg-3 position-relative">
+          <div className="col-lg-4 mb-5 mb-lg-0 position-relative">
             <div className={styles.hiring__box}>
               <ShadowBox
                 checkbox
@@ -95,7 +95,7 @@ export const HiringSection = () => {
               <span className="text-highlight">roles we’re looking</span> for:
             </p>
           </div>
-          <div className="col-lg-8 px-0 px-lg-3">
+          <div className="col-lg-8">
             <div
               className={cn(
                 styles.hiring__positions_box,

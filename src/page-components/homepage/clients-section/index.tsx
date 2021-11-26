@@ -165,7 +165,10 @@ export const ClientsSection = () => {
             </div>
 
             <div className={styles.logoRow}>
-              <p className="lead-lg text-center mb-0" style={{ width: "65%" }}>
+              <p
+                className="lead-lg text-center mb-0 mx-auto"
+                style={{ width: "65%" }}
+              >
                 Whether you’re a billion-dollar company,
               </p>
             </div>
@@ -223,7 +226,10 @@ export const ClientsSection = () => {
             </div>
 
             <div className={styles.logoRow}>
-              <p className="lead-lg text-center mb-0" style={{ width: "80%" }}>
+              <p
+                className="lead-lg text-center mb-0 mx-auto"
+                style={{ width: "80%" }}
+              >
                 ...or a bootstrapped powerhouse,
               </p>
             </div>
