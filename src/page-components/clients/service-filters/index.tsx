@@ -38,7 +38,7 @@ export const ServiceFilters: FC<ServiceFiltersProps> = () => {
         className={cn(styles.service_filters__btn, "btn btn-light")}
       >
         <StaticImage alt="" className="me-2" src="./chevron-down.svg" />#
-        {selected}
+        {selected === "All" ? "All services" : selected}
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
