@@ -1,3 +1,4 @@
+const React = require("react");
 const config = require("./gatsby-config");
 
 exports.onRenderBody = ({ setPostBodyComponents }) => {

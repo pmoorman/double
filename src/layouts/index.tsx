@@ -1,31 +1,18 @@
 import React, { useEffect } from "react";
 import { ParallaxProvider, useController } from "react-scroll-parallax";
 
-import { Footer, Header } from "@app/components";
+import { Footer, Header, ParallaxCache } from "@app/components";
 
-export const Layout = (props) => {
+export const Layout = ({ children }) => {
+  const isBrowser = typeof window !== "undefined";
+
   return (
     <ParallaxProvider>
-      <InnerLayout {...props} />
-    </ParallaxProvider>
-  );
-};
-
-const InnerLayout = ({ children }) => {
-  const { parallaxController } = useController();
-
-  useEffect(() => {
-    setTimeout(() => {
-      parallaxController.update();
-    }, 150);
-  });
-
-  return (
-    <>
+      {isBrowser && <ParallaxCache />}
       <Header />
       <main>{children}</main>
       <Footer />
-    </>
+    </ParallaxProvider>
   );
 };
 
