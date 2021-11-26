@@ -94,8 +94,6 @@ export const HeroSection = () => {
                 alt=""
                 src="./hero-graphic-3.png"
               />
-            </Parallax>
-            <Parallax>
               <StaticImage
                 className={styles.hero__bggraphic_item__desktop_2_img_2}
                 alt=""
@@ -213,8 +211,6 @@ export const HeroSection = () => {
                 alt=""
                 src="./hero-graphic-1.png"
               />
-            </Parallax>
-            <Parallax>
               <StaticImage
                 className={styles.hero__bggraphic_item__desktop_3_img_2}
                 alt=""
@@ -257,7 +253,7 @@ export const HeroSection = () => {
           <div className="col-lg-7 pe-lg-5">
             <ShadowBox checkbox className="mb-4" />
             <h2>
-              We help you systematically drive traffic...
+              We help you systematically drive traffic...{" "}
               <span>(= performance)</span>
             </h2>
           </div>
