@@ -276,7 +276,13 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
         const logo = getLogo(row[0].logo);
         const bg = getBackgroundImage(row[0].backgroundImage);
         return (
-          <ClientBox {...row[0]} key={key} logo={logo} backgroundImage={bg} />
+          <ClientBox
+            {...row[0]}
+            key={key}
+            logo={logo}
+            backgroundImage={bg}
+            data-sal="fade"
+          />
         );
       }
 
@@ -292,6 +298,7 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
                   key={"client" + client.title + i * ii}
                   lg={width}
                   className="mb-3"
+                  data-sal="fade"
                 >
                   <ClientBox {...client} logo={logo} backgroundImage={bg} />
                 </Col>

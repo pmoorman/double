@@ -21,7 +21,7 @@ export const HeroSection = () => {
         <div className={cn(styles.hero__content, "row justify-content-center")}>
           {/* Images */}
           <div className={styles.hero__images}>
-            <Parallax className={styles.hero__images__1} data-aos="fade-in">
+            <Parallax className={styles.hero__images__1}>
               <StaticImage
                 alt=""
                 className="img-fluid"
@@ -29,7 +29,7 @@ export const HeroSection = () => {
               />
               <p>Devoted coffee lovers</p>
             </Parallax>
-            <Parallax className={styles.hero__images__2} data-aos="fade-in">
+            <Parallax className={styles.hero__images__2}>
               <StaticImage
                 alt=""
                 className="img-fluid"
@@ -37,7 +37,7 @@ export const HeroSection = () => {
               />
               <p>Lunch time jokers</p>
             </Parallax>
-            <Parallax className={styles.hero__images__3} data-aos="fade-in">
+            <Parallax className={styles.hero__images__3}>
               <StaticImage
                 alt=""
                 className="img-fluid"
@@ -45,7 +45,7 @@ export const HeroSection = () => {
               />
               <p>Philosophical debaters</p>
             </Parallax>
-            <Parallax className={styles.hero__images__4} data-aos="fade-in">
+            <Parallax className={styles.hero__images__4}>
               <StaticImage
                 alt=""
                 className={cn(styles.hero__images__4_img, "img-fluid")}
@@ -53,7 +53,7 @@ export const HeroSection = () => {
               />
               <p>Part-time bag designers</p>
             </Parallax>
-            <Parallax className={styles.hero__images__5} data-aos="fade-in">
+            <Parallax className={styles.hero__images__5}>
               <StaticImage
                 alt=""
                 className="img-fluid"
@@ -61,7 +61,7 @@ export const HeroSection = () => {
               />
               <p>Fair-weather sailors</p>
             </Parallax>
-            <Parallax className={styles.hero__images__6} data-aos="fade-in">
+            <Parallax className={styles.hero__images__6}>
               <StaticImage
                 alt=""
                 className={cn(styles.hero__images__6_img, "img-fluid")}
@@ -74,7 +74,7 @@ export const HeroSection = () => {
           </div>
           <div className="col-lg-8">
             <div className="position-relative">
-              <div className={styles.hero__imagesmain} data-aos="fade-in">
+              <div className={styles.hero__imagesmain}>
                 <WistiaVideo
                   videoId="eap2y2f006"
                   style={{ boxShadow: "20px 20px 0px var(--bs-secondary)" }}

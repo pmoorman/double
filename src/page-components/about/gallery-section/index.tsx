@@ -10,7 +10,7 @@ export const GallerySection = () => {
   return (
     <section id="gallery" className={styles.gallery}>
       <div className="container position-relative">
-        <div className="row">
+        <div className="row" data-sal="slide-up">
           <div className="col-lg-4">
             <h3 className={styles.gallery__title}>
               <span className="text-highlight">Now pause the reading,</span>
@@ -21,102 +21,86 @@ export const GallerySection = () => {
 
         {/* Images */}
         <div className={styles.gallery__images}>
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images1}
-            src="./gallery-img-1.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images2}
-            src="./gallery-img-2.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images3}
-            src="./gallery-img-3.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images4}
-            src="./gallery-img-4.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images5}
-            src="./gallery-img-5.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images6}
-            src="./gallery-img-6.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images7}
-            src="./gallery-img-7.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images8}
-            src="./gallery-img-8.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images9}
-            src="./gallery-img-9.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images10}
-            src="./gallery-img-10.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images11}
-            src="./gallery-img-11.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images12}
-            src="./gallery-img-12.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images13}
-            src="./gallery-img-13.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images14}
-            src="./gallery-img-14.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images15}
-            src="./gallery-img-15.jpg"
-          />
-          <StaticImage
-            alt=""
-            data-aos="fade-in"
-            className={styles.gallery__images16}
-            src="./gallery-img-16.jpg"
-          />
+          <div className={styles.gallery__images1}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-1.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images2}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-2.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images3}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-3.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images4}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-4.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images5}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-5.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images6}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-6.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images7}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-7.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images8}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-8.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images9}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-9.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images10}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-10.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images11}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-11.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images12}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-12.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images13}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-13.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images14}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-14.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images15}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-15.jpg" />
+            </div>
+          </div>
+          <div className={styles.gallery__images16}>
+            <div data-sal="slide-up">
+              <StaticImage alt="" src="./gallery-img-16.jpg" />
+            </div>
+          </div>
         </div>
 
         <div className={cn(styles.gallery__bottom, "row")}>

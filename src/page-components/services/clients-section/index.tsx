@@ -18,63 +18,43 @@ export const ClientsSection = () => {
           </div>
           <div className={cn(styles.clients__logos, "col-lg-6")}>
             <div className="d-flex justify-content-between align-items-center mb-5">
-              <div>
-                <StaticImage
-                  alt=""
-                  data-aos="fade-in"
-                  className={styles.clients__logos__item_1}
-                  quality={60}
-                  src="./logo-sendcloud.png"
-                />
+              <div className={styles.clients__logos__item_1}>
+                <div data-sal="fade">
+                  <StaticImage alt="" quality={60} src="./logo-sendcloud.png" />
+                </div>
               </div>
-              <div>
-                <StaticImage
-                  alt=""
-                  data-aos="fade-in"
-                  className={styles.clients__logos__item_2}
-                  quality={60}
-                  src="./logo-klooker.png"
-                />
+              <div className={styles.clients__logos__item_2}>
+                <div data-sal="fade">
+                  <StaticImage alt="" quality={60} src="./logo-klooker.png" />
+                </div>
               </div>
-              <div>
-                <StaticImage
-                  alt=""
-                  data-aos="fade-in"
-                  className={styles.clients__logos__item_3}
-                  quality={60}
-                  src="./logo-cla.png"
-                />
+              <div className={styles.clients__logos__item_3}>
+                <div data-sal="fade">
+                  <StaticImage alt="" quality={60} src="./logo-cla.png" />
+                </div>
               </div>
             </div>
             <div className="d-flex justify-content-between align-items-center">
-              <StaticImage
-                alt=""
-                data-aos="fade-in"
-                className={styles.clients__logos__item_4}
-                quality={60}
-                src="./logo-alpian.png"
-              />
-              <StaticImage
-                alt=""
-                data-aos="fade-in"
-                className={styles.clients__logos__item_5}
-                quality={60}
-                src="./logo-tiktok.png"
-              />
-              <StaticImage
-                alt=""
-                data-aos="fade-in"
-                className={styles.clients__logos__item_6}
-                quality={60}
-                src="./logo-h.png"
-              />
-              <StaticImage
-                alt=""
-                data-aos="fade-in"
-                className={styles.clients__logos__item_7}
-                quality={60}
-                src="./logo-elugie.png"
-              />
+              <div className={styles.clients__logos__item_4}>
+                <div data-sal="fade">
+                  <StaticImage alt="" quality={60} src="./logo-alpian.png" />
+                </div>
+              </div>
+              <div className={styles.clients__logos__item_5}>
+                <div data-sal="fade">
+                  <StaticImage alt="" quality={60} src="./logo-tiktok.png" />
+                </div>
+              </div>
+              <div className={styles.clients__logos__item_6}>
+                <div data-sal="fade">
+                  <StaticImage alt="" quality={60} src="./logo-h.png" />
+                </div>
+              </div>
+              <div className={styles.clients__logos__item_7}>
+                <div data-sal="fade">
+                  <StaticImage alt="" quality={60} src="./logo-elugie.png" />
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-12 d-flex flex-column flex-lg-row">

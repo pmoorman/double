@@ -30,7 +30,7 @@ export const HeroSection = () => {
             styles.hero__intro,
             "px-3 px-lg-0 text-center text-lg-start"
           )}
-          data-aos="fade-in"
+          data-sal="fade"
         >
           <h1 className="text-primary fw-bold mb-4">
             Growth, <br />
@@ -43,7 +43,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Arrows and images */}
-        <Parallax y={[0, -30]} className={styles.hero__bggraphics}>
+        <Parallax y={[0, -20]} className={styles.hero__bggraphics}>
           <div className={styles.hero__bggraphics__arrows}>
             <StaticImage
               className={cn(
@@ -110,7 +110,7 @@ export const HeroSection = () => {
             styles.hero__bottom,
             "text-center text-lg-start px-3 px-lg-0 d-flex justify-content-end"
           )}
-          data-aos="fade-in"
+          data-sal="fade"
         >
           <div className={styles.hero__bottom__inner}>
             <p className="lead">
