@@ -36,7 +36,12 @@
     font-weight: 600;
     font-size: 18px;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &__arrow {
+      display: flex;
+      align-items: center;
       position: absolute;
       right: 15px;
       top: 25px;

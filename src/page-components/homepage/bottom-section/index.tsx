@@ -22,13 +22,22 @@ export const BottomSection = () => {
           </div>
           <div className={cn(styles.bottom__content__col2, "col-lg-6")}>
             <div>
-              <Parallax className={styles.bottom__content__col2_item1}>
+              <Parallax
+                y={[50, 0]}
+                className={styles.bottom__content__col2_item1}
+              >
                 <div className={styles.bottom__content__col2_item1_inner}></div>
               </Parallax>
-              <Parallax className={styles.bottom__content__col2_item2}>
+              <Parallax
+                y={[50, 0]}
+                className={styles.bottom__content__col2_item2}
+              >
                 <StaticImage alt="" src="./footer-img-1.png" />
               </Parallax>
-              <Parallax className={styles.bottom__content__col2_item3}>
+              <Parallax
+                y={[50, 0]}
+                className={styles.bottom__content__col2_item3}
+              >
                 <StaticImage alt="" src="./footer-img-2.png" />
               </Parallax>
             </div>

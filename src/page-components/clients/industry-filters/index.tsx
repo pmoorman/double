@@ -52,14 +52,14 @@ export const IndustryFilters: FC<IndustryFiltersProps> = () => {
             aria-expanded={isOpen}
           >
             Show {selected}
-            <StaticImage
+            <div
               className={cn(
                 styles.industry_filters_mobile__mainbtn__arrow,
                 "me-2"
               )}
-              src="./chevron-down-light.svg"
-              alt=""
-            />
+            >
+              <StaticImage src="./chevron-down-light.svg" alt="" />
+            </div>
           </Button>
           <Collapse in={isOpen}>
             <div id="industry-filters-mobile">

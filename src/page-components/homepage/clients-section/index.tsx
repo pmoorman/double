@@ -236,11 +236,7 @@ export const ClientsSection = () => {
 
             <div className={cn(styles.logoRow, "position-relative")}>
               <AnimatedLine className={styles.clients__lines_line2}>
-                <StaticImage
-                  className={styles.clients__logoitem}
-                  src="./explode-line3.svg"
-                  alt=""
-                />
+                <StaticImage src="./explode-line3.svg" alt="" />
               </AnimatedLine>
               <div>
                 <StaticImage
@@ -275,16 +271,18 @@ const Explode = () => {
 
   return (
     <>
-      <div className={cn(styles.logoRow, "pt-5 pt-lg-0 pb-4 pb-lg-0")}>
-        <p
-          className={cn(
-            styles.clients__logos__text2,
-            "lead-lg justify-content-center text-center mb-0 m-auto",
-            { [styles.active]: inView }
-          )}
-        >
-          ...chances are that we can <br /> help you <span>scale up</span>
-        </p>
+      <div className="container">
+        <div className={cn(styles.logoRow, "pt-5 pt-lg-0 pb-4 pb-lg-0")}>
+          <p
+            className={cn(
+              styles.clients__logos__text2,
+              "lead-lg justify-content-center text-center mb-0 m-auto",
+              { [styles.active]: inView }
+            )}
+          >
+            ...chances are that we can <br /> help you <span>scale up</span>
+          </p>
+        </div>
       </div>
 
       {/* Explode */}
