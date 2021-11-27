@@ -30,7 +30,7 @@ export const HeroSection = () => {
             styles.hero__intro,
             "px-3 px-lg-0 text-center text-lg-start"
           )}
-          data-sal="fade"
+          data-aos="fade-in"
         >
           <h1 className="text-primary fw-bold mb-4">
             Growth, <br />
@@ -110,7 +110,7 @@ export const HeroSection = () => {
             styles.hero__bottom,
             "text-center text-lg-start px-3 px-lg-0 d-flex justify-content-end"
           )}
-          data-sal="fade"
+          data-aos="fade-in"
         >
           <div className={styles.hero__bottom__inner}>
             <p className="lead">

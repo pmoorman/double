@@ -11,3 +11,4 @@ export * from "./bottom-section";
 export * from "./wistia-video";
 export * from "./parallax";
 export * from "./parallax-cache";
+export * from "./aos";

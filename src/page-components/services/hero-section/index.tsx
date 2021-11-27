@@ -27,7 +27,7 @@ export const HeroSection = () => {
             styles.hero__intro,
             "d-flex px-3 px-lg-0 text-center text-lg-start"
           )}
-          data-sal="fade"
+          data-aos="fade-in"
         >
           <div className="col-lg-5">
             <p className={cn(styles.hero__intro__subtitle, "lead-lg mb-2")}>
@@ -79,7 +79,7 @@ export const HeroSection = () => {
             styles.hero__text_1,
             "d-flex text-center text-lg-start px-4 px-lg-3"
           )}
-          data-sal="fade"
+          data-aos="fade-in"
         >
           <div className="col-lg-6 px-3 px-lg-5">
             <p className="lead">
@@ -160,7 +160,7 @@ export const HeroSection = () => {
             styles.hero__text_2,
             "d-flex justify-content-end  text-center text-lg-start px-4 px-lg-3"
           )}
-          data-sal="fade"
+          data-aos="fade-in"
         >
           <div className="col-lg-6 px-0 px-lg-3">
             <p className="lead">
@@ -196,7 +196,7 @@ export const HeroSection = () => {
         </div>
 
         {/* images */}
-        <div className={styles.hero__desktop_image_section} data-sal="fade">
+        <div className={styles.hero__desktop_image_section} data-aos="fade-in">
           <Parallax
             className={cn(
               styles.hero__bggraphic_item__desktop,
@@ -245,7 +245,7 @@ export const HeroSection = () => {
         </div>
 
         {/* text 3 */}
-        <div className={cn(styles.hero__text_3, "row")} data-sal="fade">
+        <div className={cn(styles.hero__text_3, "row")} data-aos="fade-in">
           <div className="col-lg-7 px-5 ps-lg-0 pe-lg-5">
             <ShadowBox checkbox className="mb-4 mx-auto mx-lg-0" />
             <h2>
@@ -274,7 +274,7 @@ export const HeroSection = () => {
         {/* text 4 & 5 */}
         <div
           className={cn(styles.hero__text_4, "row justify-content-between")}
-          data-sal="fade"
+          data-aos="fade-in"
         >
           <div className="col-lg-6">
             <ShadowBox checkbox className="mb-4 mx-auto mx-lg-0" />
@@ -302,7 +302,10 @@ export const HeroSection = () => {
         </div>
 
         {/* Text 6 */}
-        <div className="row justify-content-center text-center" data-sal="fade">
+        <div
+          className="row justify-content-center text-center"
+          data-aos="fade-in"
+        >
           <div className="col-lg-6">
             <p className="lead-lg">
               All while building the{" "}

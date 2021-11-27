@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect } from "react";
 import { graphql, PageProps } from "gatsby";
 import { Col } from "react-bootstrap";
-import sal from "sal.js";
+import AOS from "aos";
 
 import {
   ClientBox,
@@ -227,7 +227,7 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
     useQueryParams<{ service?: string; industry: string }>();
 
   useEffect(() => {
-    sal();
+    AOS.refresh();
   }, [queryParams]);
 
   // Filter instustry and service based on query params
@@ -282,7 +282,7 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
           <ClientBox
             {...row[0]}
             key={key}
-            data-sal="fade"
+            data-aos="fade-in"
             logo={logo}
             backgroundImage={bg}
           />
@@ -301,7 +301,7 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
                   key={"client" + key + client.title + i * ii}
                   lg={width}
                   className="mb-3"
-                  data-sal="fade"
+                  data-aos="fade-in"
                 >
                   <ClientBox {...client} logo={logo} backgroundImage={bg} />
                 </Col>
