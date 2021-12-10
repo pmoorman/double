@@ -24,7 +24,7 @@ const IndexPage = () => {
       <AcademySection />
       <AboutSection />
       <ProcessSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <BottomSection />
     </>
   );
