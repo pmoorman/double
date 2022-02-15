@@ -117,7 +117,7 @@ const clients: Client[] = [
     testimonialJobtitle: null,
     backgroundColor: "#E6F1F5",
     backgroundImage: "glowforge-background",
-    backgroundImageMobile: "tiktok_background_mobile",
+    backgroundImageMobile: "glowforge_background_mobile",
     arrow: "light",
     size: 3,
   },
