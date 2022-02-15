@@ -11,10 +11,10 @@ export const ClientImage: FC<ClientImageProps> = ({ item, ...rest }) => {
   if (item.childImageSharp) {
     return (
       <GatsbyImage
-        {...rest}
         image={getImage(item.childImageSharp)}
         objectFit="contain"
         alt=""
+        {...rest}
       />
     );
   }

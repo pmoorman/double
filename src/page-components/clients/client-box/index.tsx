@@ -16,6 +16,7 @@ export interface ClientBoxProps {
   backgroundColor?: string;
   backgroundImage?: { childImageSharp?: any; publicURL: string };
   backgroundImageMobile?: ReactNode;
+  backgroundImageObjectFit?: "cover" | "contain";
   backgroundImagePosition?: "top" | "bottom";
   arrow: "dark" | "light";
   pageUrl?: string;
@@ -108,6 +109,7 @@ const ClientBoxMd: FC<ClientBoxProps> = (props) => {
   const {
     backgroundColor,
     backgroundImage,
+    backgroundImageObjectFit = "contain",
     pageUrl,
     logo,
     title,
@@ -126,6 +128,7 @@ const ClientBoxMd: FC<ClientBoxProps> = (props) => {
       >
         <ClientImage
           item={backgroundImage}
+          objectFit={backgroundImageObjectFit}
           alt=""
           style={{
             width: "100%",
