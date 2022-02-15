@@ -12,9 +12,14 @@ import {
 import { useQueryParams } from "@app/hooks";
 import { SEO } from "@app/components";
 
-interface Client extends Omit<ClientBoxProps, "logo" | "backgroundImage"> {
+interface Client
+  extends Omit<
+    ClientBoxProps,
+    "logo" | "backgroundImage" | "backgroundImageMobile"
+  > {
   logo: string;
   backgroundImage?: string;
+  backgroundImageMobile?: string;
 }
 
 const clients: Client[] = [
@@ -125,17 +130,13 @@ const clients: Client[] = [
     title: "Sencyr",
     logo: null,
     industry: "E-commerce",
-    services: [
-      "Copywriting",
-      "Webdesign",
-      "Paid Ads",
-      "Strategy",
-    ],
+    services: ["Copywriting", "Webdesign", "Paid Ads", "Strategy"],
     description:
       "We’re helping Sencyr launch and grow their very first B2C skincare line for acne-prone skin.  Our strategy aims to scale E-commerce activities and establish the brand’s authority.",
     testimonialName: null,
     testimonialJobtitle: null,
-    backgroundImage: "babb_background",
+    backgroundImage: "sencyr_background",
+    backgroundImageObjectFit: "cover",
     backgroundColor: "#000000",
     arrow: "light",
     size: 2,
@@ -276,7 +277,7 @@ const clients: Client[] = [
     industry: "E-commerce",
     services: ["Copywriting", "Design", "PR", "Onboarding", "Strategy"],
     description:
-      "We created Bistroo's blueprint to  engage their community through incentives and gamification. The result? Exponential growth!",  
+      "We created Bistroo's blueprint to  engage their community through incentives and gamification. The result? Exponential growth!",
     backgroundColor: "##56204B",
     arrow: "dark",
     size: 1,
@@ -285,7 +286,14 @@ const clients: Client[] = [
     title: "MyMall",
     logo: "mymall-logo",
     industry: "E-commerce",
-    services: ["Copywriting", "Activation", "Onboarding" , "B2B Lead Generation" , "Paid ads" , "Strategy"],
+    services: [
+      "Copywriting",
+      "Activation",
+      "Onboarding",
+      "B2B Lead Generation",
+      "Paid ads",
+      "Strategy",
+    ],
     description:
       "Despite being one of Manila’s most popular do-it-all apps MyMall’s growth was stalling. We created more effective activation strategies, optimised their acquisition and set up incentive schemes for suppliers to generate new active use growth.",
     backgroundColor: "#FFFFFF",
@@ -296,7 +304,7 @@ const clients: Client[] = [
     title: "RChain",
     logo: "R-chain-logo",
     industry: "Crypto",
-    services: ["Strategy", "Onboarding" , "Copywriting" , "Automation"],
+    services: ["Strategy", "Onboarding", "Copywriting", "Automation"],
     description:
       "Rchain are competing with other big names in the crypto space. We helped them during the first crypto bull run to by building incentive structures, rewriting website copy and setting up vital marketing automations.",
     backgroundColor: "#000000",
@@ -378,6 +386,12 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
       if (clientsNormalized[row[0].title].size === 3) {
         const logo = getLogo(row[0].logo);
         const bg = getBackgroundImage(row[0].backgroundImage);
+        const bgMobile = row[0].backgroundImageMobile
+          ? getBackgroundImage(row[0].backgroundImageMobile)
+          : undefined;
+
+        console.log({ bgMobile, m: row[0] });
+
         return (
           <ClientBox
             {...row[0]}
@@ -385,6 +399,7 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
             data-aos="fade-in"
             logo={logo}
             backgroundImage={bg}
+            backgroundImageMobile={bgMobile}
           />
         );
       }
@@ -396,6 +411,10 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
               const width = client.size === 2 ? 8 : 4;
               const logo = getLogo(client.logo);
               const bg = getBackgroundImage(client.backgroundImage);
+              const bgMobile = client.backgroundImageMobile
+                ? getBackgroundImage(client.backgroundImageMobile)
+                : undefined;
+
               return (
                 <Col
                   key={"client" + key + client.title + i * ii}
@@ -403,7 +422,12 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
                   className="mb-3"
                   data-aos="fade-in"
                 >
-                  <ClientBox {...client} logo={logo} backgroundImage={bg} />
+                  <ClientBox
+                    {...client}
+                    logo={logo}
+                    backgroundImage={bg}
+                    backgroundImageMobile={bgMobile}
+                  />
                 </Col>
               );
             })}

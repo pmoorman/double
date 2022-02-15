@@ -15,7 +15,8 @@ export interface ClientBoxProps {
   testimonialJobtitle?: string;
   backgroundColor?: string;
   backgroundImage?: { childImageSharp?: any; publicURL: string };
-  backgroundImageMobile?: ReactNode;
+  backgroundImageMobile?: { childImageSharp?: any; publicURL: string };
+  backgroundImageObjectFit?: "cover" | "contain";
   backgroundImagePosition?: "top" | "bottom";
   arrow: "dark" | "light";
   pageUrl?: string;
@@ -108,6 +109,7 @@ const ClientBoxMd: FC<ClientBoxProps> = (props) => {
   const {
     backgroundColor,
     backgroundImage,
+    backgroundImageObjectFit = "contain",
     pageUrl,
     logo,
     title,
@@ -126,6 +128,7 @@ const ClientBoxMd: FC<ClientBoxProps> = (props) => {
       >
         <ClientImage
           item={backgroundImage}
+          objectFit={backgroundImageObjectFit}
           alt=""
           style={{
             width: "100%",
@@ -228,10 +231,14 @@ const ClientBoxLg: FC<ClientBoxProps> = (props) => {
       className="client-box__lg"
       style={{ backgroundImage: `url('${backgroundImage.publicURL}')` }}
     >
-      <div
-        className="mobile-bg d-block d-lg-none"
-        style={{ backgroundImage: `url('${backgroundImageMobile}')` }}
-      ></div>
+      {backgroundImageMobile && (
+        <div
+          className="mobile-bg d-block d-lg-none"
+          style={{
+            backgroundImage: `url('${backgroundImageMobile.publicURL}')`,
+          }}
+        ></div>
+      )}
       <div className="container">
         <div className="row">
           <div className="col-lg-4 px-0">
