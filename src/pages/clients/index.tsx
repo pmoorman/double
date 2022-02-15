@@ -12,9 +12,14 @@ import {
 import { useQueryParams } from "@app/hooks";
 import { SEO } from "@app/components";
 
-interface Client extends Omit<ClientBoxProps, "logo" | "backgroundImage"> {
+interface Client
+  extends Omit<
+    ClientBoxProps,
+    "logo" | "backgroundImage" | "backgroundImageMobile"
+  > {
   logo: string;
   backgroundImage?: string;
+  backgroundImageMobile?: string;
 }
 
 const clients: Client[] = [
@@ -381,6 +386,12 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
       if (clientsNormalized[row[0].title].size === 3) {
         const logo = getLogo(row[0].logo);
         const bg = getBackgroundImage(row[0].backgroundImage);
+        const bgMobile = row[0].backgroundImageMobile
+          ? getBackgroundImage(row[0].backgroundImageMobile)
+          : undefined;
+
+        console.log({ bgMobile, m: row[0] });
+
         return (
           <ClientBox
             {...row[0]}
@@ -388,6 +399,7 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
             data-aos="fade-in"
             logo={logo}
             backgroundImage={bg}
+            backgroundImageMobile={bgMobile}
           />
         );
       }
@@ -399,6 +411,10 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
               const width = client.size === 2 ? 8 : 4;
               const logo = getLogo(client.logo);
               const bg = getBackgroundImage(client.backgroundImage);
+              const bgMobile = client.backgroundImageMobile
+                ? getBackgroundImage(client.backgroundImageMobile)
+                : undefined;
+
               return (
                 <Col
                   key={"client" + key + client.title + i * ii}
@@ -406,7 +422,12 @@ export const ClientsPage = ({ data }: PageProps<ClientsPageProps>) => {
                   className="mb-3"
                   data-aos="fade-in"
                 >
-                  <ClientBox {...client} logo={logo} backgroundImage={bg} />
+                  <ClientBox
+                    {...client}
+                    logo={logo}
+                    backgroundImage={bg}
+                    backgroundImageMobile={bgMobile}
+                  />
                 </Col>
               );
             })}
