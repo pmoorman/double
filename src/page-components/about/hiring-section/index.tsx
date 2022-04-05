@@ -14,7 +14,7 @@ const hiring_positions = [
   {
     title: "Senior Growth Strategist",
     location: "Amsterdam or Remote",
-    url: "https://www.notion.so/Senior-Growth-Strategist-1addc3fec0a34b57a76d063adbf6ed12",
+    url: "https://grape-legal-d11.notion.site/Senior-Growth-Strategist-1addc3fec0a34b57a76d063adbf6ed12",
   },
   {
     title: "Open Application",
