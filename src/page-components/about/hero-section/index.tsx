@@ -25,7 +25,7 @@ export const HeroSection = () => {
               <StaticImage
                 alt=""
                 className="img-fluid"
-                src="./hero-img-1.jpg"
+                src="./hero-img-1a.jpg"
               />
               <p>Devoted coffee lovers</p>
             </Parallax>
@@ -33,7 +33,7 @@ export const HeroSection = () => {
               <StaticImage
                 alt=""
                 className="img-fluid"
-                src="./hero-img-2.jpg"
+                src="./hero-img-2a.jpg"
               />
               <p>Lunch time jokers</p>
             </Parallax>
@@ -41,7 +41,7 @@ export const HeroSection = () => {
               <StaticImage
                 alt=""
                 className="img-fluid"
-                src="./hero-img-3.jpg"
+                src="./hero-img-3a.jpg"
               />
               <p>Philosophical debaters</p>
             </Parallax>
@@ -49,7 +49,7 @@ export const HeroSection = () => {
               <StaticImage
                 alt=""
                 className={cn(styles.hero__images__4_img, "img-fluid")}
-                src="./hero-img-4.jpg"
+                src="./hero-img-4a.jpg"
               />
               <p>Part-time bag designers</p>
             </Parallax>
@@ -57,7 +57,7 @@ export const HeroSection = () => {
               <StaticImage
                 alt=""
                 className="img-fluid"
-                src="./hero-img-5.jpg"
+                src="./hero-img-5a.jpg"
               />
               <p>Fair-weather sailors</p>
             </Parallax>
@@ -67,7 +67,7 @@ export const HeroSection = () => {
                 className={cn(styles.hero__images__6_img, "img-fluid")}
                 width={270}
                 height={179}
-                src="./hero-img-6.jpg"
+                src="./hero-img-6a.jpg"
               />
               <p>Copywriting Kiwis</p>
             </Parallax>
