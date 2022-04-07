@@ -61,11 +61,13 @@ export const ClientsSection = () => {
                 />
               </div>
               <div>
-                <StaticImage
-                  className={styles.clients__logoitem}
-                  src="./logo-startlife.png"
-                  alt=""
-                />
+                <a href="https://start-life.nl/" target="_blank" rel="noopener">
+                  <StaticImage
+                    className={styles.clients__logoitem}
+                    src="./logo-startlife.png"
+                    alt=""
+                  />
+                </a>
               </div>
               <div>
                 <StaticImage
@@ -179,11 +181,13 @@ export const ClientsSection = () => {
               </AnimatedLine>
 
               <div>
-                <StaticImage
-                  className={styles.clients__logoitem}
-                  src="./logo-startlife.png"
-                  alt=""
-                />
+                <a href="https://start-life.nl/" target="_blank" rel="noopener">
+                  <StaticImage
+                    className={styles.clients__logoitem}
+                    src="./logo-startlife.png"
+                    alt=""
+                  />
+                </a>
               </div>
               <div>
                 <StaticImage
