@@ -9,12 +9,12 @@ const hiring_positions = [
   {
     title: "All-round Marketing Consultant",
     location: "Amsterdam or Remote",
-    url: "https://www.notion.so/All-round-Marketing-Consultant-8430964a121044df8b73e799f12a20ca",
+    url: "https://grape-legal-d11.notion.site/All-round-Marketing-Consultant-8430964a121044df8b73e799f12a20ca",
   },
   {
-    title: "Senior Growth Strategist",
+    title: "Copywriter",
     location: "Amsterdam or Remote",
-    url: "https://www.notion.so/Senior-Growth-Strategist-1addc3fec0a34b57a76d063adbf6ed12",
+    url: "https://grape-legal-d11.notion.site/Marketing-Content-Writer-6deb6171c0584d5182f719feecfbf9f5",
   },
   {
     title: "Open Application",
