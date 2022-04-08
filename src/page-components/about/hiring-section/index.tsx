@@ -12,7 +12,7 @@ const hiring_positions = [
     url: "https://grape-legal-d11.notion.site/All-round-Marketing-Consultant-8430964a121044df8b73e799f12a20ca",
   },
   {
-    title: "Marketing content writer",
+    title: "Copywriter",
     location: "Amsterdam or Remote",
     url: "https://grape-legal-d11.notion.site/Marketing-Content-Writer-6deb6171c0584d5182f719feecfbf9f5",
   },
