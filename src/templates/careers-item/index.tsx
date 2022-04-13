@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, PageProps } from "gatsby";
 
 import * as styles from "./blog-post.module.scss";
+import { Col, Container, Row } from "react-bootstrap";
 
 export interface CareersItemDataProps {
   file: {
@@ -19,9 +20,31 @@ export interface CareersItemDataProps {
 export interface CareersItemProps extends PageProps<CareersItemDataProps> {}
 
 export const CareersItemTemplate = (props: CareersItemProps) => {
-  const { data } = props;
-  console.log(props);
-  return <>{data.file.childMarkdownRemark.frontmatter.title}</>;
+  const { childMarkdownRemark } = props.data.file;
+  const { html, frontmatter } = childMarkdownRemark;
+  const { title, salary, location } = frontmatter;
+
+  return (
+    <>
+      <section>
+        <Container>
+          <p>Apply for</p>
+          <h1>{title}</h1>
+          <h4>{salary}</h4>
+          <p className="lead">{location}</p>
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <Row>
+            <Col>
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </>
+  );
 };
 
 export default CareersItemTemplate;

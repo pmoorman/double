@@ -16,8 +16,6 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  console.log({ data });
-
   data.careers.edges.forEach((entry) => {
     const { name } = entry.node;
     const page = {
