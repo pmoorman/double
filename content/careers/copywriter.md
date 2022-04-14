@@ -22,7 +22,7 @@ You’ll help them figure out the right communication for their growth strategy.
 
 - Assisting company-wide learning around client management processes. You’ll work on sourcing and documenting best practices to help client projects run smoothly. Want to learn how to build a world-class agency? We’re right there with you!
 
-## Requirements
+### Requirements
 
 - At least 3 full-time years of experience as a copywriter or marketing content specialist
 - You’re a great prioritiser and thrive in a market that requires you to be sharp, committed, and knowledgeable.
