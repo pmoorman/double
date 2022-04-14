@@ -1,5 +1,8 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React, { FC } from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import cn from "classnames";
+
 import * as styles from "./index.module.scss";
 
 export interface HeroSectionProps {
@@ -16,10 +19,21 @@ export const HeroSection: FC<HeroSectionProps> = ({
   return (
     <section className={styles.section}>
       <Container>
-        <p>Apply for</p>
-        <h1>{title}</h1>
-        <h4>{salary}</h4>
-        <p className="lead">{location}</p>
+        <Row className="text-center">
+          <Col>
+            <p className={cn("mb-5", styles.p)}>Apply for</p>
+            <h1 className="mb-5 fw-bold text-primary">{title}</h1>
+            <p className={cn("mb-5 fw-bold", styles.p)}>{salary}</p>
+            <p className={cn("mb-5", styles.p)}>
+              <StaticImage
+                width={23}
+                src="./location-icon.svg"
+                alt="location icon"
+              />
+              {location}
+            </p>
+          </Col>
+        </Row>
       </Container>
     </section>
   );
