@@ -23,6 +23,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
           <Col>
             <p className={cn("mb-5", styles.p)}>Apply for</p>
             <h1 className="mb-5 fw-bold text-primary">{title}</h1>
+            <hr className={styles.hr} />
             <p className={cn("mb-5 fw-bold", styles.p)}>{salary}</p>
             <p className={cn("mb-5", styles.p)}>
               <StaticImage
@@ -32,6 +33,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
               />
               {location}
             </p>
+            <hr className={styles.hr} />
           </Col>
         </Row>
       </Container>

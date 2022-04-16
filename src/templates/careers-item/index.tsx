@@ -5,9 +5,10 @@ import { Col, Container, Row } from "react-bootstrap";
 import {
   HeroSection,
   HiringProcessSection,
+  ContactSection,
 } from "@app/page-components/careers-item";
 
-import * as styles from "./blog-post.module.scss";
+import * as styles from "./index.module.scss";
 
 export interface CareersItemDataProps {
   file: {
@@ -32,7 +33,7 @@ export const CareersItemTemplate: FC<PageProps<CareersItemDataProps>> = (
     <>
       <HeroSection {...frontmatter} />
 
-      <section>
+      <section className={styles.content}>
         <Container>
           <Row>
             <Col>
@@ -116,6 +117,8 @@ export const CareersItemTemplate: FC<PageProps<CareersItemDataProps>> = (
       </section>
 
       <HiringProcessSection />
+
+      <ContactSection />
     </>
   );
 };

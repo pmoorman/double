@@ -14,7 +14,7 @@ All of our consultants work directly with a variety of fast-growing companies in
 
 You’ll help them figure out the right communication for their growth strategy. Your secret weapon? Experience in writing marketing pieces that convert.
 
-#### Responsibilities and success factors include:
+**Responsibilities and success factors include:**
 
 - We expect you to be comfortable working in a fast-paced, client-facing environment. You'll be working on 1~3 projects simultaneously, collaborating with other consultants to deliver results.
 
