@@ -39,6 +39,8 @@ You’ll help them figure out the right communication for their growth strategy.
 8. Video editing
 9. General design skills
 
+<br />
+
 _You’ll score extra points if you have:_
 
 An education / training in growth marketing (online courses count, too!)

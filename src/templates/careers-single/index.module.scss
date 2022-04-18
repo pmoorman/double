@@ -1,20 +1,29 @@
-.content {
-  h3 {
-    font-weight: 600;
-    color: var(--bs-primary);
+.careersSingle {
+  .content {
+    h3 {
+      font-weight: 600;
+      color: var(--bs-primary);
+      margin-bottom: 20px;
 
-    span {
-      color: initial;
+      span {
+        color: initial;
+      }
     }
   }
-}
 
-p,
-li {
-  font-size: 32px;
-  line-height: 42px;
-}
+  p,
+  li {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: normal;
+    letter-spacing: 0.6px;
+  }
 
-p {
-  margin-bottom: 70px;
+  ul li {
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
 }

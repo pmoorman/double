@@ -30,7 +30,7 @@ export const CareersSingleTemplate: FC<PageProps<CareersSingleDataProps>> = (
   const { html, frontmatter } = childMarkdownRemark;
 
   return (
-    <>
+    <div className={styles.careersSingle}>
       <HeroSection {...frontmatter} />
 
       <section className={styles.content}>
@@ -119,7 +119,7 @@ export const CareersSingleTemplate: FC<PageProps<CareersSingleDataProps>> = (
       <HiringProcessSection />
 
       <ContactSection />
-    </>
+    </div>
   );
 };
 

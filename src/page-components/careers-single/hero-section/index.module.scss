@@ -4,8 +4,21 @@
 
 .p {
   font-size: 35px;
+  line-height: 74px;
 }
 
 .hr {
   color: #d6dcf3;
+}
+
+.backBtn {
+  position: relative;
+  top: -80px;
+
+  a {
+    font-size: 25px;
+    line-height: 74px;
+    color: var(--bs-secondary);
+    text-decoration: underline;
+  }
 }
