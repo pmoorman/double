@@ -1,5 +1,6 @@
 .section {
   background: var(--bs-primary-light);
+  padding-bottom: 200px;
 }
 
 .carouselItem {
@@ -8,4 +9,31 @@
   box-shadow: 12px 12px 0 0 rgb(148 154 180 / 40%);
   margin: 15px;
   padding: 25px;
+}
+
+.slideTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.slideBody {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.dots {
+  bottom: -100px;
+}
+
+h3 {
+  font-weight: 600;
+  color: var(--bs-primary);
+  margin-bottom: 50px;
+
+  span {
+    color: initial !important;
+    font-weight: normal;
+  }
 }

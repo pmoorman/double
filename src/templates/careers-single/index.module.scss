@@ -1,13 +1,17 @@
-.careersSingle {
-  .content {
-    h3 {
-      font-weight: 600;
-      color: var(--bs-primary);
-      margin-bottom: 20px;
+.content {
+  .dynamicContent {
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
 
-      span {
-        color: initial;
-      }
+  h3 {
+    font-weight: 600;
+    color: var(--bs-primary);
+    margin-bottom: 20px;
+
+    span {
+      color: initial !important;
+      font-weight: normal;
     }
   }
 

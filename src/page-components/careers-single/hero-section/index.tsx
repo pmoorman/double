@@ -28,12 +28,13 @@ export const HeroSection: FC<HeroSectionProps> = ({
             <p className={cn("mb-4", styles.p)}>Apply for</p>
             <h1 className="mb-5 fw-bold text-primary">{title}</h1>
             <hr className={styles.hr} />
-            <p className={cn("mb-0 fw-bold", styles.p)}>{salary}</p>
+            <p className={cn("mb-5 fw-bold", styles.p)}>{salary}</p>
             <p className={cn("mb-0 d-flex justify-content-center", styles.p)}>
               <StaticImage
                 height={33}
                 src="./location-icon.svg"
                 alt="location icon"
+                className="me-1"
               />
               {location}
             </p>
