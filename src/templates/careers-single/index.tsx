@@ -6,11 +6,11 @@ import {
   HeroSection,
   HiringProcessSection,
   ContactSection,
-} from "@app/page-components/careers-item";
+} from "@app/page-components/careers-single";
 
 import * as styles from "./index.module.scss";
 
-export interface CareersItemDataProps {
+export interface CareersSingleDataProps {
   file: {
     childMarkdownRemark: {
       frontmatter: {
@@ -23,7 +23,7 @@ export interface CareersItemDataProps {
   };
 }
 
-export const CareersItemTemplate: FC<PageProps<CareersItemDataProps>> = (
+export const CareersSingleTemplate: FC<PageProps<CareersSingleDataProps>> = (
   props
 ) => {
   const { childMarkdownRemark } = props.data.file;
@@ -123,7 +123,7 @@ export const CareersItemTemplate: FC<PageProps<CareersItemDataProps>> = (
   );
 };
 
-export default CareersItemTemplate;
+export default CareersSingleTemplate;
 
 export const pageQuery = graphql`
   query ($slug: String!) {

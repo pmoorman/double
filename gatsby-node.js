@@ -2,7 +2,9 @@ const path = require("path");
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const careersTemplate = path.resolve("src/templates/careers-item/index.tsx");
+  const careersTemplate = path.resolve(
+    "src/templates/careers-single/index.tsx"
+  );
 
   const { data } = await graphql(`
     {
