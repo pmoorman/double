@@ -1,9 +1,4 @@
 .content {
-  .dynamicContent {
-    padding-top: 80px;
-    padding-bottom: 0px;
-  }
-
   h3 {
     font-weight: 600;
     color: var(--bs-primary);
@@ -13,21 +8,5 @@
       color: initial !important;
       font-weight: normal;
     }
-  }
-
-  p,
-  li {
-    font-size: 32px;
-    line-height: 42px;
-    font-weight: normal;
-    letter-spacing: 0.6px;
-  }
-
-  ul li {
-    margin-bottom: 40px;
-  }
-
-  p {
-    margin-bottom: 40px;
   }
 }

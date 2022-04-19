@@ -4,7 +4,8 @@
 }
 
 .carouselItem {
-  width: 380px !important;
+  width: 380px;
+  max-width: 100%;
   background: #fff;
   box-shadow: 12px 12px 0 0 rgb(148 154 180 / 40%);
   margin: 15px;

@@ -9,6 +9,7 @@ import {
 } from "@app/page-components/careers-single";
 
 import * as styles from "./index.module.scss";
+import classNames from "classnames";
 
 export interface CareersSingleDataProps {
   file: {
@@ -34,7 +35,7 @@ export const CareersSingleTemplate: FC<PageProps<CareersSingleDataProps>> = (
       <div className={styles.content}>
         <HeroSection {...frontmatter} />
 
-        <section className={styles.dynamicContent}>
+        <section className="pb-0">
           <Container>
             <Row>
               <Col>

@@ -12,13 +12,12 @@ export const ContactSection = () => {
         <Row className="text-center">
           <Col>
             <h2 className="mb-5 fw-bold">Sounds like a great match?</h2>
-            <p className={cn("mb-5 pb-5", styles.p)}>
+            <p className={cn("mb-5 pb-5 lead-lg")}>
               We’re eager to hear from you!
             </p>
             <p
               className={cn(
-                "pt-5 d-flex align-items-center justify-content-center",
-                styles.p2
+                "pt-5 d-flex align-items-center justify-content-center lead-lg"
               )}
             >
               Press Enter

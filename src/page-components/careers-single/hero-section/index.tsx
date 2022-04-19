@@ -25,16 +25,19 @@ export const HeroSection: FC<HeroSectionProps> = ({
         </div>
         <Row className="text-center">
           <Col>
-            <p className={cn("mb-4", styles.p)}>Apply for</p>
-            <h1 className="mb-5 fw-bold text-primary">{title}</h1>
+            <p className={cn("mb-4 lead-lg")}>Apply for</p>
+            <h1 className={cn("mb-5 fw-bold text-primary", styles.title)}>
+              {title}
+            </h1>
             <hr className={styles.hr} />
-            <p className={cn("mb-5 fw-bold", styles.p)}>{salary}</p>
-            <p className={cn("mb-0 d-flex justify-content-center", styles.p)}>
+            <p className={cn("mb-5 fw-bold lead-lg")}>{salary}</p>
+            <p className={cn("mb-0 d-flex lead-lg justify-content-center")}>
               <StaticImage
-                height={33}
+                width={33}
                 src="./location-icon.svg"
                 alt="location icon"
-                className="me-1"
+                className="me-1 img-fluid"
+                layout="fixed"
               />
               {location}
             </p>

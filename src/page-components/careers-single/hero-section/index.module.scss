@@ -2,9 +2,10 @@
   background: var(--bs-primary-light);
 }
 
-.p {
-  font-size: 35px;
-  line-height: 74px;
+.title {
+  @include media-breakpoint-down(md) {
+    line-height: 80px;
+  }
 }
 
 .hr {
@@ -13,11 +14,10 @@
 
 .backBtn {
   position: relative;
-  top: -80px;
+  top: -50px;
 
   a {
-    font-size: 25px;
-    line-height: 74px;
+    font-weight: normal;
     color: var(--bs-secondary);
     text-decoration: underline;
   }

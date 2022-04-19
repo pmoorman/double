@@ -8,3 +8,8 @@
 @import "./general-1";
 @import "./typography-2";
 @import "./font";
+
+// Fix slick slider going to next line
+.slick-track {
+  display: flex;
+}

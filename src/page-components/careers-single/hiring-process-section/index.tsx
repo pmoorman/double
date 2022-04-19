@@ -23,7 +23,7 @@ const steps = [
     body: "Tempor dolor duis incididunt nulla Lorem ad.",
   },
   {
-    title: "Tempor dolor duis",
+    title: "Tempor dolor duisd",
     body: "Tempor dolor duis incididunt nulla Lorem ad.",
   },
 ];
@@ -35,6 +35,7 @@ const sliderSettings = {
   variableWidth: true,
   initialSlide: 1,
   centerMode: true,
+  slidesToShow: 1,
   dotsClass: cn("slick-dots", styles.dots),
 };
 
@@ -51,16 +52,22 @@ export const HiringProcessSection = () => {
         </Row>
       </Container>
       <Container fluid>
-        <Slider {...sliderSettings}>
-          {steps.map((s, i) => (
-            <div key={s.title} className={styles.carouselItem}>
-              <h5 className={styles.slideTitle}>
-                Step {i + 1}: {s.title}
-              </h5>
-              <p className={styles.slideBody}>{s.body}</p>
-            </div>
-          ))}
-        </Slider>
+        <Row>
+          <Col>
+            <Slider {...sliderSettings}>
+              {steps.map((s, i) => (
+                <div key={s.title}>
+                  <div className={styles.carouselItem}>
+                    <h5 className={styles.slideTitle}>
+                      Step {i + 1}: {s.title}
+                    </h5>
+                    <p className={styles.slideBody}>{s.body}</p>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </Col>
+        </Row>
       </Container>
     </section>
   );
