@@ -20,9 +20,9 @@ export const HeroSection: FC<HeroSectionProps> = ({
   return (
     <section className={styles.section}>
       <Container>
-        <div className={styles.backBtn}>
+        {/* <div className={styles.backBtn}>
           <Link to="/careers">← Back to open positions</Link>
-        </div>
+        </div> */}
         <Row className="text-center">
           <Col>
             <p className={cn("mb-4 lead-lg")}>Apply for</p>
