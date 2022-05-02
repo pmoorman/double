@@ -2,6 +2,9 @@
   background: var(--bs-secondary);
   color: #fff;
   padding: 0;
+  @include media-breakpoint-down(md) {
+    padding-bottom: 40px;
+  }
 }
 
 .typeform {
