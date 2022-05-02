@@ -9,7 +9,6 @@ import {
 } from "@app/page-components/careers-single";
 
 import * as styles from "./index.module.scss";
-import classNames from "classnames";
 
 export interface CareersSingleDataProps {
   file: {
@@ -18,6 +17,7 @@ export interface CareersSingleDataProps {
         location: string;
         salary: string;
         title: string;
+        typeform_id: string;
       };
       html: string;
     };
@@ -128,7 +128,7 @@ export const CareersSingleTemplate: FC<PageProps<CareersSingleDataProps>> = (
 
       <HiringProcessSection />
 
-      <ContactSection />
+      <ContactSection typeformId={frontmatter.typeform_id} />
     </>
   );
 };
@@ -143,6 +143,7 @@ export const pageQuery = graphql`
           location
           salary
           title
+          typeform_id
         }
         html
       }

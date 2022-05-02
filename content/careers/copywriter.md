@@ -2,6 +2,7 @@
 title: Copywriter (remote)
 salary: €4500 monthly starting salary
 location: Amsterdam or Remote
+typeform_id: QP1iJ8f3
 ---
 
 Are you a skilled writer with 3+ years of working in marketing, who wants to leave a digital footprint on the landscape of innovative scale-ups? That's great because we are a fast-growing digital marketing agency, currently on the lookout for people like you.
