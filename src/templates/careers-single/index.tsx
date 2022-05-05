@@ -15,7 +15,7 @@ export interface CareersSingleDataProps {
     childMarkdownRemark: {
       frontmatter: {
         location: string;
-        salary: string;
+        compensation: string;
         title: string;
         typeform_id: string;
       };
@@ -141,7 +141,7 @@ export const pageQuery = graphql`
       childMarkdownRemark {
         frontmatter {
           location
-          salary
+          compensation
           title
           typeform_id
         }

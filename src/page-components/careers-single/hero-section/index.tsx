@@ -8,13 +8,13 @@ import { Link } from "@app/components";
 
 export interface HeroSectionProps {
   title: string;
-  salary: string;
+  compensation: string;
   location: string;
 }
 
 export const HeroSection: FC<HeroSectionProps> = ({
   title,
-  salary,
+  compensation,
   location,
 }) => {
   return (
@@ -30,7 +30,7 @@ export const HeroSection: FC<HeroSectionProps> = ({
               {title}
             </h1>
             <hr className={styles.hr} />
-            <p className={cn("mb-5 fw-bold lead-lg")}>{salary}</p>
+            <p className={cn("mb-5 fw-bold lead-lg")}>{compensation}</p>
             <p className={cn("mb-0 d-flex lead-lg justify-content-center")}>
               <StaticImage
                 width={33}

@@ -1,13 +1,13 @@
 ---
 title: Copywriter (remote)
-salary: €4500 monthly starting salary
+compensation: €4500 monthly starting compensation
 location: Amsterdam or Remote
 typeform_id: QP1iJ8f3
 ---
 
 Are you a skilled writer with 3+ years of working in marketing, who wants to leave a digital footprint on the landscape of innovative scale-ups? That's great because we are a fast-growing digital marketing agency, currently on the lookout for people like you.
 
-TL;DR: This role has 40 hrs per week + a monthly starting salary of €4500. Mostly writing (emails, ads, website copy) but if you're open to developing more digital growth skills, that's even better.
+TL;DR: This role has 40 hrs per week + a monthly starting compensation of €4500. Mostly writing (emails, ads, website copy) but if you're open to developing more digital growth skills, that's even better.
 
 Amsterdam serves as a hub for a part of our team but you’re encouraged to travel and work remotely from anywhere. We have colleagues in New Zealand, Bali, Portugal.
 
@@ -22,6 +22,8 @@ You’ll help them figure out the right communication for their growth strategy.
 - Growing the Double name. Both on the agency and academy side of our business, your marketing skills will help expand and maintain the Double brand.
 
 - Assisting company-wide learning around client management processes. You’ll work on sourcing and documenting best practices to help client projects run smoothly. Want to learn how to build a world-class agency? We’re right there with you!
+
+<br />
 
 ### Requirements
 

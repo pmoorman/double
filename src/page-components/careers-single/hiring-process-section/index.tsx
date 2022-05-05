@@ -33,8 +33,8 @@ const sliderSettings = {
   infinite: false,
   speed: 500,
   variableWidth: true,
-  initialSlide: 1,
-  centerMode: true,
+  initialSlide: 0,
+  centerMode: false,
   slidesToShow: 1,
   dotsClass: cn("slick-dots", styles.dots),
 };
