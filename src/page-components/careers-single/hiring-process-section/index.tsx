@@ -8,23 +8,30 @@ import * as styles from "./index.module.scss";
 const steps = [
   {
     title: "Application",
-    body: "Tempor dolor duis incididunt nulla Lorem ad.",
+    body: "Fill in a short survey and help us understand how you see yourself fit into the role.",
   },
   {
-    title: "20-min intro call",
-    body: "Tempor dolor duis incididunt nulla Lorem ad.",
+    title: "Intro call",
+    body: "20-min casuall talk. You don't have to prepare anything, let's just feel the vibes.",
   },
   {
     title: "Assessment",
-    body: "Tempor dolor duis incididunt nulla Lorem ad.",
+    body: "Your platform to showcase your strategic skills and marketing experience.",
   },
   {
-    title: "Tempor dolor duis",
-    body: "Tempor dolor duis incididunt nulla Lorem ad.",
+    title: "Skill check call",
+    body: "60-min video conversation based on the assessment plus some merit questions",
   },
   {
-    title: "Tempor dolor duisd",
-    body: "Tempor dolor duis incididunt nulla Lorem ad.",
+    title: "Culture fit",
+    body: "A call with our CEO",
+  },
+  {
+    title: "Live co-working task",
+    body: "(optional) Let's put our heads together to solve an actual case",
+  },
+  {
+    title: "Offer!",
   },
 ];
 
@@ -61,7 +68,7 @@ export const HiringProcessSection = () => {
                     <h5 className={styles.slideTitle}>
                       Step {i + 1}: {s.title}
                     </h5>
-                    <p className={styles.slideBody}>{s.body}</p>
+                    {s.body && <p className={styles.slideBody}>{s.body}</p>}
                   </div>
                 </div>
               ))}
