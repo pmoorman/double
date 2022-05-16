@@ -32,15 +32,16 @@ You’ll help them figure out the right communication for their growth strategy.
 - You enjoy working autonomously and have a strong sense of ownership
 - Excellent oral and written communication skills in English (other languages are a plus):
 
-1. A basic to good understanding of the following skills:
-2. Marketing automation
-3. Paid advertising
-4. Data analysis and analytics
-5. Customer onboarding optimisation
-6. A/B-testing & high tempo experimentation
-7. Basic coding
-8. Video editing
-9. General design skills
+A basic to good understanding of the following skills:
+
+1. Marketing automation
+2. Paid advertising
+3. Data analysis and analytics
+4. Customer onboarding optimisation
+5. A/B-testing & high tempo experimentation
+6. Basic coding
+7. Video editing
+8. General design skills
 
 <br />
 

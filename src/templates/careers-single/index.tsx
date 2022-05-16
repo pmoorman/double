@@ -35,8 +35,8 @@ export const CareersSingleTemplate: FC<PageProps<CareersSingleDataProps>> = (
       <div className={styles.content}>
         <HeroSection {...frontmatter} />
 
-        <section className="pb-0">
-          <Container>
+        <section className="pb-0 pt-5 mt-5">
+          <Container className={styles.narrow}>
             <Row>
               <Col>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -47,7 +47,7 @@ export const CareersSingleTemplate: FC<PageProps<CareersSingleDataProps>> = (
 
         {/* Our culture */}
         <section className="pt-5 pb-0">
-          <Container>
+          <Container className={styles.narrow}>
             <Row>
               <Col>
                 <h3>
@@ -107,7 +107,7 @@ export const CareersSingleTemplate: FC<PageProps<CareersSingleDataProps>> = (
 
         {/* Equal Opportunity */}
         <section className="pt-5">
-          <Container>
+          <Container className={styles.narrow}>
             <Row>
               <Col>
                 <h3>

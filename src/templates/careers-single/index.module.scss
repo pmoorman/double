@@ -1,4 +1,8 @@
 .content {
+  ul,
+  ol {
+    font-weight: 400;
+  }
   h3 {
     font-weight: 600;
     color: var(--bs-primary);
@@ -9,4 +13,8 @@
       font-weight: normal;
     }
   }
+}
+
+.narrow {
+  max-width: 630px;
 }
