@@ -1,19 +1,19 @@
 ---
-title: Copywriter (remote)
+title: All-round Marketing Consultant
 compensation: €4500 monthly starting compensation
 location: Amsterdam or Remote
-typeform_id: QP1iJ8f3
+typeform_id: nBpn70i8
 ---
 
-Are you a skilled writer with 3+ years of working in marketing, who wants to leave a digital footprint on the landscape of innovative scale-ups? That's great because we are a fast-growing digital marketing agency, currently on the lookout for people like you.
+We’re looking for an All-round Marketing Consultant (3+ years experience), someone to help us elevate our clients’ business growth and get them more happy customers. This role has 40 hrs per week and a monthly starting salary of €4500. We expect you to have strengths and weaknesses across the spectrum of marketing but a solid understanding of the fundamentals is necessary.
 
-TL;DR: This role has 40 hrs per week + a monthly starting compensation of €4500. Mostly writing (emails, ads, website copy) but if you're open to developing more digital growth skills, that's even better.
+<br />
 
-Amsterdam serves as a hub for a part of our team but you’re encouraged to travel and work remotely from anywhere. We have colleagues in New Zealand, Bali, Portugal.
+### Your role
 
 All of our consultants work directly with a variety of fast-growing companies in industries like fintech, high-tech, SaaS, e-commerce. One thing connects our clients; they want to optimise their brand awareness and attract leads, aka growth marketing.
 
-You’ll help them figure out the right communication for their growth strategy. Your secret weapon? Experience in writing marketing pieces that convert.
+You’ll help them figure out the right growth strategy for their lifecycle and set up supporting systems so that they can maintain success. Your secret weapon? Being a jack of all trades.
 
 **Responsibilities and success factors include:**
 
@@ -27,20 +27,22 @@ You’ll help them figure out the right communication for their growth strategy.
 
 ### Requirements
 
-- At least 3 full-time years of experience as a copywriter or marketing content specialist
+- At least 3 full-time years of experience as a (growth) marketer
 - You’re a great prioritiser and thrive in a market that requires you to be sharp, committed, and knowledgeable.
 - You enjoy working autonomously and have a strong sense of ownership
-- Excellent oral and written communication skills in English (other languages are a plus):
-- A basic to good understanding of the following skills:
+- Excellent oral and written communication skills in English
+- A basic to good understanding of the following skills and an expert in one or some of them (preferably one of the first three):
 
 1. Marketing automation
 2. Paid advertising
-3. Data analysis and analytics
-4. Customer onboarding optimisation
-5. A/B-testing & high tempo experimentation
-6. Basic coding
-7. Video editing
-8. General design skills
+3. Copywriting
+4. A/B-testing & high tempo experimentation
+5. Customer onboarding optimisation
+6. Sales
+7. Data analysis and analytics
+8. Basic coding
+9. Video editing
+10. General design skills
 
 <br />
 
