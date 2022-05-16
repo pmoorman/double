@@ -63,12 +63,14 @@ export const HiringProcessSection = () => {
           <Col>
             <Slider {...sliderSettings}>
               {steps.map((s, i) => (
-                <div key={s.title}>
+                <div key={s.title} className={styles.carouselItemWrapper}>
                   <div className={styles.carouselItem}>
                     <h5 className={styles.slideTitle}>
                       Step {i + 1}: {s.title}
                     </h5>
-                    {s.body && <p className={styles.slideBody}>{s.body}</p>}
+                    {s.body && (
+                      <p className={cn(styles.slideBody, "mb-0")}>{s.body}</p>
+                    )}
                   </div>
                 </div>
               ))}

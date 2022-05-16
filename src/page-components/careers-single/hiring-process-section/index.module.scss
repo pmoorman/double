@@ -5,11 +5,22 @@
 
 .carouselItem {
   width: 380px;
-  max-width: 100%;
+  max-width: 100vw;
   background: #fff;
   box-shadow: 12px 12px 0 0 rgb(148 154 180 / 40%);
   margin: 15px;
   padding: 25px;
+  // padding-bottom: 0;
+  height: 100%;
+  @include media-breakpoint-down(md) {
+    margin: 0;
+    // width: calc(100% - 30px);
+  }
+}
+
+.carouselItemWrapper {
+  height: 100%;
+  padding-bottom: 30px;
 }
 
 .slideTitle {

@@ -13,3 +13,10 @@
 .slick-track {
   display: flex;
 }
+
+.slick-slide {
+  height: inherit !important;
+  > div {
+    height: 100%;
+  }
+}
