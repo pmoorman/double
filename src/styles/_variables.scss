@@ -16,3 +16,9 @@ $container-max-widths: (
   lg: 960px,
   xl: 1110px,
 );
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "primary-light": #ecf5fe,
+);

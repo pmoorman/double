@@ -1,8 +1,22 @@
 @import "variables";
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
 
 // Generics
 @import "./general-1";
 @import "./typography-2";
 @import "./font";
+
+// Fix slick slider going to next line
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  height: inherit !important;
+  > div {
+    height: 100%;
+  }
+}

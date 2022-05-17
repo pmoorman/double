@@ -33,6 +33,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -57,6 +58,13 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `careers`,
+        path: `./content/careers`,
+      },
     },
 
     /********************

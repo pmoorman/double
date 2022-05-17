@@ -1,0 +1,51 @@
+.section {
+  background: var(--bs-primary-light);
+  padding-bottom: 200px;
+}
+
+.carouselItem {
+  width: 380px;
+  max-width: 100vw;
+  background: #fff;
+  box-shadow: 12px 12px 0 0 rgb(148 154 180 / 40%);
+  margin: 15px;
+  padding: 25px;
+  // padding-bottom: 0;
+  height: 100%;
+  @include media-breakpoint-down(md) {
+    margin: 0;
+    // width: calc(100% - 30px);
+  }
+}
+
+.carouselItemWrapper {
+  height: 100%;
+  padding-bottom: 30px;
+}
+
+.slideTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.slideBody {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.dots {
+  bottom: -100px;
+}
+
+h3 {
+  font-weight: 600;
+  color: var(--bs-primary);
+  margin-bottom: 50px;
+
+  span {
+    color: initial !important;
+    font-weight: normal;
+  }
+}
