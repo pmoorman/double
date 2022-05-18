@@ -22,7 +22,7 @@ const items = [
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="services bg-secondary text-light">
+    <section id="services" className="services bg-secondary text-white">
       <div className="container">
         {/* Title */}
         <div className="row">
