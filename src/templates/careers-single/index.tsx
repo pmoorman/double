@@ -120,6 +120,11 @@ export const CareersSingleTemplate: FC<PageProps<CareersSingleDataProps>> = (
                   the requirements while men are happy to do so even if it’s
                   around 70%.
                 </p>
+                <p>
+                  Have you read the above job description and felt a bit
+                  insecure but you’re fascinated by our company and clients?
+                  Please apply and let’s talk anyway.
+                </p>
               </Col>
             </Row>
           </Container>
