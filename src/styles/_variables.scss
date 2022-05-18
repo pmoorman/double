@@ -17,8 +17,6 @@ $container-max-widths: (
   xl: 1110px,
 );
 
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "primary-light": #ecf5fe,
-);
+:root {
+  --primary-light: #ecf5fe
+}

@@ -1,6 +1,18 @@
 .section {
-  background: var(--bs-primary-light);
+  background: var(--primary-light);
   padding-bottom: 200px;
+
+  h3 {
+    font-weight: 600;
+    color: var(--bs-primary);
+    margin-bottom: 50px;
+  
+    span {
+      color: initial !important;
+      font-weight: normal;
+    }
+  }
+  
 }
 
 .carouselItem {
@@ -37,15 +49,4 @@
 
 .dots {
   bottom: -100px;
-}
-
-h3 {
-  font-weight: 600;
-  color: var(--bs-primary);
-  margin-bottom: 50px;
-
-  span {
-    color: initial !important;
-    font-weight: normal;
-  }
 }
