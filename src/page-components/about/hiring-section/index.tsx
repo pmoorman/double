@@ -3,23 +3,23 @@ import cn from "classnames";
 
 import * as styles from "./index.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
-import { ShadowBox } from "@app/components";
+import { Link, ShadowBox } from "@app/components";
 
 const hiring_positions = [
   {
     title: "All-round Marketing Consultant",
     location: "Amsterdam or Remote",
-    url: "https://grape-legal-d11.notion.site/All-round-Marketing-Consultant-8430964a121044df8b73e799f12a20ca",
+    url: "/careers/all-round-marketing-consultant",
   },
   {
     title: "Copywriter",
     location: "Amsterdam or Remote",
-    url: "https://grape-legal-d11.notion.site/Marketing-Content-Writer-6deb6171c0584d5182f719feecfbf9f5",
+    url: "/careers/copywriter",
   },
   {
-    title: "Open Application",
+    title: "Performance Marketing Consultant",
     location: "Amsterdam or Remote",
-    url: "https://www.notion.so/I-m-Feeling-Lucky-Open-Application-af2073d5142a4c0ea10cb699a5d422d4",
+    url: "/careers/performance-marketing-consultant",
   },
 ];
 
@@ -103,9 +103,9 @@ export const HiringSection = () => {
               )}
             >
               {hiring_positions.map((i, ii) => (
-                <a
+                <Link
                   key={i.title + ii}
-                  href={i.url}
+                  to={i.url}
                   className={cn(
                     styles.hiring__positions_box__item,
                     "d-flex justify-content-between align-items-center text-white py-4"
@@ -125,7 +125,7 @@ export const HiringSection = () => {
                   <div className="d-flex">
                     <StaticImage alt="" src="./arrow-right.svg" />
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
