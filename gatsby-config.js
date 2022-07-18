@@ -88,7 +88,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-reddit-pixel`,
       options: {
-        pixelId: "t2_odexgo3r",
+        pixelId: "t2_pyhymtu8",
       },
     },
     {
