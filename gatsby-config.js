@@ -86,6 +86,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-reddit-pixel`,
+      options: {
+        pixelId: "t2_odexgo3r",
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-M44383W",
